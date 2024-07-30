@@ -1,0 +1,26 @@
+.language_wrap{
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    font-size: 1.8rem;
+}
+.language{
+    display: flex;
+    gap: .5rem;
+    font-family: "Exo2-Medium";
+    width: 0;
+    overflow: hidden;
+    transition: .3s;
+   
+}
+
+.uncover{
+    width: 8rem;
+    transition: .3s;
+}
+.noactive{
+    color: #A8A8A8;
+}
+.active{
+    color: #fff;
+}

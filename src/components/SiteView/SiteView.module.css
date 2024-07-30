@@ -1,0 +1,45 @@
+.d_block{
+    display: block!important;
+}
+.d_none{
+    display: none!important;
+}
+.additional_features {
+    /* display: none; */
+    padding: 16px;
+    position: absolute;
+    bottom: -19rem;
+    left: -5rem;
+    cursor: auto;
+    background-color: #57c73bf9;
+    height: 178px;
+}
+.additional_features p {
+    font-family: "Exo2-Regular";
+    font-size: 16px;
+    line-height: 19px;
+    color: #343333;
+    margin-bottom: 16px;
+}
+.site_view_block {
+    position: relative;
+}
+.site_view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+ .site_view span {
+     font-size: 28px;
+     color: white;
+     background-color: #0a921f;
+     padding: 5px 10px;
+     cursor: pointer;
+ }
+  .site_view span:nth-child(2) {
+      background-color: #828282;
+  }
+  .site_view span:last-child {
+      background-color: #3e3e3e;
+  }
