@@ -4,7 +4,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Header from '@/components/home/Header';
 import Carousel from '@/components/Carousel/Carousel';
 import AboutUs from '@/components/home/AboutUs';
-import VideoPage from '@/components/V/v';
+
 
 export async function getServerSideProps({ locale }) {
   return {
@@ -27,7 +27,7 @@ export default function Home({ locale }) {
       <Header locale={locale}/>
       <Carousel/>
       <AboutUs/>
-      <VideoPage/>
+   
     </>
   );
 }
