@@ -1,8 +1,8 @@
 .wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
     align-items: center;
-    margin-top: 18.2rem;
 }
 
 .text {
@@ -61,16 +61,31 @@
 
 .playIcon span:hover {
     transform: scale(1.4);
-    /* padding: 1.5rem; */
     border: 1px solid #00E85D;
-    /* position: absolute; */
-    /* left: 0; */
-    /* top: -1.8rem; */
-    /* background: none; */
 }
 .playIcon span:hover img{
     transform: scale(0.8);
 }
 .playIcon span:hover .playIcon{
-    border: 1px solid #00E85D;
+    border: 1px solid #00E85D;  
+}
+.imageSection{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);  
+    gap: 2.4rem;
+}
+.top_left{
+    border-radius: 164px 0px 10px 0px;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.bottom_right{
+    border-radius: 10px 0px 164px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }

@@ -8,7 +8,7 @@ function index({ children }) {
     <>
         <NavBar />
         <main>{children}</main>
-        <footer></footer>
+       <footer></footer>
     </>
   )
 }

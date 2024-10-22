@@ -6,7 +6,9 @@ import styles from './AboutUs.module.css';
 import classN from 'classnames';
 
 import Play from '@/icon/play.svg';
-import Ellipse from '@/icon/Ellipse.svg';
+import Of1 from '@/img/Of1.jpg';
+import Of2 from '@/img/Of2.jpg';
+import Of3 from '@/img/Of3.jpg';
 
 function AboutUs() {
   return (
@@ -40,7 +42,12 @@ function AboutUs() {
           </p>
         
       </div>
-      <div className={styles.imageSection}></div>
+      <div className={styles.imageSection}>
+        <div className={styles.top_left}> <Image src={Of1} width={'auto'} height={'auto'} alt="of" /></div>
+        <div className={styles.bottom_right}><Image src={Of2} width={'auto'} height={'auto'} alt="of" /></div>
+        <div className={styles.top_left}><Image src={Of3} width={'auto'} height={'auto'} alt="of" /></div>
+        <div className={styles.bottom_right}><Image src={Of1} width={'auto'} height={'auto'} alt="of" /></div> 
+      </div>
     </section>
   )
 }
