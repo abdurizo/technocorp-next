@@ -6,9 +6,9 @@ import NavBar from './NavBar';
 function index({ children }) {
   return (
     <>
-        <NavBar />
-        <main>{children}</main>
-       <footer></footer>
+      <NavBar />
+      <main>{children}</main>
+      <footer></footer>
     </>
   )
 }

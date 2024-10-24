@@ -14,3 +14,10 @@
     src: url("../assets/fonts/Roboto/Roboto-Regular.ttf");
     font-family: "Roboto-Regular";
 }
+@font-face {
+    src: url("../assets/fonts/static/Exo2-Medium.ttf");
+    font-family: "Exo2-Medium";
+}@font-face {
+    src: url("../assets/fonts/static/Exo2-Regular.ttf");
+    font-family: "Exo2-Regular";
+}
