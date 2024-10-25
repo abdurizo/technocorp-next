@@ -37,9 +37,9 @@ img{
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 132rem;
   margin: auto;
-  margin-top: 10rem;
+  margin-top: 15rem;
 }
 
 .sectionTitle {
@@ -48,4 +48,5 @@ img{
   font-size: 5rem;
   font-style: normal;
   line-height: 3.125rem;
+  margin-bottom: 5rem;
 }
