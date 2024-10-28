@@ -33,7 +33,7 @@ function Carousel() {
                   src={EkologikC}
                   width={'auto'}
                   height={'auto'}
-                  alt="adliya"
+                  alt="EkologikC"
                   className={styles.image}
                />
             </div>
@@ -42,7 +42,7 @@ function Carousel() {
                   src={Ichfi_ishlarC}
                   width={'auto'}
                   height={'auto'}
-                  alt="adliya"
+                  alt="Ichfi_ishlarC"
                   className={styles.image}
                />
             </div>
