@@ -1,14 +1,12 @@
 import { useState } from 'react';
+import Link from 'next/link';
 
 import styles from './Card.module.css';
 
 import Image from 'next/image';
 
-// import Development from '@/assets/icon/veb.svg';
-// import Gif1 from '@/assets/img/Gif1.gif';
 
-
-function Card() {
+function Card({ gif, image }) {
     const [isHovered, setIsHovered] = useState(false);
 
 
@@ -23,7 +21,7 @@ function Card() {
                 <div className={styles.image}>
 
                     <Image
-                        src={isHovered ?"/gif/Gif1.gif" : "/gif/gif1.svg" }
+                        src={isHovered ? gif : image}
                         width={500}
                         height={500}
                         alt="Development"
@@ -32,7 +30,17 @@ function Card() {
                     />
                 </div>
             </div>
+            <div className={styles.button}>
             <p className={styles.text}>texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek, axborot portallari va veb-resurslarni rivojlantirish va jadallashtirish masalalarida texnik ko‘mak berish...</p>
+            
+                <div className={styles.wrap_but}>
+                    
+                </div>
+                <Link className={styles.but} href={"#!"}>BATAFSIL</Link>
+            </div>
+
+
+
         </div>
     );
 }

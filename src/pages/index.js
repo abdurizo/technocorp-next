@@ -6,6 +6,7 @@ import Carousel from '@/components/Carousel/Carousel';
 import AboutUs from '@/components/home/AboutUs';
 import OurProjects from '@/components/home/OurProjects';
 import Services from '@/components/home/Services';
+import Scroll from '@/components/home/Scroll';
 
 
 export async function getServerSideProps({ locale }) {
@@ -30,7 +31,8 @@ export default function Home({ locale }) {
       <Carousel />
       <AboutUs />
       <OurProjects />
-      <Services/>
+      <Services />
+      <Scroll/>
     </>
   );
 }

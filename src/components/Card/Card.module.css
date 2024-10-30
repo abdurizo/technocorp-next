@@ -3,14 +3,17 @@
     border: 0.5px solid #474747;
     background: rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(25px);
-    padding: 3rem;
+    padding: 3rem;  
+   
 }
-.title_wrap{
+
+.title_wrap {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 2.7rem;
 }
+
 .title {
     font-family: "Exo2-Regular";
     font-size: 2.8rem;
@@ -19,7 +22,8 @@
     text-transform: uppercase;
     color: #fff;
 }
-.text{
+
+.text {
     font-family: "Exo2-Regular";
     font-size: 1.6rem;
     font-style: normal;
@@ -27,8 +31,43 @@
     text-transform: uppercase;
     color: #B0B0B0;
 }
-.image{
+
+.image {
     width: 10rem;
     height: 10rem;
     overflow: hidden;
+}
+
+.button {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    position: relative;
+}
+
+.wrap_but {
+    /* width: 20%; */
+    /* height: 100%; */
+    display: flex;
+    justify-content: flex-end;
+    /* border: 1px solid #fff; */
+    /* position: relative; */
+}
+
+.but {
+    position: absolute;
+    bottom: -100%;
+    left: 70%;
+    font-family: "Exo2-Regular";
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 2.7rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    color: #3CE477;
+}
+
+.wrap:hover .but {
+    bottom: 0%;
+    left: 85%;
 }
