@@ -1,0 +1,52 @@
+.wrap {
+    border-radius: 4rem;
+    border: 1px solid #FFF;
+    padding: 5rem 7rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: .5s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.04), 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 16px 0px rgba(0, 0, 0, 0.60);
+    transition: background-color 0.7s ease, transform 0.5s ease;
+}
+.nohover_img{
+    background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+.hover_img{
+    background: radial-gradient(144.6% 122.45% at 92.69% 91.85%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.image {
+    width: 16rem;
+    height: 16rem;
+}
+
+
+.text {
+    color: #C5C5C5;
+    text-align: center;
+    font-family: "Exo2-Bold";
+    font-size: 3.2rem;
+    font-style: normal;
+    line-height: 3.2rem;
+    letter-spacing: 0.16rem;
+    text-transform: uppercase;
+}
+.wrap::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; /* Положение до появления */
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50% 0 0 0; /* Создаем скругленный угол */
+    opacity: 0;
+    transition: opacity 0.3s ease, bottom 0.3s ease, right 0.3s ease;
+}
