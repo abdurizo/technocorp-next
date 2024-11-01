@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+
 import Image from 'next/image';
 import Marquee from "react-fast-marquee";
 

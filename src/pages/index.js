@@ -8,6 +8,8 @@ import OurProjects from '@/components/home/OurProjects';
 import Services from '@/components/home/Services';
 import Scroll from '@/components/home/Scroll';
 import Startap from '@/components/home/Startap';
+import News from '@/components/home/News';
+import ContactUs from '@/components/home/ContactUs';
 
 
 export async function getServerSideProps({ locale }) {
@@ -34,7 +36,9 @@ export default function Home({ locale }) {
       <OurProjects />
       <Services />
       <Scroll />
-      <Startap/>
+      <Startap />
+      <News />
+      <ContactUs/>
     </>
   );
 }

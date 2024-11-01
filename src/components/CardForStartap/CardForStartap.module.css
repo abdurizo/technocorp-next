@@ -31,22 +31,36 @@
 .text {
     color: #C5C5C5;
     text-align: center;
-    font-family: "Exo2-Bold";
+    
     font-size: 3.2rem;
     font-style: normal;
     line-height: 3.2rem;
     letter-spacing: 0.16rem;
     text-transform: uppercase;
 }
-.wrap::after {
-    content: '';
+.text_two{
+    color: #C5C5C5;
+text-align: center;
+font-family: "Exo2-Bold";
+font-size: 2.8rem;
+font-style: normal;
+font-weight: 700;
+line-height: 3.2rem; /* 114.286% */
+letter-spacing: 0.14rem;
+}
+.sign{
     position: absolute;
-    bottom: -10px; /* Положение до появления */
-    right: -10px;
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border-radius: 50% 0 0 0; /* Создаем скругленный угол */
-    opacity: 0;
-    transition: opacity 0.3s ease, bottom 0.3s ease, right 0.3s ease;
+    bottom: 2px;
+    right: -50px;
+    background-color: #D9D9D9;
+    color: #343434;
+    padding: 0.5rem 2rem 1rem 1.5rem;
+    border-radius: 5px;
+    font-size: 3rem;
+    font-family: "Exo2-Bold";
+    transition: .3s;
+}
+.wrap:hover .sign{
+    right: -2px;
+    bottom: -2px;
 }
