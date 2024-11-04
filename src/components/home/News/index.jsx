@@ -20,13 +20,13 @@ function News() {
                 pauseOnHover={true}
             >
                 <div className='new_carousel'>
-                    <Image
-                        src={Img1}
-                        width={'auto'}
-                        height={'auto'}
-                        alt="adliya"
-                        className={styles.image}
-                    />
+                        <Image
+                            src={Img1}
+                            width={'auto'}
+                            height={'auto'}
+                            alt="adliya"
+                            className={styles.image}
+                        />
                 </div>
                 <div className='new_carousel'>
                     <Image

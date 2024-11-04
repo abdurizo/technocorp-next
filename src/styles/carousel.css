@@ -13,3 +13,38 @@
 .new_carousel{
     margin:2.4rem 1rem;
 }
+
+.swiper_container {
+    position: relative; 
+    margin-top: 13.4rem;
+}
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 10.8rem;
+    height: 6.6rem;
+    z-index: 666;
+}
+
+.swiper-button-disabled{
+    opacity: .5;
+}
+.prev {
+    right: 5rem;
+}
+.next {
+    left: 5rem; 
+}
+.swiper-pagination-bullet{
+    border: 3px solid #656565BF;
+    width: 2rem !important;
+    height: 2rem !important;
+    background: none !important;
+    opacity: 1 !important;
+}
+.swiper-pagination-bullet-active{
+    background-color: #fff !important;
+}

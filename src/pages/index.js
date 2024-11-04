@@ -2,7 +2,7 @@ import Head from "next/head";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Header from '@/components/home/Header';
-import Carousel from '@/components/Carousel/Carousel';
+import CarouselPartners from '@/components/CarouselPartners/CarouselPartners';
 import AboutUs from '@/components/home/AboutUs';
 import OurProjects from '@/components/home/OurProjects';
 import Services from '@/components/home/Services';
@@ -10,6 +10,7 @@ import Scroll from '@/components/home/Scroll';
 import Startap from '@/components/home/Startap';
 import News from '@/components/home/News';
 import ContactUs from '@/components/home/ContactUs';
+import Corousel from '@/components/Carousel';
 
 
 export async function getServerSideProps({ locale }) {
@@ -31,14 +32,15 @@ export default function Home({ locale }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header locale={locale} />
-      <Carousel />
+      <CarouselPartners />
       <AboutUs />
       <OurProjects />
       <Services />
       <Scroll />
       <Startap />
       <News />
-      <ContactUs/>
+      <ContactUs />
+      <Corousel/>
     </>
   );
 }

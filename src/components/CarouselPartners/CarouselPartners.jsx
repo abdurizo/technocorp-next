@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Marquee from "react-fast-marquee";
 
-import styles from "./Carousel.module.css"
+import styles from "./CarouselPartners.module.css"
 
 
 import AdliyaC from '@/icon/adliyaC.svg';
