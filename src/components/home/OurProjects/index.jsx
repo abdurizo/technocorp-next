@@ -3,9 +3,12 @@ import styles from './OurProjects.module.css';
 import classN from 'classnames';
 
 import Image from 'next/image';
-import Of1 from '@/img/Of1.jpg';
-import Of2 from '@/img/Of2.jpg';
-import Of3 from '@/img/Of3.jpg';
+import Aloqatarixi from '@/img/imgProject/aloqatarixi.png';
+import Qustut from '@/img/imgProject/qustut.png';
+import MilliTiklanish from '@/img/imgProject/milliTiklanish.png';
+import Oʼzbrespvаzirlаr from '@/img/imgProject/OʼZBRESPVАZIRLАR.jpeg';
+import Uzkomnazor from '@/img/imgProject/uzkomnazor.jpeg';
+import Giologiya from '@/img/imgProject/giologiya.webp';
 import KuchFdolat from '@/img/kuchFdolat.png';
 import Btn from '@/components/ui/Btn/Btn';
 
@@ -23,67 +26,73 @@ function OurProjects() {
                         <p>Milliy tiklanish demokratik partiyasi</p>
                     </div>
 
-                    <Image className={styles.image} src={Of1} width={'auto'} height={'auto'} alt="of" />
+                    <Image className={styles.image} src={Aloqatarixi} width={'auto'} height={'auto'} alt="of" />
                 </div>
+
                 <div className={classN(styles.item2, styles.item)}>
-                <div className={styles.item_back}>
+                    <div className={styles.item_back}>
                         <div>
                             <Image src={KuchFdolat} width={'auto'} height={'auto'} alt="KuchFdolat" />
                         </div>
 
                         <p>Milliy tiklanish demokratik partiyasi</p>
                     </div>
-                    <Image className={styles.image} src={Of2} width={'auto'} height={'auto'} alt="of" />
+                    <Image className={styles.image} src={Oʼzbrespvаzirlаr} width={'auto'} height={'auto'} alt="of" />
                 </div>
+
                 <div className={classN(styles.item3, styles.item)}>
-                <div className={styles.item_back}>
+                    <div className={styles.item_back}>
                         <div>
                             <Image src={KuchFdolat} width={'auto'} height={'auto'} alt="KuchFdolat" />
                         </div>
 
                         <p>Milliy tiklanish demokratik partiyasi</p>
                     </div>
-                    <Image className={styles.image} src={Of3} width={'auto'} height={'auto'} alt="of" />
+                    <Image className={styles.image} src={Qustut} width={'auto'} height={'auto'} alt="of" />
                 </div>
+
                 <div className={classN(styles.item4, styles.item)}>
-                <div className={styles.item_back}>
+                    <div className={styles.item_back}>
                         <div>
                             <Image src={KuchFdolat} width={'auto'} height={'auto'} alt="KuchFdolat" />
                         </div>
 
                         <p>Milliy tiklanish demokratik partiyasi</p>
                     </div>
-                    <Image className={styles.image} src={Of1} width={'auto'} height={'auto'} alt="of" />
+                    <Image className={styles.image} src={Uzkomnazor} width={'auto'} height={'auto'} alt="of" />
                 </div>
+
                 <div className={classN(styles.item5, styles.item)}>
-                <div className={styles.item_back}>
+                    <div className={styles.item_back}>
                         <div>
                             <Image src={KuchFdolat} width={'auto'} height={'auto'} alt="KuchFdolat" />
                         </div>
 
                         <p>Milliy tiklanish demokratik partiyasi</p>
                     </div>
-                    <Image className={styles.image} src={Of2} width={'auto'} height={'auto'} alt="of" />
+                    <Image className={styles.image} src={Giologiya} width={'auto'} height={'auto'} alt="of" />
                 </div>
+
                 <div className={classN(styles.item6, styles.item)}>
-                <div className={styles.item_back}>
+                    <div className={styles.item_back}>
                         <div>
                             <Image src={KuchFdolat} width={'auto'} height={'auto'} alt="KuchFdolat" />
                         </div>
 
                         <p>Milliy tiklanish demokratik partiyasi</p>
                     </div>
-                    <Image className={styles.image} src={Of3} width={'auto'} height={'auto'} alt="of" />
+                    <Image className={styles.image} src={MilliTiklanish} width={'auto'} height={'auto'} alt="of" />
                 </div>
+
                 <div className={classN(styles.item7, styles.item)}>
-                <div className={styles.item_back}>
+                    <div className={styles.item_back}>
                         <div>
                             <Image src={KuchFdolat} width={'auto'} height={'auto'} alt="KuchFdolat" />
                         </div>
 
                         <p>Milliy tiklanish demokratik partiyasi</p>
                     </div>
-                    <Image className={styles.image} src={Of1} width={'auto'} height={'auto'} alt="of" />
+                    <Image className={styles.image} src={Oʼzbrespvаzirlаr} width={'auto'} height={'auto'} alt="of" />
                 </div>
             </div>
             <Btn />

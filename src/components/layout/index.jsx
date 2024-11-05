@@ -1,6 +1,7 @@
 import Head from 'next/head';
 
 import NavBar from './NavBar';
+import Footer from './Footer';
 
 
 function index({ children }) {
@@ -8,7 +9,7 @@ function index({ children }) {
     <>
       <NavBar />
       <main>{children}</main>
-      <footer></footer>
+      <Footer />
     </>
   )
 }

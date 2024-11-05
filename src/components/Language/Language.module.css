@@ -26,6 +26,16 @@
     color: #fff;
 }
 .wrap_icon{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+}
+.wrap_icon span{
+    font-family: "Exo2-Medium";
+    color: #fff;
+    margin-right: 0.5rem;
+}
+.icon{
     width: 1.8rem;
     height: 1.8rem;
 }

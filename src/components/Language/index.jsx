@@ -37,10 +37,12 @@ function Language() {
                 <Link href={pathname} locale="en" onClick={() => handelExecutionFunction('en')} className={`${activeLocale === "en" ? styles.active : styles.noactive}`}>EN</Link>
             </div>
             <div className={styles.wrap_icon} onClick={handelAddClass}>
+                <span className={styles.content}>{i18n?.language === 'uz' ? 'UZ' : i18n?.language === 'ru' ? 'RU' : "EN"}</span>
                 <Image src={GlobeEarthIcon}
                     width={'auto'}
                     height={'auto'}
                     alt="icon glasses"
+                    className={styles.icon}
                 />
             </div>
 
