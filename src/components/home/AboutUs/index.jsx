@@ -59,11 +59,8 @@ function AboutUs() {
         </div>
 
         <p className={styles.text}>
-          "Axborot texnologiyalari va axborot resurslarini rivojlantirish markazi" MCHJ
-          O‘zbekiston Respublikasi Prezidentining 2019-yil 14-sentabrdagi
-          "Axborot texnologiyalari va kommunikatsiyalarning yangi avlodini yaratish
-          orqali ulardan foydalanish imkoniyatlarini yanada kengaytirishga doir qo‘shimcha chora-tadbirlar to‘g‘risida"
-          PQ-4452-son qaroriga muvofiq tashkil etilgan.
+        Markazning asosiy vazifalari:
+        texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek, axborot portallari va veb-resurslarni rivojlantirish va jadallashtirish masalalarida texnik ko‘mak berish...
         </p>
 
       </div>

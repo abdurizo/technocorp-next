@@ -6,7 +6,7 @@ import styles from './Card.module.css';
 import Image from 'next/image';
 
 
-function Card({ gif, image }) {
+function Card({ gif, image, title, text }) {
     const [isHovered, setIsHovered] = useState(false);
 
 
@@ -17,7 +17,7 @@ function Card({ gif, image }) {
         >
 
             <div className={styles.title_wrap}>
-                <h3 className={styles.title}>Texnik hujjat ishlab chiqish</h3>
+                <h3 className={styles.title}>{title}</h3>
                 <div className={styles.image}>
 
                     <Image
@@ -30,13 +30,14 @@ function Card({ gif, image }) {
                     />
                 </div>
             </div>
-            <div className={styles.button}>
-            <p className={styles.text}>texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek, axborot portallari va veb-resurslarni rivojlantirish va jadallashtirish masalalarida texnik ko‘mak berish...</p>
-            
+            <div className={styles.sup_text}>
+                <p className={styles.text}>{text}</p>
+
                 <div className={styles.wrap_but}>
                     
+                <Link className={styles.but} href={"#!"}>BATAFSIL</Link>   
                 </div>
-                <Link className={styles.but} href={"#!"}>BATAFSIL</Link>
+                 
             </div>
 
 

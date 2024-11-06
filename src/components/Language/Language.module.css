@@ -21,9 +21,11 @@
 }
 .noactive{
     color: #A8A8A8;
+    cursor: pointer;
 }
 .active{
     color: #fff;
+    cursor: pointer;
 }
 .wrap_icon{
    display: flex;

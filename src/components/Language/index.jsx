@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Image from 'next/image';
 import Link from 'next/link';
@@ -15,6 +15,8 @@ function Language() {
     const { locale, pathname } = router;
     const [toggle, setToggle] = useState(false);
     const [activeLocale, setActiveLocale] = useState(locale);
+    const [clientLanguage, setClientLanguage] = useState(null);
+
     const handelAddClass = () => {
         setToggle(!toggle)
     };
@@ -24,20 +26,47 @@ function Language() {
     const handelExecutionFunction = (newLocale) => {
         handelAddClass();
         handelAddClassLocation(newLocale);
+        router.push(pathname, pathname, { locale: newLocale });
     }
+
+    useEffect(() => {
+        setClientLanguage(i18n.language);
+    }, [i18n.language]);
+
+    useEffect(() => {
+        setActiveLocale(locale); // Обновление языка при изменении маршрута
+    }, [locale]);
+    
     return (
         <div
             className={styles.language_wrap}
         >
             <div className={`${styles.language} ${toggle ? styles.uncover : ''}`}>
 
-                <Link href={pathname} locale="uz" onClick={() => handelExecutionFunction('uz')} className={`${activeLocale === "uz" ? styles.active : styles.noactive}`}>UZ</Link>
-
-                <Link href={pathname} locale="ru" onClick={() => handelExecutionFunction('ru')} className={`${activeLocale === "ru" ? styles.active : styles.noactive}`}>RU</Link>
-                <Link href={pathname} locale="en" onClick={() => handelExecutionFunction('en')} className={`${activeLocale === "en" ? styles.active : styles.noactive}`}>EN</Link>
+                <span
+                    onClick={() => handelExecutionFunction('uz')}
+                    className={activeLocale === "uz" ? styles.active : styles.noactive}
+                >
+                    UZ
+                </span>
+              
+                <span
+                    onClick={() => handelExecutionFunction('ru')}
+                    className={activeLocale === "ru" ? styles.active : styles.noactive}
+                >
+                    RU
+                </span>
+            
+                <span
+                    onClick={() => handelExecutionFunction('en')}
+                    className={activeLocale === "en" ? styles.active : styles.noactive}
+                >
+                    EN
+                </span>
+                
             </div>
             <div className={styles.wrap_icon} onClick={handelAddClass}>
-                <span className={styles.content}>{i18n?.language === 'uz' ? 'UZ' : i18n?.language === 'ru' ? 'RU' : "EN"}</span>
+                <span className={styles.content}>{clientLanguage === 'uz' ? 'UZ' : clientLanguage === 'ru' ? 'RU' : "EN"}</span>
                 <Image src={GlobeEarthIcon}
                     width={'auto'}
                     height={'auto'}

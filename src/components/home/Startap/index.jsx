@@ -16,9 +16,24 @@ function Startap() {
         <section className='container'>
             <h2 className="sectionTitle">Startap loyihalar</h2>
             <div className={styles.grid_content}>
-                <CardForStartap imageOne={Slack} imageTwo={Slack2} />
-                <CardForStartap imageOne={Layers} imageTwo={Layers2} />
-                <CardForStartap imageOne={Cpu} imageTwo={Cpu2} />
+                <CardForStartap
+                    imageOne={Slack}
+                    imageTwo={Slack2}
+                    text={' PRIVATE SCHOOLASSISTANT'}
+                    textTwo={'Oʼqishga kirish uchun onlayn ariza berish, shaxsiy kabinet ochish, xususiy taʼlim muassasalari boʼyicha umumiy maʼlumot berish.'}
+                />
+                <CardForStartap
+                    imageOne={Layers}
+                    imageTwo={Layers2}
+                    text={'E-archive'}
+                    textTwo={'Аrxiv hujjatlarini raqamlashtirish, saqlash va foydalanish'}
+                />
+                <CardForStartap
+                    imageOne={Cpu}
+                    imageTwo={Cpu2}
+                    text={'SMART GADGET'}
+                    textTwo={'Muzey tizimini avtomatlashtirish hamda inson omilini kamaytirib vaqtni tejashga yordam beradi.'}
+                />
             </div>
             <Btn />
         </section>
