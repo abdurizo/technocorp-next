@@ -31,13 +31,13 @@ function Card({ gif, image, title, text }) {
                 </div>
             </div>
             <div className={styles.sup_text}>
+
                 <p className={styles.text}>{text}</p>
 
                 <div className={styles.wrap_but}>
-                    
-                <Link className={styles.but} href={"#!"}>BATAFSIL</Link>   
+                    <Link className={styles.but} href={"#!"}>BATAFSIL</Link>
                 </div>
-                 
+
             </div>
 
 

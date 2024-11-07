@@ -42,7 +42,7 @@ function NavBar() {
       <div className={styles.nav_icon}>
         <SiteView />
         <div className={`${styles.icon_animation} check`} onClick={handelAddClass}>
-          <div className={`${styles.number} ${toggle ? styles.d_toggle : ''} `}>+998 (55) 501-43-00</div>
+          <div className={styles.number}>+998 (55) 501-43-00</div>
           <div>
             <Image src={PhoneIcon}
               width={'auto'}
@@ -52,7 +52,7 @@ function NavBar() {
           </div>
         </div>
         <div className={styles.icon_animation} >
-          <input type="text" className={`${styles.search} ${search ? styles.search_active : ''} `} placeholder='sea rch' />
+          <input type="text" className={`${styles.search} ${search ? styles.search_active : ''} `} placeholder='search' />
           <div onClick={handelAddClassSearch}>
             <Image src={SearchIcon}
               width={'auto'}

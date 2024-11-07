@@ -1,5 +1,5 @@
 .wrap {
-    border-radius: 4rem;
+    border-radius: 20px;
     border: 1px solid #FFF;
     padding: 5rem 7rem;
     cursor: pointer;
@@ -62,7 +62,7 @@
     padding: 0.5rem 2rem 1rem 1.5rem;
     border-radius: 5px;
     font-size: 3rem;
-    font-family: "Exo2-Bold";
+    font-family: "Roboto-Boldr";
     transition: .3s;
 }
 

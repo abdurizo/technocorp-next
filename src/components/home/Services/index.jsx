@@ -23,13 +23,13 @@ function Services() {
                 <Card
                     gif="/gif/Gif3.gif"
                     image="/gif/gif3.svg"
-                    title={'DASTURIY APPARAT QURILMALARINIDASTURLASH'}
+                    title={'DASTURIY APPARAT QURILMALARINI DASTURLASH'}
                     text={'texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek, axborot portallari va veb-resurslarni rivojlantirish va jadallashtirish masalalarida texnik ko‘mak berish...'}
                 />
                 <Card
                     gif="/gif/Gif4.gif"
                     image="/gif/gif4.svg"
-                    title={'VR VA AR TEXNOLOGIYALARI360 TUR'}
+                    title={'VR VA AR TEXNOLOGIYALARI 360 TUR'}
                     text={'texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek, axborot portallari va veb-resurslarni rivojlantirish va jadallashtirish masalalarida texnik ko‘mak berish...'}
                 />
                 <Card

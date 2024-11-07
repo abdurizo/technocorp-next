@@ -5,7 +5,7 @@ import styles from './Btn.module.css';
 function Btn() {
   return (
     <div className={styles.btn_wrap}>
-      <Link href={'#!'} className={styles.wrap}>Batafsil</Link>
+      <Link href={'#!'} className={styles.btn}>Batafsil</Link>
     </div>
   )
 

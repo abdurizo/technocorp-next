@@ -56,7 +56,7 @@ function Carousel() {
                </div>
             </Link>
 
-            <Link href={''} target={'_blank'}>
+            <Link href={'https://gov.uz/ru/toshkent/pages/about'} target={'_blank'}>
                <div className='carousel_wrap'>
                   <Image
                      src={KuchFdolatC}

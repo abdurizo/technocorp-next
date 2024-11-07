@@ -5,21 +5,20 @@
     display: none!important;
 }
 .additional_features {
-    /* display: none; */
     padding: 16px;
     position: absolute;
-    bottom: -19rem;
+    bottom: -14rem;
     left: -5rem;
     cursor: auto;
-    background-color: #57c73bf9;
-    height: 178px;
+    background-color: #002e13;
+    border-radius: 5px;
 }
 .additional_features p {
-    font-family: "Exo2-Regular";
-    font-size: 16px;
-    line-height: 19px;
-    color: #343333;
-    margin-bottom: 16px;
+    font-family: "Exo2-Medium";
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    color: #A8A8A8;
+    margin-bottom: 1.6rem;
 }
 .site_view_block {
     position: relative;

@@ -1,0 +1,10 @@
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="codesandbox">
+<path id="Vector" d="M105 79.9995V39.9995C104.998 38.2459 104.535 36.5236 103.658 35.0053C102.78 33.4871 101.519 32.2263 100 31.3495L65 11.3495C63.4798 10.4718 61.7554 10.0098 60 10.0098C58.2446 10.0098 56.5202 10.4718 55 11.3495L20 31.3495C18.4813 32.2263 17.2199 33.4871 16.3423 35.0053C15.4647 36.5236 15.0018 38.2459 15 39.9995V79.9995C15.0018 81.7531 15.4647 83.4755 16.3423 84.9937C17.2199 86.5119 18.4813 87.7727 20 88.6495L55 108.65C56.5202 109.527 58.2446 109.989 60 109.989C61.7554 109.989 63.4798 109.527 65 108.65L100 88.6495C101.519 87.7727 102.78 86.5119 103.658 84.9937C104.535 83.4755 104.998 81.7531 105 79.9995Z" stroke="#CBCBCB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M37.5 21.0498L60 34.0498L82.5 21.0498" stroke="#CBCBCB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M37.5 98.95V73L15 60" stroke="#CBCBCB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M105 60L82.5 73V98.95" stroke="#CBCBCB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M16.3477 34.7998L59.9977 60.0498L103.648 34.7998" stroke="#CBCBCB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M60 110.4V60" stroke="#CBCBCB" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
