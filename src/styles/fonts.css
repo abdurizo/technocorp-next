@@ -38,3 +38,15 @@
     src: url("../assets/fonts/Work_Sans/WorkSans-Regular.ttf");
     font-family: "WorkSans-Regular";
 }
+@font-face {
+    src: url("../assets/fonts/static/Inter_18pt-Bold.ttf");
+    font-family: "Inter_18pt-Bold";
+}
+@font-face {
+    src: url("../assets/fonts/static/Inter_18pt-Regular.ttf");
+    font-family: "Inter_18pt-Regular";
+}
+@font-face {
+    src: url("../assets/fonts/static/Inter_18pt-SemiBold.ttf");
+    font-family: "Inter_18pt-SemiBold";
+}

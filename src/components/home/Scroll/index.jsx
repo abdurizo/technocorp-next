@@ -32,7 +32,7 @@ function Scroll() {
                         <div className={styles.circle_1}></div>
                     </div>
                     <div className={styles.text_wrap_1}>
-                        <p className={styles.text_1}> texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek, axborot portallari va veb-resurslarni rivojlantirish va jadallashtirish masalalarida texnik ko‘mak berish...</p>
+                        <p className={styles.text_1}>har bir xizmat yoki mahsulotda mukammallikni ta'minlash, mijozlar talablariga to'liq javob berish va doimiy ravishda takomillashtirishga intilishdir. Technocorp sifatni eng yuqori darajaga qo'yib, har bir loyiha va yechimda ishonchli va barqaror natijalarga erishishga intiladi. Sifat — bu kompaniyaning muvaffaqiyatining asosi.</p>
                     </div>
                 </div>
 
@@ -52,7 +52,7 @@ function Scroll() {
                         <div className={styles.circle_1}></div>
                     </div>
                     <div className={styles.text_wrap_1}>
-                        <p className={styles.text_1}> texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek, axborot portallari va veb-resurslarni rivojlantirish va jadallashtirish masalalarida texnik ko‘mak berish...</p>
+                        <p className={styles.text_1}>mijozlar, hamkorlar va xodimlar o'rtasida mustahkam aloqalarni yaratish, o'z vaqtida va sifatli xizmat ko'rsatish orqali ishning to'g'ri bajarilishiga ishonch hosil qilishdir. Technocorp o'zining ishonchli va o'zaro hurmatga asoslangan yondashuvi bilan, barcha tomonlar uchun doimiy ravishda yuqori darajadagi xizmatlarni taqdim etadi.    </p>
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@ function Scroll() {
                         <div className={styles.circle_1}></div>
                     </div>
                     <div className={styles.text_wrap_1}>
-                        <p className={styles.text_1}> texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek, axborot portallari va veb-resurslarni rivojlantirish va jadallashtirish masalalarida texnik ko‘mak berish...</p>
+                        <p className={styles.text_1}>yangiliklar yaratish va texnologiyalarni doimiy ravishda rivojlantirish orqali bozorni yangi va ilg'or yechimlar bilan to'ldirishdir. Technocorp innovatsiyalarni hayotga tadbiq etish orqali o'z mijozlariga samarali va raqobatbardosh texnologik yechimlar taklif etadi. Innovatsiya kompaniyaning uzoq muddatli muvaffaqiyatini ta'minlovchi asosiy kuchdir.</p>
                     </div>
                 </div>
 

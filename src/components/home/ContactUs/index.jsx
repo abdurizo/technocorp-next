@@ -1,6 +1,6 @@
 import styles from './ContactUs.module.css';
 
-import Form from '@/components/Form'
+import Form from '@/components/home/Form'
 
 function ContactUs() {
     return (

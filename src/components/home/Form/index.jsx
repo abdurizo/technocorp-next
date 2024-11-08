@@ -14,7 +14,7 @@ function Form() {
         formState: { errors },
         handleSubmit,
     } = useForm({
-        mode: 'onBlur',
+        mode: 'onSubmit',
     });
 
     const onSubmit = (data) => {

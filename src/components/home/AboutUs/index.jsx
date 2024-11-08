@@ -38,16 +38,6 @@ function AboutUs() {
           PQ-4452-son qaroriga muvofiq tashkil etilgan.
         </p>
 
-        {/* <div className={styles.link}>
-          <span className={styles.linkText}>BATAFSIL</span>
-          <Link href={'https://www.youtube.com/watch?v=-ACo9Zh3f9k&t=7s'}
-            className={styles.playIcon}>
-            <span>
-              <Image src={Play} width={'auto'} height={'auto'} alt="icon play" />
-            </span>
-          </Link>
-        </div> */}
-
         <div className={styles.link}>
           <span className={styles.linkText}>BATAFSIL</span>
           <div onClick={openModal} className={styles.playIcon}>

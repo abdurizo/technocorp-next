@@ -1,0 +1,154 @@
+.wrap {
+    background: #c4c4c430;
+    padding: 1.1rem;
+    border-radius: 100%;
+    position: fixed;
+    top: 800px;
+    right: 50px;
+    z-index: 999;
+}
+
+.inner_wrap {
+    background: #c4c4c430;
+    padding: 1.5rem 2rem;
+    border-radius: 100%;
+
+}
+
+.image {
+    max-width: 2.4rem;
+    max-height: 2.4rem;
+    animation: animate 1s infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modalContent {
+    position: relative;
+    background: rgba(24, 24, 24, 0.70);
+    padding: 5rem;
+    border-radius: 8px;
+    min-width: 46rem;
+    text-align: center;
+}
+
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    background-color: #fff;
+    font-weight: 900;
+    border-radius: 5px;
+}
+
+.title_form {
+    color: #D8D8D8;
+    font-family: "Inter_18pt-Bold";
+    font-size: 2.7895rem;
+    font-style: normal;
+    line-height: normal;
+}
+
+.form {
+    margin-top: 4.2rem;
+    text-align: left;
+}
+
+.block {
+    margin-bottom: 2.7rem;
+}
+
+.form_text_style {
+    font-family: "Inter_18pt-Regular";
+    font-size: 1.594rem;
+    font-style: normal;
+    line-height: normal;
+}
+
+.label {
+    color: #D8D8D8;
+}
+
+.input_wrap {
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.icon {
+    width: 1.9rem;
+    height: 1.9rem;
+}
+
+.input {
+    background: none;
+    outline: none;
+    border: none;
+    color: #fff;
+    width: 100%;
+}
+
+.input::placeholder {
+    color: rgba(255, 255, 255, 0.50);
+}
+.error {
+    color: #c31d1d;
+    margin-top: 0.5rem;
+}
+.button_wrap{
+    text-align: center;
+}
+.button {
+    font-family: "Inter_18pt-SemiBold";
+    font-size: 1.8rem;
+    font-style: normal;
+    line-height: 2.16rem;
+    text-transform: capitalize;
+    padding: 1rem 3rem;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 10px;
+    margin-top: 1rem;
+    opacity: 0.7;
+    transition: .3s;
+}
+.button:hover{
+    opacity: 1  ;
+    transition: .3s;
+}

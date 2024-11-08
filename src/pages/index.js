@@ -1,10 +1,11 @@
 import Head from "next/head";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+import ContactUsPosition from "@/components/ContactUs";
 import Header from '@/components/home/Header';
 import CarouselPartners from '@/components/CarouselPartners/CarouselPartners';
 import AboutUs from '@/components/home/AboutUs';
-import OurProjects from '@/components/home/OurProjects';
+import OurProjects from '@/components/OurProjects';
 import Services from '@/components/home/Services';
 import Scroll from '@/components/home/Scroll';
 import Startap from '@/components/home/Startap';
@@ -31,6 +32,7 @@ export default function Home({ locale }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      {/* <ContactUsPosition/> */}
       <Header locale={locale} />
       <CarouselPartners />
       <AboutUs />
