@@ -1,6 +1,7 @@
 import styles from './NavBar.module.css';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState } from "react";
 import { useTranslation } from 'next-i18next';
 
@@ -10,6 +11,7 @@ import PhoneIcon from '@/icon/phone.svg';
 import SearchIcon from '@/icon/search.svg';
 import GlobeEarthIcon from '@/icon/globe-earth.svg';
 import SiteView from '@/components/SiteView/index';
+
 
 function NavBar() {
   const { i18n, t } = useTranslation();
@@ -24,19 +26,44 @@ function NavBar() {
 
   return (
     <nav className={styles.logo}>
-      <div >
+      <Link href="/" >
         <Image src={Logo}
           width={'auto'}
           height={'auto'}
           alt="icon glasses"
         />
-      </div>
+      </Link>
       <ul className={styles.nav_list}>
-        <li>{t('about')}</li>
-        <li>Xizmatlar</li>
-        <li>Loyihalar</li>
-        <li>Yangiliklar</li>
-        <li>Bog‘lanish</li>
+        <li>
+          <Link href="/about">
+            {t('about')}
+          </Link>
+        </li>
+        <li>
+          <Link href="#">
+            Markaz
+          </Link>
+        </li>
+        <li>
+          <Link href="#">
+            Xizmatlar
+          </Link>
+        </li>
+        <li>
+          <Link href="#">
+            Loyihalar
+          </Link>
+        </li>
+        <li>
+          <Link href="#">
+            Yangiliklar
+          </Link>
+        </li>
+        <li>
+          <Link href="#">
+            Bog‘lanish
+          </Link>
+        </li>
       </ul>
 
       <div className={styles.nav_icon}>

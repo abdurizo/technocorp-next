@@ -1,5 +1,22 @@
+.wrap{
+    position: relative;
+}
 .cards{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 2.4rem;
+}
+.circular{
+    width: 60rem;
+    height: 58rem;
+    flex-shrink: 0;
+    top: 200px;
+    left: -50px;
+}
+.circular_min{
+    min-width: 50rem;
+    min-height: 48rem;
+    flex-shrink: 0;
+    bottom: 0px;
+    right: 0px;    
 }

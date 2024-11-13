@@ -1,0 +1,9 @@
+.background_header {
+    /* background: url(../assets/img/imgFon/fon.jpg) no-repeat center; */
+    background-size: cover;
+    border: 10px solid #000;
+  }
+  .background_about{
+    /* background-color: #000702; */
+    background-size: cover;
+  }

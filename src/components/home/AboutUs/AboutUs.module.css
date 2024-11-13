@@ -1,8 +1,9 @@
 .wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    gap: 11.6rem;
     align-items: center;
+    position: relative;
 }
 
 .text {
@@ -93,14 +94,18 @@
     align-items: center;
     overflow: hidden;
 }
-.top_left img,.bottom_right img{
+
+.top_left img,
+.bottom_right img {
     transition: .3s;
-} 
+}
+
 .top_left:hover img {
     transform: scale(1.1);
     transition: .3s;
 }
-.bottom_right:hover img{
+
+.bottom_right:hover img {
     transform: scale(1.1);
     transition: .3s;
 }
@@ -117,17 +122,17 @@
     justify-content: center;
     align-items: center;
     z-index: 1000;
-  }
-  
-  .modalContent {
+}
+
+.modalContent {
     position: relative;
     background: rgba(255, 255, 255, 0.067);
     padding: 20px;
     border-radius: 8px;
     max-width: 80%;
-  }
-  
-  .closeButton {
+}
+
+.closeButton {
     position: absolute;
     top: 10px;
     right: 10px;
@@ -138,5 +143,19 @@
     padding: 0.5rem 1rem;
     background-color: #fff;
     font-weight: 900;
-    border-radius: 5    px;
-  }
+    border-radius: 5 px;
+}
+.circular{
+    min-width: 60rem;
+    min-height: 58rem;
+    flex-shrink: 0;
+    top: 100px;
+    left: -200px;
+}
+.circular_min{
+    min-width: 50rem;
+    min-height: 48rem;
+    flex-shrink: 0;
+    bottom: 100px;
+    right: -200px;    
+}

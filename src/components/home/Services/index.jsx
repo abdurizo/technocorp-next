@@ -1,11 +1,12 @@
 import styles from './Services.module.css';
 import classN from 'classnames';
 
-import Card from '../../Card'
+import Card from '../../Card';
+import СircularShadow from "@/components/СircularShadow";
 
 function Services() {
     return (
-        <section className={classN(styles.wrap, 'container')}>
+        <section className={classN(styles.wrap, 'container')} >
             <h2 className="sectionTitle">XIZMATLAR</h2>
             <div className={styles.cards}>
                 <Card
@@ -51,7 +52,8 @@ function Services() {
                     text={'Tashkilot faoliyati, veb-sayt, va xizmatlarni axborot-kommunikatsiya texnologiyalari va axborot xavfsizligi talablariga muvofiqlik bo‘yicha audit va konsalting xizmatlarini taklif etamiz.'}
                 />
             </div>
-
+            <СircularShadow className={styles.circular_min} />
+            <СircularShadow className={styles.circular} />
         </section>
     );
 }

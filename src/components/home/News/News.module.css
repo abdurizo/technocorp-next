@@ -1,4 +1,11 @@
 .wrap{
-    text-align: center;
     margin-top: 19.2em;
+    position: relative;
+}
+.circular{
+    width: 60rem;
+    height: 58rem;
+    flex-shrink: 0;
+    top: 100px;
+    left: -50px;
 }

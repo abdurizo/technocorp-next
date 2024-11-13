@@ -1,0 +1,7 @@
+.circular {
+    border-radius: 70rem;
+    background: radial-gradient(70.71% 70.71% at 50% 50%, #3CE477 0%, #000 100%);
+    filter: blur(300px);
+    position: absolute;
+    z-index: -1;
+}

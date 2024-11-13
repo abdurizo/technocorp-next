@@ -15,6 +15,10 @@
     font-family: "Roboto-Regular";
 }
 @font-face {
+    src: url("../assets/fonts/Roboto/Roboto-Medium.ttf");
+    font-family: "Roboto-Medium";
+}
+@font-face {
     src: url("../assets/fonts/static/Exo2-Medium.ttf");
     font-family: "Exo2-Medium";
 }
