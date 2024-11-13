@@ -11,7 +11,7 @@ import Of1 from '@/img/Of1.jpg';
 import Of2 from '@/img/Of2.jpg';
 import Of3 from '@/img/Of3.jpg';
 
-import СircularShadow from "@/components/СircularShadow"
+import СircularShadow from "@/components/СircularShadow";
 
 function AboutUs() {
   // Состояние для модального окна

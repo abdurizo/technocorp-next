@@ -1,0 +1,17 @@
+.wrap{
+    position: relative;
+    padding-top: 15rem;
+    margin-bottom: 1.8rem;
+}
+.background_text {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    font-family: "Roboto-Boldr";
+    font-size: 17.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23rem;
+    color: #00E85D;
+    opacity: 0.05;
+}

@@ -3,6 +3,8 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 11.6rem;
     align-items: center;
+    position: relative;
+    padding-top: 15rem;
 }
 
 .text {
@@ -11,10 +13,9 @@
     font-size: 1.6rem;
     font-style: normal;
     line-height: 2.7rem;
-   
 }
 
-.line{
+.line {
     width: 100%;
     min-height: 0.1rem;
     background: #DDD;
@@ -42,16 +43,47 @@
     align-items: center;
     overflow: hidden;
 }
-.top_left img,.bottom_right img{
+
+.top_left img,
+.bottom_right img {
     transition: .3s;
-} 
+}
+
 .top_left:hover img {
     transform: scale(1.1);
     transition: .3s;
 }
-.bottom_right:hover img{
+
+.bottom_right:hover img {
     transform: scale(1.1);
     transition: .3s;
 }
 
+.circular {
+    min-width: 60rem;
+    min-height: 58rem;
+    flex-shrink: 0;
+    bottom: 0px;
+    left: 0px;
+}
 
+.circular_min {
+    min-width: 50rem;
+    min-height: 48rem;
+    flex-shrink: 0;
+    top: 0px;
+    right: 0px;
+}
+
+.background_text {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    font-family: "Roboto-Boldr";
+    font-size: 17.5rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23rem;
+    color: #00E85D;
+    opacity: 0.05;
+}

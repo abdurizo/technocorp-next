@@ -59,12 +59,10 @@
 
 .prev {
     left: 0.5rem;
-    /* border: 1px solid #fff; */
 }
 
 .next {
     right:0.5rem;
-    /* border: 1px solid #fff; */
 }
 
 .swiper-pagination-bullet {
