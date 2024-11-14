@@ -1,0 +1,20 @@
+.wrap{
+    /* margin: 22rem auto 11.5rem; */
+    position: relative;
+    padding: 15rem 0;
+}
+.circular {
+    min-width: 60rem;
+    min-height: 58rem;
+    flex-shrink: 0;
+    bottom: -50px;
+    left: -50px;
+}
+
+.circular_min {
+    min-width: 50rem;
+    min-height: 48rem;
+    flex-shrink: 0;
+    top: 0px;
+    right: -50px;
+}

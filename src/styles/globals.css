@@ -52,3 +52,15 @@ img {
   line-height: 3.125rem;
   margin-bottom: 5rem;
 }
+.background_text {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  font-family: "Roboto-Boldr";
+  font-size: 17.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23rem;
+  color: #00E85D;
+  opacity: 0.05;
+}

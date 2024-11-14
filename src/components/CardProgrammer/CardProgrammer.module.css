@@ -1,5 +1,5 @@
 .card {
-    width: 42.4rem;
+    /* width: 42.4rem; */
     padding: 2.4rem;
     border-radius: 1rem;
     background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.02) 100%);
@@ -7,8 +7,8 @@
     backdrop-filter: blur(12px);
     position: relative;
     overflow: hidden;
-    min-height: 52rem;
-    transition: all ease 0.3s;
+    min-height: 50rem;
+    transition: all ease 0.5s;
 }
 
 .card:hover {
@@ -21,33 +21,27 @@
 
 .image_wrap {
     max-width: 37.6rem;
-    max-width: 45.2rem;
+    max-height: 45.2rem;
     overflow: hidden;
     border-radius: 10px;
     overflow: hidden;
-    transition: all ease 0.3s;
+    transition: all ease 0.5s;
 }
 
 .card:hover .image_wrap {
-    max-width: 37.6rem;
-    max-height: 34rem;
-    transition: all ease 0.3s;
-}
-
-.image {
-    max-width: 37.6rem;
-    min-height: 45.2rem;
+    max-height: 35rem;
     transition: all ease 0.3s;
 }
 
 .about_programmer {
     position: absolute;
     bottom: -100px;
-    transition: all ease 0.3s;
+    transition: all ease 0.1s;
 }
 
 .card:hover .about_programmer {
     bottom: 20px;
+    transition: all ease 0.5s;
 }
 
 .name {

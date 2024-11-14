@@ -20,8 +20,12 @@
     font-style: normal;
     line-height: 5.2rem;
     margin-bottom: 2.5rem;
+    transition: .2s;
 }
-
+.card:hover .count{
+    color: #00E85D;
+    transition: .2s;
+}
 .text {
     color: #B0B0B0;
     text-align: center;

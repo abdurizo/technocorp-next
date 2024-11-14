@@ -60,7 +60,7 @@ function NavBar() {
           </Link>
         </li>
         <li>
-          <Link href="#">
+          <Link href="/contactus">
             Bog‘lanish
           </Link>
         </li>

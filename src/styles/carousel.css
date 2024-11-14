@@ -65,6 +65,28 @@
     right:0.5rem;
 }
 
+.nextProg,
+.prevProg{
+    position: absolute;
+    /* top: 0%; */
+    bottom: -70px;
+    cursor: pointer;
+    width: 4.8rem;
+    height: 4.8rem;
+    z-index: 666;
+}
+.nextProg{
+    right: 0;
+}
+.prevProg{
+    right: 65px;
+}
+
+
+
+
+
+
 .swiper-pagination-bullet {
     border: 3px solid #656565BF;
     width: 2rem !important;

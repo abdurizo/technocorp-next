@@ -13,7 +13,7 @@ import СircularShadow from "@/components/СircularShadow";
 function AboutUs(props) {
     return (
         <>
-            <section className={classN(styles.wrap, 'container')}>
+            <header className={classN(styles.wrap, 'container')}>
                 <div className={styles.textSection}>
                     <h2 className={classN(styles.title, 'sectionTitle')}>BIZ HAQIMIZDA</h2>
                     <p className={styles.text}>
@@ -43,9 +43,9 @@ function AboutUs(props) {
                 </div>
                 <СircularShadow className={styles.circular_min} />
                 <СircularShadow className={styles.circular} />
-                <p className={styles.background_text}>BIZ HAQIMIZDA</p>
+                <p className='background_text'>BIZ HAQIMIZDA</p>
                
-            </section>
+            </header>
         </>
     );
 }
