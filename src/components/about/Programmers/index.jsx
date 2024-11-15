@@ -11,12 +11,12 @@ const Carousel = dynamic(() => import('@/components/CarouselProgrammer'), { ssr:
 function Programmers() {
     return (
         <section className={classN(styles.wrap, 'container')}>
-            <h2 className={classN(styles.title, 'sectionTitle')}>BIZNING DASTURCHILAR</h2>
+            <h2 className={classN(styles.title, 'sectionTitle')}>BIZNING JAMOA</h2>
             <div className={styles.carousel}>
                 <Carousel />
             </div>
 
-            <p className='background_text'>DASTURCHILAR</p>
+            <p className='background_text'>BIZNINGJAMOA</p>
             <СircularShadow className={styles.circular} />
         </section>
     );

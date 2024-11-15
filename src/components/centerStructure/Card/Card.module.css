@@ -1,0 +1,78 @@
+.card {
+    background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12px);
+    border-radius: 10px;
+    padding: 2.4rem;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    padding: 1px;
+    /* Ширина границы */
+    background: linear-gradient(180deg, #ffffff, #ffffff00);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    /* Нужен для правильной маски */
+    mask-composite: exclude;
+    pointer-events: none;
+    /* Чтобы псевдоэлемент не мешал кликам */
+}
+
+.person_info {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+}
+
+.Image_wrap {
+    max-width: 15rem;
+    max-height: 15rem;
+}
+.base{
+    color: #fff;
+    font-family: "Exo2-Regular";
+    font-style: normal;
+}
+.full_name {
+    font-size: 2.8rem;
+    margin-bottom: 0.8rem;
+    line-height: 2.88rem;
+}
+.position{
+    color: #D2D2D2;
+    font-size: 1.6rem;    
+    /* line-height: 110%  */
+}
+.reception{
+    display: flex;
+    border-top: 1px solid rgba(255, 255, 255, 0.30);
+    margin-top: 1.2rem;
+    padding-top: 1.2rem;
+}
+.reception_time{
+    font-size: 1.8rem;
+    /* line-height: 110% */
+}
+.social{
+    margin-top: 2.4rem;
+    display: flex;
+    justify-content: space-between;
+}
+.image_social{
+    max-width: 3.6rem;
+    max-height: 3.6rem;
+}
+.social_block{
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
