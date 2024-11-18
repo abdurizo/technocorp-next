@@ -2,14 +2,14 @@ import styles from './CardProgrammer.module.css';
 
 import Image from 'next/image';
 
-import KhodjabekovaSh from '@/img/imgProgrammer/KhodjabekovaShakhnoza.jpg'
+import KhodjabekovaSh from '@/img/imgProgrammer/KhodjabekovaShakhnoza.jpg';
 
-function CardProgrammer() {
+function CardProgrammer({image,name,profession}) {
     return (
         <div className={styles.card}>
             <div className={styles.image_wrap}>
                 <Image
-                    src={KhodjabekovaSh}
+                    src={image}
                     width={376}
                     height={452}
                     alt="Development"
@@ -17,8 +17,8 @@ function CardProgrammer() {
                 />
             </div>
             <div className={styles.about_programmer}>
-                <p className={styles.name}>Khodjabekova Shakhnoza Baxodirovna</p>
-                <p className={styles.profession}>Back-end developer</p>
+                <p className={styles.name}>{name }</p>
+                <p className={styles.profession}>{profession }</p>
             </div>
             
         </div>

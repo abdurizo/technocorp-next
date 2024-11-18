@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import styles from "@/styles/styles.module.css";
+// import styles from "@/styles/styles.module.css";
 
 // import ContactUsPosition from "@/components/ContactUs";
 import Header from "@/components/home/Header";

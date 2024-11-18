@@ -1,6 +1,6 @@
 .wrap {
-    border-radius: 20px;
-    border: 1px solid #FFF;
+    border-radius: 10px;
+    /* border: 1px solid #FFF; */
     padding: 5rem 7rem;
     cursor: pointer;
     overflow: hidden;
@@ -15,6 +15,27 @@
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.04), 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 16px 0px rgba(0, 0, 0, 0.60);
     transition: background-color 0.7s ease, transform 0.5s ease;
 }
+
+.wrap::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    padding: 1px; /* Ширина границы */
+    background: linear-gradient(180deg, #ffffff, #ffffff00);
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor; /* Нужен для правильной маски */
+    mask-composite: exclude;
+    pointer-events: none; /* Чтобы псевдоэлемент не мешал кликам */
+}
+
+
+
 
 .nohover_img {
     background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.02) 100%);

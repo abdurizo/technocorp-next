@@ -15,6 +15,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/pagination';
 import { Navigation, Pagination, } from 'swiper/modules';
 
+import KhodjabekovaSh from '@/img/imgProgrammer/KhodjabekovaShakhnoza.jpg';
+import RasulovKomiljon from '@/img/imgProgrammer/RasulovKomiljon.jpg';
+
 export default function CarouselProgrammer() {
 
     return (
@@ -35,29 +38,29 @@ export default function CarouselProgrammer() {
                 className="mySwiper"
             >
                 <SwiperSlide>
-                    <CardProgrammer />
+                    <CardProgrammer image={KhodjabekovaSh} name={'Khodjabekova Shakhnoza Baxodirovna'} profession={'Back-end developer'} />
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <CardProgrammer />
+                    <CardProgrammer image={RasulovKomiljon} name={'Rasulov Komiljon Uktamjonovich'} profession={'Back-end developer'}/>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <CardProgrammer />
+                    <CardProgrammer image={KhodjabekovaSh} name={'Khodjabekova Shakhnoza Baxodirovna'} profession={'Back-end developer'}/>
                 </SwiperSlide>
 
                 <SwiperSlide>
-                    <CardProgrammer />
-                </SwiperSlide>
-
-
-                <SwiperSlide>
-                    <CardProgrammer />
+                    <CardProgrammer image={RasulovKomiljon} name={'Rasulov Komiljon Uktamjonovich'} profession={'Back-end developer'}/>
                 </SwiperSlide>
 
 
                 <SwiperSlide>
-                    <CardProgrammer />
+                    <CardProgrammer image={KhodjabekovaSh} name={'Khodjabekova Shakhnoza Baxodirovna'} profession={'Back-end developer'}/>
+                </SwiperSlide>
+
+
+                <SwiperSlide>
+                    <CardProgrammer image={RasulovKomiljon} name={'Rasulov Komiljon Uktamjonovich'} profession={'Back-end developer'}/>
                 </SwiperSlide>
 
 

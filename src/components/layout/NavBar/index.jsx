@@ -40,7 +40,7 @@ function NavBar() {
           </Link>
         </li>
         <li>
-          <Link href="#">
+          <Link href="centerstructure">
             Markaz
           </Link>
         </li>
