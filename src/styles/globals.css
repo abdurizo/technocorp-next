@@ -51,6 +51,7 @@ img {
   font-style: normal;
   line-height: 3.125rem;
   margin-bottom: 5rem;
+  text-transform: uppercase;
 }
 .background_text {
   position: absolute;
@@ -63,4 +64,5 @@ img {
   line-height: 23rem;
   color: #00E85D;
   opacity: 0.05;
+  text-transform: uppercase;
 }
