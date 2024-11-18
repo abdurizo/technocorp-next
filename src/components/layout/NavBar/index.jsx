@@ -40,7 +40,7 @@ function NavBar() {
           </Link>
         </li>
         <li>
-          <Link href="centerstructure">
+          <Link href="/centerstructure">
             Markaz
           </Link>
         </li>
@@ -50,12 +50,12 @@ function NavBar() {
           </Link>
         </li>
         <li>
-          <Link href="#">
+          <Link href="/proj">
             Loyihalar
           </Link>
         </li>
         <li>
-          <Link href="#">
+          <Link href="/news">
             Yangiliklar
           </Link>
         </li>

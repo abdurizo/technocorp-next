@@ -9,22 +9,26 @@ function Structure(props) {
         <>
             <header className={classN('container', styles.wrap)}>
                 <h2 className={classN('sectionTitle', styles.title)}>Markaz TUZILMASI</h2>
+            </header>
+            <section className='container'> 
                 <div className={styles.wrpa_director}>
-                    
+
                 </div>
 
                 <div className={styles.director}>
-                        <Card />
-                    </div>
+                    <Card />
+                </div>
 
                 <div className={styles.grid}>
                     <Card />
                     <Card />
                     <Card />
                 </div>
-                <СircularShadow className={styles.circular_min} />
-                <СircularShadow className={styles.circular} />
-            </header>
+            </section>
+
+            <СircularShadow className={styles.circular_min} />
+            <СircularShadow className={styles.circular} />
+
             <p className={styles.background_text}>MarkazTUZILMASI</p>
         </>
 
