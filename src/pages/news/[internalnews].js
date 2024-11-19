@@ -2,6 +2,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import dynamic from 'next/dynamic';
 
 
+
 import Header from '@/components/news/internalNews/Header';
 import Information from '@/components/news/internalNews/Information';
 // import OtherNews from '@/components/news/internalNews/OtherNews';
@@ -17,6 +18,7 @@ export async function getServerSideProps({ locale }) {
 }
 
 function Internalnews() {
+ 
   return (
     <div className='container'>
       <Header />
