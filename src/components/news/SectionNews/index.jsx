@@ -1,8 +1,8 @@
 import styles from './SectionNews.module.css';
 
-import Card from '../CardProgrammer';
+import Card from '../CardNew';
 
-import Img from '@/img/imgNews/im1.png'
+import Img from '@/img/imgNews/im1.png';
 
 function SectionNews() {
     return (

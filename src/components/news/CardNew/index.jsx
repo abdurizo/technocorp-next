@@ -1,4 +1,4 @@
-import styles from './CardProgrammer.module.css';
+import styles from './CardNew.module.css';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -41,7 +41,7 @@ function CardProgrammer({ image, name, profession }) {
                         </div>
                     </div>
 
-                    <Link href={'#'} className={styles.button}>
+                    <Link href={'/news/internalnews'} className={styles.button}>
                         <span>Batafsil</span>
                         <Image
                             src={RightGreen}

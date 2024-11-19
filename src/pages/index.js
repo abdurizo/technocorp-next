@@ -7,7 +7,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Header from '@/components/home/Header';
 import CarouselPartners from '@/components/CarouselPartners/CarouselPartners';
 import AboutUs from '@/components/home/AboutUs';
-import OurProjects from '@/components/OurProjects';
+import OurProjects from '@/components/home/OurProjects';
 import Services from '@/components/home/Services';
 import Scroll from '@/components/home/Scroll';
 import Startap from '@/components/home/Startap';

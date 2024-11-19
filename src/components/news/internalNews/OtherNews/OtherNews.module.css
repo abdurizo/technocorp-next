@@ -1,0 +1,31 @@
+.section {
+    margin-top: 10rem;
+    margin-bottom: 11.2rem;
+}
+
+.title {
+    color: #00E85D;
+    font-family: "Roboto-Boldr";
+    font-size: 5rem;
+    font-style: normal;
+    line-height: 5.2rem;
+    margin-bottom: 2.4rem;
+}
+.button_wrap{
+    display: flex;
+    justify-content: end;
+    margin-top: 4rem;
+}
+.button {
+    color: #FFF;
+    font-family: "Exo2-Medium";
+    font-size: 2.8rem;
+    font-style: normal;
+    line-height: 4.4rem;
+    text-transform: capitalize;
+    border-radius: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(59, 59, 59, 0.35);
+    backdrop-filter: blur(5px);
+    padding: 1rem 3rem;
+}

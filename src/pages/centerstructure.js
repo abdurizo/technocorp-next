@@ -1,9 +1,18 @@
-import React from 'react';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Structure from '@/components/centerStructure/Structure';
 import Programmers from '@/components/about/Programmers';
 
-function CenterStructure(props) {
+export async function getServerSideProps({ locale }) {
+    return {
+      props: {
+        ... (await serverSideTranslations(locale, ['common',])),
+        locale: locale
+      },
+    };
+  }
+
+function CenterStructure() {
     return (
         <>
              <Structure />

@@ -12,6 +12,7 @@ import Img5 from '@/img/imgNews/im5.png';
 import Img6 from '@/img/imgNews/im6.png';
 
 import СircularShadow from "@/components/СircularShadow";
+import Btn from '@/components/ui/Btn/Btn';
 
 function News() {
     return (
@@ -140,6 +141,7 @@ function News() {
 
             </Marquee>
             <СircularShadow className={styles.circular} />
+            <Btn text="Batafsil" href="/news" />
         </section>
     );
 }

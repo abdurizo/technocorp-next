@@ -105,7 +105,7 @@ function OurProjects() {
                     <Image className={styles.image} src={IchkiIshlarImg} width={'auto'} height={'auto'} alt="of" />
                 </div>
             </div>
-            <Btn />
+            <Btn text="Batafsil" href="#"/>
         </section>
     );
 }

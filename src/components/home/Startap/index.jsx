@@ -35,7 +35,7 @@ function Startap() {
                     textTwo={'Muzey tizimini avtomatlashtirish hamda inson omilini kamaytirib vaqtni tejashga yordam beradi.'}
                 />
             </div>
-            <Btn />
+            <Btn text="Batafsil" href="#" />
         </section>
     );
 }
