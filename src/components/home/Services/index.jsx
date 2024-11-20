@@ -11,11 +11,13 @@ const serviceList = [
     gif: "/gif/Gif1.gif",
     image: "/gif/gif1.svg",
     title: "Texnik hujjat ishlab chiqish",
+    desc: "texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek, axborot portallari va veb-resurslarni rivojlantirish va jadallashtirish masalalarida texnik ko‘mak berish...",
   },
   {
     gif: "/gif/Gif1.gif",
     image: "/gif/gif2.svg",
     title: "VEB DASTURLASH",
+    desc: "texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek, axborot portallari va veb-resurslarni rivojlantirish va jadallashtirish masalalarida texnik ko‘mak berish...",
   },
   {
     gif: "/gif/Gif3.gif",
