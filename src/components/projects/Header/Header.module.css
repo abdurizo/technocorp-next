@@ -1,0 +1,11 @@
+.wrap {
+    padding-top: 15rem;
+    position: relative;
+}
+.circular {
+    min-width: 60rem;
+    min-height: 58rem;
+    flex-shrink: 0;
+    top: 0px;
+    right: 0px;
+}

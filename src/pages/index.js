@@ -50,7 +50,6 @@ export default function Home({ locale }) {
       <News />
       <ContactUs />
       <Carousel />
-
     </>
 
   );

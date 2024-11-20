@@ -45,12 +45,12 @@ function NavBar() {
           </Link>
         </li>
         <li>
-          <Link href="#">
+          <Link href="/servise">
             Xizmatlar
           </Link>
         </li>
         <li>
-          <Link href="/proj">
+          <Link href="/projects">
             Loyihalar
           </Link>
         </li>
