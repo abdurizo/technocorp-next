@@ -1,0 +1,10 @@
+.container{
+    margin-bottom: 11.9rem;
+}
+.wrap{
+    padding: 7rem;
+    border-radius: 1rem;
+    border: 0.5px solid #474747;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(25px);
+}
