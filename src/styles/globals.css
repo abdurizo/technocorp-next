@@ -1,11 +1,15 @@
-@import"./fonts.css";
-@import"./carousel.css";
+@import "./fonts.css";
+@import "./carousel.css";
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html {
   font-size: 10px;
@@ -46,7 +50,7 @@ img {
 
 .sectionTitle {
   font-family: "Roboto-Boldr";
-  color: #00E85D;
+  color: #00e85d;
   font-size: 5rem;
   font-style: normal;
   line-height: 3.125rem;
@@ -62,7 +66,19 @@ img {
   font-style: normal;
   font-weight: 700;
   line-height: 23rem;
-  color: #00E85D;
+  color: #00e85d;
   opacity: 0.05;
   text-transform: uppercase;
+}
+
+@keyframes loading {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 70%;
+  }
+  100% {
+    width: 100%;
+  }
 }

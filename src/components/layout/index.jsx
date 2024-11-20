@@ -1,19 +1,18 @@
-import Head from 'next/head';
+import Head from "next/head";
 
-import NavBar from './NavBar';
-import Footer from './Footer';
-import ContactUs from '../ContactUs';
-
+import NavBar from "./NavBar";
+import Footer from "./Footer";
+import ContactUs from "../ContactUs";
 
 function index({ children }) {
   return (
     <>
       <NavBar />
-      <ContactUs/>
+      <ContactUs />
       <main>{children}</main>
       <Footer />
     </>
-  )
+  );
 }
 
-export default index
+export default index;

@@ -1,27 +1,34 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-
-import AboutUs from '@/components/about/AboutUs';
-import Card from '@/components/about/Card';
-import Programmers from '@/components/about/Programmers';
-
+import AboutUs from "@/components/about/AboutUs";
+import Card, { SingleCounter } from "@/components/about/Card";
+import Programmers from "@/components/about/Programmers";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export async function getServerSideProps({ locale }) {
   return {
     props: {
-      ... (await serverSideTranslations(locale, ['common',])),
-      locale: locale
+      ...(await serverSideTranslations(locale, ["common"])),
+      locale: locale,
     },
   };
 }
-
 function About() {
+  const stats = [
+    { value: 68, label: "Xodimlar" },
+    { value: 14, label: "Muvaffaqiyatli loyihalar" },
+    { value: 14, label: "Xursand mijozlarimiz" },
+    { value: 28, label: "Ish tajribasi" },
+  ];
   return (
     <>
       <AboutUs />
-      <Card />
+
+      <section className="container grid grid-cols-4 gap-6">
+        {stats.map((n) => (
+          <Card count={n.value} text={n.label} />
+        ))}
+      </section>
+
       <Programmers />
-     
     </>
   );
 }

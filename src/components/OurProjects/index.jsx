@@ -17,15 +17,30 @@ import Ozarxiv from "@/img/ozarxiv.png";
 import Yoll from "@/img/yoll.png";
 import UztransgazIcon from "@/img/uztransgaz.png";
 import IchkiIshlarIcon from "@/img/ichki_ishlar.png";
+import { motion } from "framer-motion";
 
 import Btn from "@/components/ui/Btn/Btn";
+
+const variantsAnimation = {
+  initial: {
+    y: 100,
+  },
+  whileInView: { y: 0 },
+  viewviewport: { amount: 1 },
+  transition: {
+    type: "spring",
+  },
+};
 
 function OurProjects() {
   return (
     <section className={classN(styles.wrap, "container")}>
-      <h2 className="sectionTitle">BIZNING LOYIHALAR</h2>
+      <h2 className="sectionTitle mb-10">BIZNING LOYIHALAR</h2>
       <div className={styles.grid_container}>
-        <div className={classN(styles.item1, styles.item)}>
+        <motion.div
+          {...variantsAnimation}
+          className={classN(styles.item1, styles.item)}
+        >
           <div className={styles.item_back}>
             <div className={styles.icon_wrap}>
               <Image src={Adliya} width={"auto"} height={"auto"} alt="Adliya" />
@@ -40,9 +55,12 @@ function OurProjects() {
             height={"auto"}
             alt="of"
           />
-        </div>
+        </motion.div>
 
-        <div className={classN(styles.item2, styles.item)}>
+        <motion.div
+          {...variantsAnimation}
+          className={classN(styles.item2, styles.item)}
+        >
           <div className={styles.item_back}>
             <div className={styles.icon_wrap}>
               <Image src={ToshT} width={"auto"} height={"auto"} alt="ToshT" />
@@ -57,9 +75,12 @@ function OurProjects() {
             height={"auto"}
             alt="of"
           />
-        </div>
+        </motion.div>
 
-        <div className={classN(styles.item3, styles.item)}>
+        <motion.div
+          {...variantsAnimation}
+          className={classN(styles.item3, styles.item)}
+        >
           <div className={styles.item_back}>
             <div className={styles.icon_wrap}>
               <Image
@@ -79,9 +100,12 @@ function OurProjects() {
             height={"auto"}
             alt="of"
           />
-        </div>
+        </motion.div>
 
-        <div className={classN(styles.item4, styles.item)}>
+        <motion.div
+          {...variantsAnimation}
+          className={classN(styles.item4, styles.item)}
+        >
           <div className={styles.item_back}>
             <div className={styles.icon_wrap}>
               <Image
@@ -101,9 +125,12 @@ function OurProjects() {
             height={"auto"}
             alt="of"
           />
-        </div>
+        </motion.div>
 
-        <div className={classN(styles.item5, styles.item)}>
+        <motion.div
+          {...variantsAnimation}
+          className={classN(styles.item5, styles.item)}
+        >
           <div className={styles.item_back}>
             <div className={styles.icon_wrap}>
               <Image
@@ -123,9 +150,9 @@ function OurProjects() {
             height={"auto"}
             alt="of"
           />
-        </div>
+        </motion.div>
 
-        <div className={classN(styles.item6, styles.item)}>
+        {/* <div className={classN(styles.item6, styles.item)}>
           <div className={styles.item_back}>
             <div className={styles.icon_wrap}>
               <Image
@@ -167,7 +194,7 @@ function OurProjects() {
             height={"auto"}
             alt="of"
           />
-        </div>
+        </div> */}
       </div>
       <Btn />
     </section>

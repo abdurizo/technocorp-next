@@ -1,9 +1,6 @@
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-// import styles from "@/styles/styles.module.css";
-
-// import ContactUsPosition from "@/components/ContactUs";
 import Header from "@/components/home/Header";
 import CarouselPartners from "@/components/CarouselPartners/CarouselPartners";
 import AboutUs from "@/components/home/AboutUs";
@@ -14,7 +11,7 @@ import Startap from "@/components/home/Startap";
 import News from "@/components/home/News";
 import ContactUs from "@/components/home/ContactUs";
 import Carousel from "@/components/Carousel";
-// import СircularShadow from '@/components/СircularShadow';
+import { motion } from "framer-motion";
 
 export async function getServerSideProps({ locale }) {
   return {
@@ -34,13 +31,16 @@ export default function Home({ locale }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       {/* <ContactUsPosition/> */}
       <Header />
       <CarouselPartners />
       {/* <СircularShadow /> */}
-      <AboutUs />
-      <OurProjects />
+      <div className="mb-80">
+        <AboutUs />
+      </div>
+      <div className="mb-32">
+        <OurProjects />
+      </div>
       <Services />
       <Scroll />
       <Startap />
