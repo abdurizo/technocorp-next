@@ -28,11 +28,11 @@ const Links = [
     title: "Markaz",
   },
   {
-    href: "#",
+    href: "/servise",
     title: "Xizmatlar",
   },
   {
-    href: "#",
+    href: "/projects",
     title: "Loyihalar",
   },
   {
