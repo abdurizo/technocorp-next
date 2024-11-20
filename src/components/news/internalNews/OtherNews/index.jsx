@@ -62,7 +62,7 @@ function OtherNews() {
                         return (
                             <SwiperSlide key={id}>
                                 {/* <CarouselCard {...item} key={id} /> */}
-                                <CardNews image={Img} href={formatTitleToURL(item.title)} />
+                                <CardNews image={Img} href={formatTitleToURL(item.title)} id={item.id} />
                             </SwiperSlide>
                         )
                     })

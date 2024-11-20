@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Eye from '@/icon/eye.svg';
 import RightGreen from '@/icon/right_green.svg';
 
-function CardProgrammer({ image, href, profession }) {
+function CardProgrammer({ image, href, profession,id }) {
 
     return (
         <>
@@ -103,7 +103,8 @@ function CardProgrammer({ image, href, profession }) {
                             </div>
 
                         <Link
-                            href={`/news/${href}`}
+                            href={`/news/${id}`}
+                            query={`name=${href}`}
                             className={styles.button}>
                                 <span>Batafsil</span>
                                 <Image

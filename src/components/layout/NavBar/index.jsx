@@ -36,6 +36,10 @@ const Links = [
     title: "Loyihalar",
   },
   {
+    href: "/news",
+    title: "Yangiliklar",
+  },
+  {
     href: "/contactus",
     title: "Bog‘lanish",
   },
