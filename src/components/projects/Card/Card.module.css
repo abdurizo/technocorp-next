@@ -1,0 +1,93 @@
+.wrap {
+    border-radius: 1rem;
+    /* border: 1px solid #FFF; */
+    background: radial-gradient(100% 100% at 50% 0%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.02) 100%);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.04), 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 8px 16px 0px rgba(0, 0, 0, 0.60);
+    backdrop-filter: blur(12px);
+    padding: 4.5rem 5.4rem;
+    transition: .3s;
+    position: relative;
+}
+
+.wrap:hover:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    padding: 1px;
+    /* Ширина границы */
+    background: linear-gradient(180deg, #ffffff, #ffffff00);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    /* Нужен для правильной маски */
+    mask-composite: exclude;
+    pointer-events: none;
+    /* Чтобы псевдоэлемент не мешал кликам */
+}
+
+.wrap:hover {
+    background: radial-gradient(144.6% 122.45% at 92.69% 91.85%, rgba(255, 255, 255, 0.20) 0%, rgba(255, 255, 255, 0.02) 100%);
+}
+
+.title {
+    color: #FFF;
+    font-family: "Exo2-Regular";
+    font-size: 2.8rem;
+    font-style: normal;
+    line-height: 2.88rem;
+    text-transform: uppercase;
+}
+
+.text {
+    color: #B0B0B0;
+    font-family: "Exo2-Regular";
+    font-size: 1.6rem;
+    font-style: normal;
+    line-height: 110%;
+    transform: translateY(-1rem);
+    opacity: 0;
+    transition: .3s;
+    margin-top: 0.2rem;
+}
+
+.wrap:hover .text {
+    transform: translateY(0rem);
+    opacity: 1;
+    /* transition: .s; */
+}
+
+.image {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 1rem;
+    transition: .3s;
+}
+
+.wrap:hover .image {
+    transform: translateY(1rem);
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 0rem 1rem 0rem 1.5rem;
+    border: 1px solid #E6E6E6;
+    opacity: 0.3;
+    background: #D9D9D9;
+    padding: 1rem;
+}
+.wrap:hover .arrow{
+    opacity: 1;
+}
+.icon{
+    transition: .5s;
+}
+.wrap:hover .icon{
+    transform: rotate(180deg);
+}

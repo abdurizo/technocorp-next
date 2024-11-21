@@ -20,18 +20,12 @@ function OtherNews() {
 
 
     const news = [
-        { id: '123', title: '7-may – O‘zbekistonюю ' },
+        { id: '123', title: '7-may– ‘zbekiston...' },
         { id: '456', title: 'May' },
         { id: '466', title: '8-dekabr' },
     ];
 
-    const formatTitleToURL = (title) => {
-        return title
-            .toLowerCase()         // Приводим к нижнему регистру
-            .replace(/[^\w\s-]/g, '')  // Удаляем все спецсимволы
-            .replace(/\s+/g, '-')    // Заменяем пробелы на дефисы
-            .replace(/-+$/g, '');    // Убираем дефисы в конце строки
-    };
+    
 
     return (
         <section className={styles.section}>
@@ -61,8 +55,7 @@ function OtherNews() {
                     news.map((item, id) => {
                         return (
                             <SwiperSlide key={id}>
-                                {/* <CarouselCard {...item} key={id} /> */}
-                                <CardNews image={Img} href={formatTitleToURL(item.title)} id={item.id} />
+                                <CardNews image={Img} href={item.title} id={item.id} />
                             </SwiperSlide>
                         )
                     })

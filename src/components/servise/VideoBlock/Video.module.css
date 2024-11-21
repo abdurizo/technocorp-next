@@ -1,7 +1,10 @@
-.container{
-    margin-bottom: 11.9rem;
+.container {
+    /* margin-bottom: 11.9rem; */
+    max-width: 132rem;
+    margin: 5rem auto 7.6rem;
 }
-.wrap{
+
+.wrap {
     padding: 7rem;
     border-radius: 1rem;
     border: 0.5px solid #474747;

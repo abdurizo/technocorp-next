@@ -9,7 +9,7 @@ const Filter = dynamic(() => import('@/components/filterCaroucel/Carousel'), { s
 
 function Header(props) {
     return (
-        <header className={classN(styles.wrap, 'container')}>
+        <header className={classN(styles.wrap,)}>
 
             <h2 className={classN('sectionTitle')}>YANGILIKLAR </h2>
             <Filter />

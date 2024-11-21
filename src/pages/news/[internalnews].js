@@ -5,7 +5,6 @@ import dynamic from 'next/dynamic';
 
 import Header from '@/components/news/internalNews/Header';
 import Information from '@/components/news/internalNews/Information';
-// import OtherNews from '@/components/news/internalNews/OtherNews';
 const OtherNews = dynamic(() => import('@/components/news/internalNews/OtherNews'), { ssr: false });
 
 export async function getServerSideProps({ locale }) {

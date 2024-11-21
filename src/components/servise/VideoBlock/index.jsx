@@ -3,7 +3,7 @@ import classN from 'classnames';
 
 function Video(props) {
     return (
-        <section className={ classN('container', styles.container)}>
+        <section className={ classN( styles.container)}>
             <div className={styles.wrap}>
                 <p className='swiper_title'>Technocorp sifat, ishonch va innovatsiya</p>
                 <iframe

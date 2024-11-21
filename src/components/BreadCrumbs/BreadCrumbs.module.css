@@ -1,0 +1,21 @@
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    /* margin-bottom: 4rem; */
+}
+.link {
+    color: rgba(255, 255, 255, 0.50);
+    font-family: "Exo2-Medium";
+    font-size: 2.2rem;
+    font-style: normal;
+    line-height: 4.4rem;    
+    text-transform: capitalize;
+}
+.color{
+    color: #00E85D;
+}
+.icon{
+    width: 2.4rem;
+    height: 2.4rem;
+}
