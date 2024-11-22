@@ -56,8 +56,7 @@ function OtherNews() {
         {news.map((item, id) => {
           return (
             <SwiperSlide key={id}>
-              {/* <CarouselCard {...item} key={id} /> */}
-              <CardNews image={Img} href={formatTitleToURL(item.title)} />
+              <CardNews image={Img} href={item.title} id={item.id} />
             </SwiperSlide>
           );
         })}

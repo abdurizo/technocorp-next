@@ -5,7 +5,7 @@ import styles from "./Card.module.css";
 
 import Image from "next/image";
 
-function Card({ gif, image, title, text }) {
+function Card({ gif, image, title, desc, href, id }) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -27,10 +27,17 @@ function Card({ gif, image, title, text }) {
         </div>
       </div>
       <div className={styles.sup_text}>
-        <p className={styles.text}>{text}</p>
+        <p className={styles.text}>{desc}</p>
 
         <div className={styles.wrap_but}>
-          <Link className={styles.but} href={"#!"}>
+          <Link
+            className={styles.but}
+            href={{
+              pathname: "/servise/" + id,
+              query: {
+                name: href
+              }
+            }}>
             BATAFSIL
           </Link>
         </div>

@@ -23,12 +23,7 @@ function SectionNews() {
     <section className={styles.container}>
       <div className={styles.cards}>
         {news.map((item) => (
-          <Card
-            key={item.id}
-            image={Img}
-            href={formatTitleToURL(item.title)}
-            id={item.id}
-          />
+          <Card key={item.id} image={Img} href={item.title} id={item.id} />
         ))}
       </div>
     </section>

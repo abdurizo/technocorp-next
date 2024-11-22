@@ -1,9 +1,10 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 
-import Header from '@/components/servise/Header';
-import Video from '@/components/servise/Video';
-import Programmers from '@/components/about/Programmers';
+import BreadCrumbs from '@/components/BreadCrumbs';
+import Form from '@/components/Form';
+import Video from '@/components/servise/VideoBlock';
+import Desc from '@/components/servise/internalServise/Desc';
 
 
 export async function getServerSideProps({ locale }) {
@@ -15,12 +16,15 @@ export async function getServerSideProps({ locale }) {
   };
 }
 
-function Internalservise(props) {
-    return (
-        <div>
-            
-        </div>
-    );
+function InternalServise(props) {
+  return (
+    <div className='container'>
+      <BreadCrumbs back={'Xizmatlar'} href={'/servise'} />
+      <Video />
+      <Desc />
+      <Form/>
+    </div>
+  );
 }
 
-export default Internalservise;
+export default InternalServise;

@@ -4,7 +4,7 @@ import dynamic from 'next/dynamic';
 
 import Header from '@/components/projects/Header';
 const Carousel = dynamic(() => import('@/components/Carousel'), { ssr: false });
-import Programmers from '@/components/about/Programmers';
+import GridCards from '@/components/projects/GridCards';
 
 
 export async function getServerSideProps({ locale }) {
@@ -17,12 +17,13 @@ export async function getServerSideProps({ locale }) {
 }
 
 function Projects(props) {
-    return (
-        <>
-            <Header />
-            <Carousel/>
-        </>
-    );
+  return (
+    <div className='container'>
+      <Header />
+      <GridCards />
+      <Carousel />
+    </div>
+  );
 }
 
 export default Projects;

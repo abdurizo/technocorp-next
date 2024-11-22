@@ -1,8 +1,7 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import Header from "@/components/servise/Header";
-import Video from "@/components/servise/Video";
-import Programmers from "@/components/about/Programmers";
+
+import Video from "@/components/servise/VideoBlock";
 import Services from "@/components/home/Services";
 
 export async function getServerSideProps({ locale }) {

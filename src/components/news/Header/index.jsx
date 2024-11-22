@@ -9,13 +9,13 @@ const Filter = dynamic(() => import('@/components/filterCaroucel/Carousel'), { s
 
 function Header(props) {
     return (
-        <header className={classN(styles.wrap, 'container')}>
+        <div className={classN(styles.wrap, 'container')}>
 
             <h2 className={classN('sectionTitle')}>YANGILIKLAR </h2>
             <Filter />
             <СircularShadow className={styles.circular} />
             <p className='background_text'>YANGILIKLAR</p>
-        </header>
+        </div>
     );
 }
 

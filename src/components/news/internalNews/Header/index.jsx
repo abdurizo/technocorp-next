@@ -1,32 +1,24 @@
 import styles from './Header.module.css';
 
 import Image from 'next/image';
-import Link from 'next/link';
-import classN from 'classnames';
 import { useRouter } from 'next/router';
 
 import Img from '@/img/imgNews/im1.png';
 import Arrow from '@/icon/long_arrow_right.svg'
 import Eye from '@/icon/eye.svg';
 
-function Header(props) {
+import BreadCrumbs from '@/components/BreadCrumbs';
+
+function Header() {
 
     const { query } = useRouter()
+   
+    console.log(query)
 
     return (
-        <header>
+        <>
             <div className={styles.wrap}>
-                <div className={styles.nav}>
-                    <Link href={'/news'} className={styles.link}>Yangiliklar</Link>
-                    <Image
-                        src={Arrow}
-                        width={'auto'}
-                        height={'auto   '}
-                        alt="Development"
-                        className={styles.icon}
-                    />
-                    <Link href={'#'} className={classN(styles.color, styles.link)}>{query.internalnews || 'Loading...'}</Link>
-                </div>
+            <BreadCrumbs back={'Yangiliklar'} href={'/news'} />
 
                 <div className={styles.date_wrap}>
                     <p className={styles.date_text}>07-May 2024-yil</p>
@@ -52,7 +44,7 @@ function Header(props) {
                 alt="Development"
                 className={styles.image}
             />
-        </header>
+        </>
     );
 }
 
