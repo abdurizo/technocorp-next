@@ -55,7 +55,7 @@ function Header(props) {
 
             <СircularShadow className={styles.circular_min} />
             <СircularShadow className={styles.circular} />
-            <p className='background_text'>XIZMATLAR</p>
+            <p className='background_text '>XIZMATLAR</p>
         </header>
     );
 }
