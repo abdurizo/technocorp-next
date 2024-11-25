@@ -12,8 +12,14 @@ import News from "@/components/home/News";
 import ContactUs from "@/components/home/ContactUs";
 import Carousel from "@/components/Carousel";
 import { motion } from "framer-motion";
+import { axiosT } from "@/api/axios";
+import { useEffect } from "react";
 
 export async function getServerSideProps({ locale }) {
+  const { data } = await axiosT.get("/about");
+
+  console.log(data, "data");
+
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),
@@ -23,6 +29,11 @@ export async function getServerSideProps({ locale }) {
 }
 
 export default function Home({ locale }) {
+  useEffect(() => {
+    axiosT.get("/about").then(({ data }) => {
+      console.log(data, "data");
+    });
+  }, []);
   return (
     <>
       <Head>
