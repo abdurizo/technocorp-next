@@ -16,10 +16,6 @@ import { axiosT } from "@/api/axios";
 import { useEffect } from "react";
 
 export async function getServerSideProps({ locale }) {
-  const { data } = await axiosT.get("/about");
-
-  console.log(data, "data");
-
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),
