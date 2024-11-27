@@ -2,17 +2,13 @@ import styles from "./Form.module.css";
 
 import Image from "next/image";
 import { useForm } from "react-hook-form";
-import {
-  axiosT,
-  getAllServicesList,
-  postServiceMessage,
-} from "@/api/pagesApis/contactUs";
 
 import User from "@/icon/formIcon/user.svg";
 import Phone from "@/icon/formIcon/phone.svg";
 import Callphone from "@/icon/formIcon/callphone.svg";
 import Location from "@/icon/formIcon/location.svg";
 import Envelope from "@/icon/formIcon/envelope.svg";
+import { axiosT } from "@/api/axios";
 function Form() {
   const {
     register,
@@ -24,43 +20,22 @@ function Form() {
   });
 
   const onSubmit = async (data) => {
-    try {
-      // Подготовка данных для API
-      const payload = {
-        fullname: data.name,
-        description: data.message || "No description provided",
-        type: 2,
-        service: null,
-        phone: data.tel,
-      };
+    const payload = {
+      fullname: data.name,
+      description: data.message || "No description provided",
+      type: 2,
+      service: null,
+      phone: data.tel,
+    };
 
-      // Отправка запроса
-      const response = await postServiceMessage();
-
-      console.log("Ответ сервера:", response.data);
-      alert("Сообщение успешно отправлено!");
-
-      // Очистка формы после отправки
-      reset();
-    } catch (error) {
-      console.error("Ошибка при отправке данных:", error);
-      if (error.response) {
-        // Ошибки, связанные с сервером
-        console.log("Ответ сервера с ошибкой:", error.response.data);
-        alert(`Ошибка: ${error.response.data.message || "Неизвестная ошибка"}`);
-      } else if (error.request) {
-        // Сервер не ответил
-        console.log(
-          "Запрос был отправлен, но ответа не получено:",
-          error.request
-        );
-        alert("Сервер не отвечает. Проверьте подключение.");
-      } else {
-        // Проблемы на клиентской стороне
-        console.log("Ошибка при настройке запроса:", error.message);
-        alert(`Клиентская ошибка: ${error.message}`);
-      }
-    }
+    axiosT
+      .post("/service/message", payload)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log("err", err);
+      });
   };
 
   return (
