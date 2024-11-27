@@ -119,7 +119,7 @@ function ContactUs() {
                   <input
                     type="tel"
                     id="tel"
-                    className={styles.input}
+                    className={classN(styles.input, styles.form_text_style)}
                     placeholder="Telefon raqamingiz"
                     {...register("tel", {
                       required: "Telefon raqamini kiriting",

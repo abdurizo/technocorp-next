@@ -17,7 +17,7 @@ import classNames from "classnames";
 const Links = [
   {
     href: "/",
-    title: "Bosh sahifa",
+    title: "home_page",
   },
   {
     href: "/about",
@@ -25,23 +25,23 @@ const Links = [
   },
   {
     href: "/centerstructure",
-    title: "Markaz",
+    title: "center",
   },
   {
     href: "/servise",
-    title: "Xizmatlar",
+    title: "services",
   },
   {
     href: "/projects",
-    title: "Loyihalar",
+    title: "projects",
   },
   {
     href: "/news",
-    title: "Yangiliklar",
+    title: "news",
   },
   {
     href: "/contactus",
-    title: "Bog‘lanish",
+    title: "contactus",
   },
 ];
 

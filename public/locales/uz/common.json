@@ -1,4 +1,10 @@
 {
+  "video": "/public/video/bannerUz.mp4",
   "about":"Biz haqimizda",
-  "video": "/public/video/bannerUz.mp4"
+  "home_page": "Bosh sahifa",
+  "center": "Markaz",
+  "services": "Xizmatlar",
+  "projects":"Loyihalar",
+  "news": "Yangiliklar",
+  "contactus": "Bog‘lanish"
 }

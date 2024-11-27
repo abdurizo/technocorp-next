@@ -1,13 +1,14 @@
 import styles from './Card.module.css';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 import ArrowRightCrcle from '@/icon/ArrowRightCircle.svg';
 import Img from '@/img/imgNews/im1.png';
 
 function Card() {
     return (
-        <div className={styles.wrap}>
+        <Link href={'#'} className={styles.wrap} target={'_blank'}>
 
             <h2 className={styles.title}>uspenskiyschool</h2>
             <p className={styles.text}>Rossiyadagi nufuzli xususiy maktab-
@@ -31,7 +32,7 @@ function Card() {
                     className={styles.icon}
                 />
             </div>
-        </div>
+        </Link>
     );
 }
 

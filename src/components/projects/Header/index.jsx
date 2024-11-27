@@ -11,10 +11,10 @@ function Header(props) {
     return (
         <header className={classN(styles.wrap,)}>
 
-            <h2 className={classN('sectionTitle')}>YANGILIKLAR </h2>
+            <h2 className={classN('sectionTitle')}>LOYIHALAR </h2>
             <Filter />
             <СircularShadow className={styles.circular} />
-            <p className='background_text'>YANGILIKLAR</p>
+            <p className='background_text'>LOYIHALAR</p>
         </header>
     );
 }
