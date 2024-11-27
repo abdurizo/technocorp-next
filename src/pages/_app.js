@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import LoadingBar from "@/components/LoadingBar/LoadingBar";
+import { getAllServicesList } from "@/api/pagesApis/service";
 const variants = {
   hidden: {
     opacity: 0,
@@ -48,4 +49,13 @@ function App({ Component, pageProps }) {
     </Layout>
   );
 }
+
 export default appWithTranslation(App);
+
+export async function getServerSideProps({ locale }) {
+  const data = await getAllServicesList();
+
+  
+
+  return {};
+}

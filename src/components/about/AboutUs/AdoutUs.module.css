@@ -1,76 +1,79 @@
 .wrap {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 11.6rem;
-    align-items: center;
-    position: relative;
-    padding-top: 15rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 11.6rem;
+  align-items: center;
+  position: relative;
+  padding-top: 15rem;
 }
 
 .text {
-    color: #B0B0B0;
-    font-family: "Roboto-Regular";
-    font-size: 1.6rem;
-    font-style: normal;
-    line-height: 2.7rem;
+  color: #b0b0b0;
+  font-family: "Roboto-Regular";
+  font-size: 1.6rem;
+  font-style: normal;
+  line-height: 2.7rem;
 }
 
 .line {
-    width: 100%;
-    min-height: 0.1rem;
-    background: #DDD;
-    margin: 3rem 0;
+  width: 100%;
+  min-height: 0.1rem;
+  background: #ddd;
+  margin: 3rem 0;
 }
 
 .imageSection {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 2.4rem;
 }
 
 .top_left {
-    border-radius: 164px 0px 10px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  border-radius: 164px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-height: 305px;
 }
 
 .bottom_right {
-    border-radius: 10px 0px 164px 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+  border-radius: 10px 0px 164px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  max-height: 305px;
 }
 
 .top_left img,
 .bottom_right img {
-    transition: .3s;
+  transition: 0.3s;
 }
 
 .top_left:hover img {
-    transform: scale(1.1);
-    transition: .3s;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .bottom_right:hover img {
-    transform: scale(1.1);
-    transition: .3s;
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .circular {
-    min-width: 60rem;
-    min-height: 58rem;
-    flex-shrink: 0;
-    bottom: 0px;
-    left: 0px;
+  min-width: 60rem;
+  min-height: 58rem;
+  flex-shrink: 0;
+  bottom: 0px;
+  left: 0px;
 }
 
 .circular_min {
-    min-width: 50rem;
-    min-height: 48rem;
-    flex-shrink: 0;
-    top: 0px;
-    right: 0px;
+  min-width: 50rem;
+  min-height: 48rem;
+  flex-shrink: 0;
+  top: 0px;
+  right: 0px;
 }

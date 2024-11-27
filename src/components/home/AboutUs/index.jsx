@@ -32,7 +32,7 @@ const cardVariants = {
     },
   },
 };
-function AboutUs() {
+function AboutUs({ aboutUs }) {
   // Состояние для модального окна
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { isVisible, ref } = useObserver();
@@ -48,6 +48,8 @@ function AboutUs() {
     }
   };
 
+  console.log("aboutUs", aboutUs);
+
   return (
     <>
       <AnimatePresence>
@@ -62,12 +64,14 @@ function AboutUs() {
               BIZ HAQIMIZDA
             </h2>
             <p className={styles.text}>
-              "Axborot texnologiyalari va axborot resurslarini rivojlantirish
+              {/* "Axborot texnologiyalari va axborot resurslarini rivojlantirish
               markazi" MCHJ O‘zbekiston Respublikasi Prezidentining 2019-yil
               14-sentabrdagi "Axborot texnologiyalari va kommunikatsiyalarning
               yangi avlodini yaratish orqali ulardan foydalanish imkoniyatlarini
               yanada kengaytirishga doir qo‘shimcha chora-tadbirlar to‘g‘risida"
-              PQ-4452-son qaroriga muvofiq tashkil etilgan.
+              PQ-4452-son qaroriga muvofiq tashkil etilgan. */}
+
+              {aboutUs.description}
             </p>
 
             <div className={styles.link}>
@@ -84,12 +88,7 @@ function AboutUs() {
               </div>
             </div>
 
-            <p className={styles.text}>
-              Markazning asosiy vazifalari: texnik vositalardan foydalanish,
-              veb-saytlar yaratish, shuningdek, axborot portallari va
-              veb-resurslarni rivojlantirish va jadallashtirish masalalarida
-              texnik ko‘mak berish...
-            </p>
+            <p className={styles.text}>{aboutUs.short_description}</p>
           </motion.div>
           <motion.div
             variants={cardVariants}
@@ -98,17 +97,36 @@ function AboutUs() {
             className={styles.imageSection}
           >
             <div className={styles.top_left}>
-              {" "}
-              <Image src={Of1} width={"auto"} height={"auto"} alt="of" />
+              <Image
+                src={aboutUs.photo_1}
+                width={1000}
+                height={1000}
+                alt="of"
+              />
             </div>
             <div className={styles.bottom_right}>
-              <Image src={Of2} width={"auto"} height={"auto"} alt="of" />
+              <Image
+                src={aboutUs.photo_2}
+                width={1000}
+                height={1000}
+                alt="of"
+              />
             </div>
             <div className={styles.top_left}>
-              <Image src={Of3} width={"auto"} height={"auto"} alt="of" />
+              <Image
+                src={aboutUs.photo_3}
+                width={1000}
+                height={1000}
+                alt="of"
+              />
             </div>
             <div className={styles.bottom_right}>
-              <Image src={Of1} width={"auto"} height={"auto"} alt="of" />
+              <Image
+                src={aboutUs.photo_4}
+                width={1000}
+                height={1000}
+                alt="of"
+              />
             </div>
           </motion.div>
 

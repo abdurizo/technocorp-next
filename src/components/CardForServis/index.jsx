@@ -19,8 +19,8 @@ function Card({ gif, image, title, desc, href, id }) {
         <div className={styles.image}>
           <Image
             src={isHovered ? gif : image}
-            width={500}
-            height={500}
+            width={400}
+            height={400}
             alt="Development"
             className={styles.image}
           />
@@ -35,9 +35,10 @@ function Card({ gif, image, title, desc, href, id }) {
             href={{
               pathname: "/servise/" + id,
               query: {
-                name: href
-              }
-            }}>
+                name: href,
+              },
+            }}
+          >
             BATAFSIL
           </Link>
         </div>

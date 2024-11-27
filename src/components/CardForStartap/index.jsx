@@ -9,7 +9,6 @@ function CardForStartap({ imageOne, imageTwo, text, textTwo }) {
 
   const handelCkck = () => {
     setState(!state);
-    console.log("work");
   };
 
   return (
@@ -26,8 +25,8 @@ function CardForStartap({ imageOne, imageTwo, text, textTwo }) {
           <div className={styles.image}>
             <Image
               src={isHovered ? imageTwo : imageOne}
-              width={"auto"}
-              height={"auto"}
+              width={180}
+              height={180}
               alt="Slack"
             />
           </div>

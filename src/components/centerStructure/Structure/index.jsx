@@ -4,7 +4,8 @@ import classN from "classnames";
 import Card from "../Card";
 import СircularShadow from "@/components/СircularShadow";
 
-function Structure(props) {
+function Structure({ centerStructure }) {
+  console.log(centerStructure, "centerStructure");
   return (
     <>
       <p className={styles.background_text}>MarkazTUZILMASI</p>

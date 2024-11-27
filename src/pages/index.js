@@ -14,22 +14,39 @@ import Carousel from "@/components/Carousel";
 import { motion } from "framer-motion";
 import { axiosT } from "@/api/axios";
 import { useEffect } from "react";
+import { getAllServicesList } from "@/api/pagesApis/service";
+import {
+  getMainPageProjects,
+  getProjects,
+  getStartUpProjects,
+} from "@/api/pagesApis/project";
+import { getAboutUs } from "@/api/pagesApis/aboutUs";
 
 export async function getServerSideProps({ locale }) {
+  const serviceList = await getAllServicesList(locale);
+  const startups = await getStartUpProjects(locale);
+  const projects = await getMainPageProjects(locale, { p: 1, page_size: 5 });
+  const aboutUs = await getAboutUs(locale);
+
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),
       locale: locale,
+      serviceList,
+      startups,
+      projects,
+      aboutUs,
     },
   };
 }
 
-export default function Home({ locale }) {
-  useEffect(() => {
-    axiosT.get("/about").then(({ data }) => {
-      console.log(data, "data");
-    });
-  }, []);
+export default function Home({
+  locale,
+  serviceList,
+  startups,
+  projects,
+  aboutUs,
+}) {
   return (
     <>
       <Head>
@@ -43,14 +60,14 @@ export default function Home({ locale }) {
       <CarouselPartners />
       {/* <СircularShadow /> */}
       <div className="mb-80">
-        <AboutUs />
+        <AboutUs aboutUs={aboutUs} />
       </div>
       <div className="mb-32">
-        <OurProjects />
+        <OurProjects projects={projects} />
       </div>
-      <Services />
+      <Services services={serviceList} />
       <Scroll />
-      <Startap />
+      <Startap startups={startups} />
       <News />
       <ContactUs />
       <Carousel />
