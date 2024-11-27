@@ -12,13 +12,13 @@ function Header() {
   useEffect(() => {
     switch (locale) {
       case "uz":
-        setVideoSrc("/video/bannerUz.mp4");
+        setVideoSrc("/video/uz.webm");
         break;
       case "ru":
-        setVideoSrc("/video/FullHD.webm");
+        setVideoSrc("/video/ru.webm");
         break;
       default:
-        setVideoSrc("/video/bannerEn.mp4");
+        setVideoSrc("/video/en.webm");
         break;
     }
   }, [locale]);

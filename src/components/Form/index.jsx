@@ -2,6 +2,7 @@ import styles from './Form.module.css'
 
 import Image from 'next/image';
 import { useForm } from "react-hook-form";
+import { axiosT } from "@/api/pagesApis/contactUs";
 
 import User from '@/icon/formIcon/user.svg';
 import Phone from '@/icon/formIcon/phone.svg';
@@ -13,12 +14,46 @@ function Form() {
         register,
         formState: { errors },
         handleSubmit,
+        reset,
     } = useForm({
         mode: 'onSubmit',
     });
 
-    const onSubmit = (data) => {
-        console.log(data);
+    const onSubmit = async (data) => {
+        try {
+            // Подготовка данных для API
+            const payload = {
+                fullname: data.name,
+                description: data.message || "No description provided",
+                type: 2, 
+                service: null, 
+                phone: data.tel,
+            };
+
+            // Отправка запроса
+            const response = await axiosT.post("/service/message", payload);
+
+            console.log("Ответ сервера:", response.data);
+            alert("Сообщение успешно отправлено!");
+
+            // Очистка формы после отправки
+            reset();
+        } catch (error) {
+            console.error("Ошибка при отправке данных:", error);
+            if (error.response) {
+                // Ошибки, связанные с сервером
+                console.log("Ответ сервера с ошибкой:", error.response.data);
+                alert(`Ошибка: ${error.response.data.message || "Неизвестная ошибка"}`);
+            } else if (error.request) {
+                // Сервер не ответил
+                console.log("Запрос был отправлен, но ответа не получено:", error.request);
+                alert("Сервер не отвечает. Проверьте подключение.");
+            } else {
+                // Проблемы на клиентской стороне
+                console.log("Ошибка при настройке запроса:", error.message);
+                alert(`Клиентская ошибка: ${error.message}`);
+            }
+        }
     };
 
     return (
@@ -169,3 +204,7 @@ function Form() {
 }
 
 export default Form;
+
+
+
+

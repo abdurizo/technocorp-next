@@ -6,10 +6,6 @@
 .title {
   text-align: center;
 }
-.wrpa_director {
-  /* display: flex; */
-  /* justify-content: center; */
-}
 .director {
   display: flex;
   justify-content: center;
