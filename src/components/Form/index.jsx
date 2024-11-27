@@ -9,7 +9,9 @@ import Callphone from "@/icon/formIcon/callphone.svg";
 import Location from "@/icon/formIcon/location.svg";
 import Envelope from "@/icon/formIcon/envelope.svg";
 import { axiosT } from "@/api/axios";
-function Form() {
+import { postServiceMessage } from "@/api/pagesApis/contactUs";
+import { useRouter } from "next/router";
+function Form({ type, id }) {
   const {
     register,
     formState: { errors },
@@ -19,23 +21,20 @@ function Form() {
     mode: "onSubmit",
   });
 
+  const roueter = useRouter();
+  console.log(roueter.query.internalservise);
+
   const onSubmit = async (data) => {
     const payload = {
       fullname: data.name,
       description: data.message || "No description provided",
-      type: 2,
-      service: null,
+      type: type,
+      service: id || null,
       phone: data.tel,
     };
+    const dataData = await postServiceMessage(payload);
 
-    axiosT
-      .post("/service/message", payload)
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log("err", err);
-      });
+    console.log("data", dataData);
   };
 
   return (
