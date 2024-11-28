@@ -2,44 +2,55 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
 import "swiper/css/pagination";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import Button from "../Button";
+import { useState } from "react";
+import { useRouter } from "next/router";
 
 function OtherNews() {
+  const [activetab, setActiveTab] = useState(undefined);
+
+  const router = useRouter();
   const news = [
-    { id: "1", text: "Barchasi" },
-    { id: "2", text: "Mobil ilovalar" },
-    { id: "3", text: "Axborot tizimlari" },
-    { id: "4", text: "Veb-saytlar" },
-    { id: "5", text: "Start-up" },
+    { id: undefined, text: "Barchasi" },
+    { id: 1, text: "Axborot tizimlari" },
+    { id: 3, text: "Veb-saytlar" },
+    { id: 4, text: "Start-up" },
+    { id: 2, text: "Mobil ilovalar" },
   ];
+
+  const setActiveTabHandler = (activeTab) => {
+    router.push(
+      {
+        pathname: router.pathname,
+        query: {
+          tab: activeTab,
+        },
+      },
+      undefined,
+      {
+        scroll: false,
+      }
+    );
+
+    setActiveTab(activeTab);
+  };
 
   return (
     <>
-      <Swiper
-        slidesPerView={6}
-        spaceBetween={20}
-        navigation={{
-          nextEl: ".nextProg",
-          prevEl: ".prevProg",
-        }}
-        pagination={false}
-        mousewheel={true}
-        keyboard={true}
-        modules={[Navigation, Pagination]}
-        className="w-full"
-      >
+      <div className="w-full flex items-center gap-4 mb-10">
         {news.map((item, id) => {
           return (
-            <SwiperSlide key={id}>
-              <Button text={item.text} />
-            </SwiperSlide>
+            <Button
+              text={item.text}
+              onClick={() => setActiveTabHandler(item.id)}
+              active={activetab === item.id ? "active" : ""}
+            />
           );
         })}
-      </Swiper>
+      </div>
     </>
   );
 }

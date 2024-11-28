@@ -6,6 +6,7 @@ import СircularShadow from "@/components/СircularShadow";
 
 function Structure({ centerStructure }) {
   console.log(centerStructure, "centerStructure");
+
   return (
     <>
       <p className={styles.background_text}>MarkazTUZILMASI</p>
@@ -18,16 +19,19 @@ function Structure({ centerStructure }) {
 
         <div className="relative">
           <div className={classN(styles.director, "mb-10 relative z-10")}>
-            <Card />
+            <Card card={centerStructure[0]} />
           </div>
 
           <div className="border border-[#6F6F6F] border-b-0 h-[20rem] w-[80%] absolute  -bottom-[33%] right-0 left-[9%]"></div>
         </div>
 
         <div className={styles.grid}>
-          <Card />
-          <Card />
-          <Card />
+          {centerStructure
+            .slice(1)
+            .filter((card) => card.position !== 3)
+            .map((card) => (
+              <Card key={card.id} card={card} />
+            ))}
         </div>
         <СircularShadow className={styles.circular_min} />
         <СircularShadow className={styles.circular} />

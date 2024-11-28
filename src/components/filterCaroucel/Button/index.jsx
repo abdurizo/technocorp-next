@@ -1,11 +1,15 @@
-import styles from './Button.module.css';
+import styles from "./Button.module.css";
+import cn from "classnames";
 
-function Button({text}) {
-    return (
-        <button className={styles.button}>
-            {text}
-        </button>
-    );
+function Button({ text, onClick, active }) {
+  return (
+    <button
+      className={cn(styles.button, active && styles.active)}
+      onClick={onClick}
+    >
+      {text}
+    </button>
+  );
 }
 
 export default Button;

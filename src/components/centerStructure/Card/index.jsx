@@ -12,26 +12,29 @@ function Card({ card }) {
     <div className={styles.card}>
       <div className={styles.person_info}>
         <div className={styles.Image_wrap}>
-          <Image
-            width={"auto"}
-            height={"auto"}
-            alt="person"
-            src={NosirovAmirjon}
-          />
+          <Image width={1000} height={1000} alt="person" src={card?.photo} />
         </div>
         <div className={styles.info}>
           <h3 className={classN(styles.full_name, styles.base)}>
-            Nosirov Amirjon Axmadjon o‘g‘li
+            {card.fullname}
           </h3>
 
-          <p className={classN(styles.position, styles.base)}>Direktor</p>
+          <p className={classN(styles.position, styles.base)}>
+            {card.position_text}
+          </p>
 
           <div className={styles.reception}>
             <p className={classN(styles.position, styles.base)}>
-              Qabul kuni va soati :{" "}
+              Qabul kuni va soati:{" "}
             </p>
-            <p className={classN(styles.reception_time, styles.base)}>
-              Dushanba 14:00 - 17:00
+            <p
+              className={classN(
+                styles.reception_time,
+                styles.base,
+                "capitalize"
+              )}
+            >
+              {card.work_time}
             </p>
           </div>
         </div>
@@ -49,7 +52,7 @@ function Card({ card }) {
           <div>
             <p className={classN(styles.position, styles.base)}>Email</p>
             <p className={classN(styles.reception_time, styles.base)}>
-              a.nosirov@technocorp.uz
+              {card.email}
             </p>
           </div>
         </div>

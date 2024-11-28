@@ -7,8 +7,13 @@ const Carousel = dynamic(() => import("@/components/Carousel"), { ssr: false });
 import GridCards from "@/components/projects/GridCards";
 import { getAllProjects } from "@/api/pagesApis/project";
 
-export async function getServerSideProps({ locale }) {
-  const projects = await getAllProjects(locale, { p: 1, page_size: 10 });
+export async function getServerSideProps({ locale, query }) {
+  console.log("queryTab", query);
+  const projects = await getAllProjects(locale, {
+    p: 1,
+    page_size: 10,
+    category: query.tab,
+  });
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common"])),

@@ -6,7 +6,7 @@ const nextConfig = {
   images: {
     domains: ["new.technocorp.uz"],
   },
-  reactStrictMode: false,
+  reactStrictMode: true,
 };
 
 module.exports = nextConfig;

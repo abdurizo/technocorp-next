@@ -10,8 +10,8 @@ function CardProgrammer({ image, name, profession }) {
       <div className={styles.image_wrap}>
         <Image
           src={image}
-          width={1000}
-          height={1000}
+          width={2000}
+          height={2000}
           alt="Development"
           className={"object-cover"}
         />
