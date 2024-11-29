@@ -18,7 +18,7 @@ const cardVariants = {
   exit: { opacity: 0, y: -50, transition: { duration: 0.5 } },
 };
 function GridCards({ projects }) {
-  const { isVisible, ref } = useObserver({ threshold: 0.2 });
+  const { isVisible, ref } = useObserver({ threshold: 0.1 });
 
   return (
     <section className={styles.wrap} ref={ref}>
