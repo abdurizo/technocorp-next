@@ -6,7 +6,10 @@ export const getDevelopers = async (locale) => {
       "Accept-Language": locale,
     },
   });
-  return data;
+  return data.map((item) => ({
+    ...item,
+    photo: item.photo.replace("https://", "http://"),
+  }));
 };
 export const getCenterStructure = async (locale) => {
   const { data } = await axiosT.get("/employee/center-structure", {
@@ -14,5 +17,8 @@ export const getCenterStructure = async (locale) => {
       "Accept-Language": locale,
     },
   });
-  return data;
+  return data.map((item) => ({
+    ...item,
+    photo: item.photo.replace("https://", "http://"),
+  }));
 };

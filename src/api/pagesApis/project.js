@@ -28,5 +28,10 @@ export const getAllProjects = async (locale, params) => {
       "Accept-Language": locale,
     },
   });
+
+  data.results = data.results.map((item) => ({
+    ...item,
+    image: item.image.replace("https://", "http://"),
+  }));
   return data;
 };
