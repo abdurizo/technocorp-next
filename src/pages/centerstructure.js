@@ -9,7 +9,9 @@ function CenterStructure({ developers, centerStructure }) {
   return (
     <>
       <Structure centerStructure={centerStructure} />
-      <Programmers developers={developers} />
+      <Programmers
+        developers={centerStructure.filter((card) => card.position === 3)}
+      />
     </>
   );
 }

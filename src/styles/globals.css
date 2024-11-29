@@ -82,3 +82,12 @@ img {
     width: 100%;
   }
 }
+
+.sectionDetail p {
+  color: #b0b0b0;
+  font-family: "Exo2-Regular";
+  font-size: 3.2rem;
+  font-style: normal;
+  line-height: 135%;
+  text-indent: 20px;
+}

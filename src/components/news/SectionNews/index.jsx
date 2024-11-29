@@ -4,6 +4,7 @@ import Card from "../CardNew";
 
 import Img from "@/img/imgNews/im1.png";
 
+<<<<<<< HEAD
 function SectionNews() {
   const news = [
     { id: "123", title: "7-may – O‘zbekistonюю " },
@@ -19,11 +20,22 @@ function SectionNews() {
   //     .replace(/-+$/g, ""); // Убираем дефисы в конце строки
   // };
 
+=======
+function SectionNews({ news }) {
+>>>>>>> 5d1917cd3badd75e31b6897e8b46a5e83ce3c8f8
   return (
     <section className={styles.container}>
       <div className={styles.cards}>
-        {news.map((item) => (
-          <Card key={item.id} image={Img} href={item.title} id={item.id} />
+        {news.results.map((item) => (
+          <Card
+            key={item.id}
+            image={item.image.src}
+            href={item.title}
+            id={item.slug}
+            desc={item.description}
+            published_date={item.published_date}
+            views={item.views}
+          />
         ))}
       </div>
     </section>

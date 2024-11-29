@@ -5,35 +5,52 @@ import Link from "next/link";
 
 import Eye from "@/icon/eye.svg";
 import RightGreen from "@/icon/right_green.svg";
+const formatData = (date) => {
+  const formattedDate = new Intl.DateTimeFormat("en-GB", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  })
+    .format(date)
+    .replace(",", "-yil");
 
+  return formattedDate;
+};
+function CardProgrammer({
+  image,
+  href,
+  profession,
+  id,
+  desc,
+  published_date,
+  views,
+}) {
+  const date = new Date(published_date);
+
+<<<<<<< HEAD
 function CardProgrammer({ image, href, id }) {
+=======
+>>>>>>> 5d1917cd3badd75e31b6897e8b46a5e83ce3c8f8
   return (
     <>
       <div className={styles.card}>
         <div className={styles.image_wrap}>
           <Image
             src={image}
-            width={"auto"}
-            height={"auto   "}
+            width={1000}
+            height={1000}
             alt="Development"
             className={styles.image}
           />
         </div>
-        <h3 className={styles.title}>
-          7-may – O‘zbekiston Respublikasi axborot-kommunikatsiya
-          texnologiyalari...
-        </h3>
+        <h3 className={styles.title}>{href}</h3>
 
         <div className={styles.content}>
-          <p className={styles.text}>
-            “Markaz joylashgan bino hududida kuchli yer qimirlashi sababli
-            xonadagi elektr rozetkasi ichidagi elektr simda qisqa tutashuv
-            natijasida yong‘in sodir bo‘lganda xodimlarning harakati”…
-          </p>
+          <p className={styles.text}>{desc}</p>
 
           <div className={styles.footer}>
             <div className={styles.date_wrap}>
-              <p className={styles.date_text}>07-May 2024-yil</p>
+              <p className={styles.date_text}>{formatData(date)}</p>
               <div className={styles.date_text}>
                 <div className={styles.icon_eye}>
                   <Image
@@ -43,7 +60,7 @@ function CardProgrammer({ image, href, id }) {
                     alt="Development"
                     className={styles.icon}
                   />
-                  <span>584</span>
+                  <span>{views}</span>
                 </div>
               </div>
             </div>

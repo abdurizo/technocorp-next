@@ -15,21 +15,7 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import CardNews from "../../CardNew";
 import Img from "@/img/imgNews/im1.png";
 
-function OtherNews() {
-  const news = [
-    { id: "123", title: "7-may – O‘zbekistonюю " },
-    { id: "456", title: "May" },
-    { id: "466", title: "8-dekabr" },
-  ];
-
-  const formatTitleToURL = (title) => {
-    return title
-      .toLowerCase() // Приводим к нижнему регистру
-      .replace(/[^\w\s-]/g, "") // Удаляем все спецсимволы
-      .replace(/\s+/g, "-") // Заменяем пробелы на дефисы
-      .replace(/-+$/g, ""); // Убираем дефисы в конце строки
-  };
-
+function OtherNews({ news }) {
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>Boshqa yangiliklar</h2>
@@ -56,7 +42,15 @@ function OtherNews() {
         {news.map((item, id) => {
           return (
             <SwiperSlide key={id}>
-              <CardNews image={Img} href={item.title} id={item.id} />
+              <CardNews
+                key={item.id}
+                image={item.image.src}
+                href={item.title}
+                id={item.slug}
+                desc={item.description}
+                published_date={item.published_date}
+                views={item.views}
+              />
             </SwiperSlide>
           );
         })}

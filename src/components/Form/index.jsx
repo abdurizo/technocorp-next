@@ -2,14 +2,18 @@ import styles from "./Form.module.css";
 
 import Image from "next/image";
 import { useForm } from "react-hook-form";
+<<<<<<< HEAD
 import { postServiceMessage } from "@/api/pagesApis/contactUs";
 import { useRouter } from "next/router";
+=======
+>>>>>>> 5d1917cd3badd75e31b6897e8b46a5e83ce3c8f8
 
 import User from "@/icon/formIcon/user.svg";
 import Phone from "@/icon/formIcon/phone.svg";
 import Callphone from "@/icon/formIcon/callphone.svg";
 import Location from "@/icon/formIcon/location.svg";
 import Envelope from "@/icon/formIcon/envelope.svg";
+<<<<<<< HEAD
 
 function Form({ type, id }) {
     const {
@@ -37,6 +41,36 @@ function Form({ type, id }) {
 
             // Отправка запроса
             const response = await postServiceMessage(payload);
+=======
+import { axiosT } from "@/api/axios";
+import { postServiceMessage } from "@/api/pagesApis/contactUs";
+import { useRouter } from "next/router";
+function Form({ type, id }) {
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm({
+    mode: "onSubmit",
+  });
+
+  const roueter = useRouter();
+  console.log(roueter.query.internalservise);
+
+  const onSubmit = async (data) => {
+    const payload = {
+      fullname: data.name,
+      description: data.message || "No description provided",
+      type: type,
+      service: id || null,
+      phone: data.tel,
+    };
+    const dataData = await postServiceMessage(payload);
+
+    console.log("data", dataData);
+  };
+>>>>>>> 5d1917cd3badd75e31b6897e8b46a5e83ce3c8f8
 
             console.log("Ответ сервера:", response);
 

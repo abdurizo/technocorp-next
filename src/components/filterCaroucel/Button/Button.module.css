@@ -1,13 +1,24 @@
 .button {
-    color: #FFF;
-    font-family: "Exo2-Medium";
-    font-size: 2.8rem;
-    font-style: normal;
-    /* line-height: 4.4rem; */
-    text-transform: capitalize;
-    padding: 0.7rem 3rem;
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.20);
-    background: rgba(59, 59, 59, 0.35);
-    backdrop-filter: blur(5px);
+  color: #fff;
+  font-family: "Exo2-Medium";
+  font-size: 2.8rem;
+  font-style: normal;
+  /* line-height: 4.4rem; */
+  text-transform: capitalize;
+  padding: 0.7rem 3rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(59, 59, 59, 0.35);
+  backdrop-filter: blur(5px);
+}
+
+.button.active {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+  transition: 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.3);
 }

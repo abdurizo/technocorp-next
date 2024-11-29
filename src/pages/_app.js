@@ -35,6 +35,7 @@ function App({ Component, pageProps }) {
 
   return (
     <Layout>
+      <LoadingBar />
       <AnimatePresence mode="wait" initial={true}>
         <motion.div
           key={router.route}
@@ -42,7 +43,6 @@ function App({ Component, pageProps }) {
           animate={"visible"}
           variants={variants}
         >
-          <LoadingBar />
           <Component {...pageProps} />;
         </motion.div>
       </AnimatePresence>
@@ -51,11 +51,3 @@ function App({ Component, pageProps }) {
 }
 
 export default appWithTranslation(App);
-
-export async function getServerSideProps({ locale }) {
-  const data = await getAllServicesList();
-
-  
-
-  return {};
-}
