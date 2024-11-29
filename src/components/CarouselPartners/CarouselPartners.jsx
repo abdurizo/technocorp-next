@@ -14,7 +14,12 @@ function Carousel() {
     axiosT
       .get("/partner")
       .then(({ data }) => {
-        setPartnersList(data);
+        setPartnersList(
+          data.map((item) => ({
+            ...item,
+            icon: item.icon.replace("https://", "http://"),
+          }))
+        );
       })
       .catch((er) => {});
   }, []);
