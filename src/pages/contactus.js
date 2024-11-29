@@ -14,20 +14,6 @@ export async function getServerSideProps({ locale }) {
 }
 
 function Contactus(props) {
-  useEffect(() => {
-    axiosT
-      .get("/about/", {
-        headers: {
-          "Accept-Language": locale,
-        },
-      })
-      .then((res) => {
-        console.log("res", res);
-      })
-      .catch((er) => {
-        console.log(er);
-      });
-  }, []);
   return (
     <>
       <Contact />
