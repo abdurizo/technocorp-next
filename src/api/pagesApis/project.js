@@ -15,7 +15,10 @@ export const getMainPageProjects = async (locale, params) => {
       "Accept-Language": locale,
     },
   });
-  return data;
+  return data.map((item) => ({
+    ...item,
+    image: item.image.replace("https://", "http://"),
+  }));
 };
 
 export const getAllProjects = async (locale, params) => {
