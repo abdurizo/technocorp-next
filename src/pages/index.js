@@ -41,20 +41,6 @@ export async function getServerSideProps({ locale }) {
 }
 
 export default function Home({ serviceList, startups, projects, aboutUs }) {
-  useEffect(() => {
-    axiosT
-      .get("/service", {
-        headers: {
-          "Accept-Language": locale,
-        },
-      })
-      .then((res) => {
-        console.log("res", res);
-      })
-      .catch((er) => {
-        console.log(er);
-      });
-  }, []);
   return (
     <>
       <Head>
