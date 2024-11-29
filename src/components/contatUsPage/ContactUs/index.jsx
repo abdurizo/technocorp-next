@@ -8,7 +8,7 @@ function Contact(props) {
     return (
         <section className={classN(styles.wrap, 'container')}>
             <h2 className={classN(styles.title, 'sectionTitle')}>BIZ BILAN BOG‘LANING</h2>
-            <Form />
+            <Form type={2}/>
             <p className='background_text'>BIZ HAQIMIZDA</p>
             <СircularShadow className={styles.circular_min} />
             <СircularShadow className={styles.circular} />

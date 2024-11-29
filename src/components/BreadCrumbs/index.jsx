@@ -9,6 +9,7 @@ import Arrow from '@/icon/long_arrow_right.svg';
 
 function BreadCrumbs({back,href}) {
     const { query } = useRouter()
+    console.log(query)
 
     return (
         <div className={styles.nav}>

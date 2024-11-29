@@ -55,7 +55,7 @@ function ContactUs() {
           <div className={styles.modalContent}>
             <h2 className={styles.title_form}>Biz bilan bog‘laning</h2>
 
-            <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.form} autoComplete="off">
               <div className={styles.block}>
                 <label
                   htmlFor="name"

@@ -55,10 +55,10 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-      {/* <ContactUsPosition/> */}
+    
       <Header />
       <CarouselPartners />
-      {/* <СircularShadow /> */}
+  
       <div className="mb-80">
         <AboutUs aboutUs={aboutUs} />
       </div>

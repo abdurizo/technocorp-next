@@ -11,13 +11,13 @@ function SectionNews() {
     { id: "466", title: "8-dekabr" },
   ];
 
-  const formatTitleToURL = (title) => {
-    return title
-      .toLowerCase() // Приводим к нижнему регистру
-      .replace(/[^\w\s-]/g, "") // Удаляем все спецсимволы
-      .replace(/\s+/g, "-") // Заменяем пробелы на дефисы
-      .replace(/-+$/g, ""); // Убираем дефисы в конце строки
-  };
+  // const formatTitleToURL = (title) => {
+  //   return title
+  //     .toLowerCase() // Приводим к нижнему регистру
+  //     .replace(/[^\w\s-]/g, "") // Удаляем все спецсимволы
+  //     .replace(/\s+/g, "-") // Заменяем пробелы на дефисы
+  //     .replace(/-+$/g, ""); // Убираем дефисы в конце строки
+  // };
 
   return (
     <section className={styles.container}>

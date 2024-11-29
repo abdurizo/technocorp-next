@@ -1,10 +1,12 @@
 import styles from "./CardNew.module.css";
+
 import Image from "next/image";
 import Link from "next/link";
+
 import Eye from "@/icon/eye.svg";
 import RightGreen from "@/icon/right_green.svg";
 
-function CardProgrammer({ image, href, profession, id }) {
+function CardProgrammer({ image, href, id }) {
   return (
     <>
       <div className={styles.card}>

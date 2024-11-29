@@ -4,16 +4,15 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 import Img from '@/img/imgNews/im1.png';
-import Arrow from '@/icon/long_arrow_right.svg'
+// import Arrow from '@/icon/long_arrow_right.svg'
 import Eye from '@/icon/eye.svg';
 
 import BreadCrumbs from '@/components/BreadCrumbs';
 
 function Header() {
 
-    const { query } = useRouter()
-   
-    console.log(query)
+    // const { query } = useRouter()    
+    // console.log(query)
 
     return (
         <>
@@ -35,7 +34,7 @@ function Header() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>ФФ
             <h2 className={styles.title}>7-may – O‘zbekiston Respublikasi axborot-kommunikatsiya texnologiyalari sohasi xodimlari kuni!</h2>
             <Image
                 src={Img}

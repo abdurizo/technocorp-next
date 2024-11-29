@@ -1,4 +1,5 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { axiosT } from "@/api/axios";
 
 
 import BreadCrumbs from '@/components/BreadCrumbs';
@@ -7,22 +8,28 @@ import Video from '@/components/servise/VideoBlock';
 import Desc from '@/components/servise/internalServise/Desc';
 
 
-export async function getServerSideProps({ locale }) {
+export async function getServerSideProps({ locale, query }) {
+
+  const data = await axiosT.get(`/service/detail/${query.internalservise}`);
+  
+
   return {
     props: {
       ... (await serverSideTranslations(locale, ['common',])),
-      locale: locale
+      locale: locale,
+      detailId: data.data,
     },
   };
 }
 
 function InternalServise(props) {
+  console.log(props.detailId, "Prop");
   return (
     <div className='container'>
       <BreadCrumbs back={'Xizmatlar'} href={'/servise'} />
       <Video />
       <Desc />
-      <Form/>
+      <Form type={1} id={props.detailId.id } />
     </div>
   );
 }
