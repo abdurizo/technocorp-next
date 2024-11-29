@@ -4,8 +4,7 @@ import Card from "../CardNew";
 
 import Img from "@/img/imgNews/im1.png";
 
-<<<<<<< HEAD
-function SectionNews() {
+
   const news = [
     { id: "123", title: "7-may – O‘zbekistonюю " },
     { id: "456", title: "May" },
@@ -20,9 +19,8 @@ function SectionNews() {
   //     .replace(/-+$/g, ""); // Убираем дефисы в конце строки
   // };
 
-=======
 function SectionNews({ news }) {
->>>>>>> 5d1917cd3badd75e31b6897e8b46a5e83ce3c8f8
+
   return (
     <section className={styles.container}>
       <div className={styles.cards}>

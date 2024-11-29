@@ -27,10 +27,6 @@ function CardProgrammer({
 }) {
   const date = new Date(published_date);
 
-<<<<<<< HEAD
-function CardProgrammer({ image, href, id }) {
-=======
->>>>>>> 5d1917cd3badd75e31b6897e8b46a5e83ce3c8f8
   return (
     <>
       <div className={styles.card}>
