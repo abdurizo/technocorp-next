@@ -6,9 +6,6 @@ import styles from "./AboutUs.module.css";
 import classN from "classnames";
 
 import Play from "@/icon/play.svg";
-import Of1 from "@/img/Of1.jpg";
-import Of2 from "@/img/Of2.jpg";
-import Of3 from "@/img/Of3.jpg";
 
 import СircularShadow from "@/components/СircularShadow";
 import { AnimatePresence, motion } from "framer-motion";
