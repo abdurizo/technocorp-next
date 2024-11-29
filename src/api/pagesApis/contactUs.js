@@ -19,7 +19,7 @@ export const postServiceMessage = async (payload) => {
   }
   const { data } = await axiosT.post("/service/message", payload, {
     headers: {
-      "X-CSRF-Token": csrfToken,
+      "X-CSRFToken": csrfToken,
     },
   });
   return data;
