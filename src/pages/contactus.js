@@ -2,6 +2,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import Contact from "@/components/contatUsPage/ContactUs";
 import { axiosT } from "@/api/axios";
+import { useEffect } from "react";
 
 export async function getServerSideProps({ locale }) {
   return {
