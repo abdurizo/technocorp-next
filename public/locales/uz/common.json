@@ -1,10 +1,14 @@
 {
-  "video": "/public/video/bannerUz.mp4",
-  "about":"Biz haqimizda",
+  "about": "Biz haqimizda",
   "home_page": "Bosh sahifa",
   "center": "Markaz",
   "services": "Xizmatlar",
-  "projects":"Loyihalar",
+  "projects": "Loyihalar",
   "news": "Yangiliklar",
-  "contactus": "Bog‘lanish"
+  "contactus": "Bog‘lanish",
+  "about_us": "BIZ HAQIMIZDA",
+  "our_projects": "BIZNING LOYIHALAR",
+  "projects_page":"LOYIHALAR",
+  "services_title": "XIZMATLAR",
+  "detail": "BATAFSIL"
 }

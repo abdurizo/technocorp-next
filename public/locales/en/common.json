@@ -1,10 +1,14 @@
 {
-  "video": "/public/video/bannerEn.mp4",
   "about": "About",
- "home_page": "Home page",
+ "home_page": "Home",
  "center": "Center",
  "services": "Services",
  "projects":"Projects",
  "news": "News",
- "contactus": "Contact Us"
+ "contactus": "Contact Us",
+ "about_us":"About Us",
+ "our_projects":"Our Projects",
+ "projects_page":"Projects",
+ "services_title":"SERVICES",
+ "detail":"detail"
 }

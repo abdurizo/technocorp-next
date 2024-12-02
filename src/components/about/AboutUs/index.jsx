@@ -2,20 +2,19 @@ import styles from "./AdoutUs.module.css";
 import classN from "classnames";
 
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
-import Of1 from "@/img/Of1.jpg";
-import Of2 from "@/img/Of2.jpg";
-import Of3 from "@/img/Of3.jpg";
 
 import СircularShadow from "@/components/СircularShadow";
 
 function AboutUs({ aboutUs }) {
+  const { t } = useTranslation();
   return (
     <>
       <header className={classN(styles.wrap, "container")}>
         <div className={styles.textSection}>
           <h2 className={classN(styles.title, "sectionTitle")}>
-            BIZ HAQIMIZDA
+            {t('about_us')}
           </h2>
           <p className={styles.text}>{aboutUs.short_description}</p>
 
@@ -25,19 +24,6 @@ function AboutUs({ aboutUs }) {
             <p> Markazning asosiy vazifalari:</p>
 
             <p>
-              {/* texnik vositalardan foydalanish, veb-saytlar yaratish, shuningdek,
-              axborot portallari va veb-resurslarni rivojlantirish va
-              jadallashtirish masalalarida texnik ko‘mak berish; davlat
-              organlari va boshqa tashkilotlar faoliyatining ochiqligini
-              ta’minlash maqsadida “raqamli va axborot jamiyati”ni
-              shakllantirish, shuningdek, texnik infratuzilmani
-              rivojlantirishning muhim masalalari bo‘yicha tahliliy
-              materiallarni tayyorlash; axborot tizimlari va axborot
-              resurslarini yaratish, ular o‘rtasida xavfsiz ma’lumot
-              almashinuvini ta’minlash, tashqi xosting maydonchalari bilan
-              integratsiya masalalari bo‘yicha konsalting xizmatlari
-              ko‘rsatishni tashkil etish; */}
-
               {aboutUs.description}
             </p>
           </div>
@@ -58,7 +44,7 @@ function AboutUs({ aboutUs }) {
         </div>
         <СircularShadow className={styles.circular_min} />
         <СircularShadow className={styles.circular} />
-        <p className="background_text">BIZ HAQIMIZDA</p>
+        <p className="background_text"> {t('about_us')}</p>
       </header>
     </>
   );

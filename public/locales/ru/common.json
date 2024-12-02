@@ -1,10 +1,14 @@
 {
-    "video": "/public/video/bannerRu.mp4",
     "about": "О нас",
-    "home_page": "Главнвя",
+    "home_page": "Главная",
     "center": "Центр",
     "services": "Услуги",
     "projects":"Проекты",
     "news": "Новости",
-    "contactus": "Cвязаться с нами"
+    "contactus": "Cвязаться с нами",
+    "about_us":"О Нас",
+    "our_projects":"Наши проекты",
+    "projects_page":"проекты",
+    "services_title":"УСЛУГИ",
+    "detail":"подробно"
 }

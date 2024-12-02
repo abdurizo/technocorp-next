@@ -2,6 +2,8 @@ import styles from "./OurProjects.module.css";
 import classN from "classnames";
 
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
+
 import AdliyaVaz from "@/img/imgProject/adliyaVaz.jpeg";
 import TransportXizmat from "@/img/imgProject/transportXizmat.jpeg";
 import Arxiv from "@/img/imgProject/arxiv.jpg";
@@ -47,9 +49,11 @@ const cardVariants = {
 };
 function OurProjects({ projects }) {
   const { isVisible, ref } = useObserver({ threshold: 0.3 });
+  const { t } = useTranslation();
+
   return (
     <section className={classN(styles.wrap, "container")}>
-      <h2 className="sectionTitle mb-10">BIZNING LOYIHALAR</h2>
+      <h2 className="sectionTitle mb-10">{ t("our_projects")}</h2>
       <div className={"grid grid-cols-3 grid-rows-2 gap-4"} ref={ref}>
         {projects.map((item, index) => (
           <motion.div

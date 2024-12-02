@@ -5,6 +5,7 @@ import Card from "../../CardForServis";
 import СircularShadow from "@/components/СircularShadow";
 import { motion } from "framer-motion";
 import { useObserver } from "@/hooks/use-observer";
+import { useTranslation } from "next-i18next";
 
 const serviceList = [
   {
@@ -67,10 +68,11 @@ const cardVariants = {
 };
 function Services({ services }) {
   const { isVisible, ref } = useObserver({ threshold: 0.3 });
+  const { t } = useTranslation();
 
   return (
     <section className={classN(styles.wrap, "container")}>
-      <h2 className="sectionTitle">XIZMATLAR</h2>
+      <h2 className="sectionTitle">{ t('services_title')}</h2>
       <div className={styles.cards} ref={ref}>
         {services.map(({ gif, image, title, href, id }, index) => (
           <motion.div

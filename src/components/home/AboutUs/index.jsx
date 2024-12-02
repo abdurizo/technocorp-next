@@ -1,14 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslation } from "next-i18next";
+import Link from "next/link";
 
 import styles from "./AboutUs.module.css";
 import classN from "classnames";
 
 import Play from "@/icon/play.svg";
-import Of1 from "@/img/Of1.jpg";
-import Of2 from "@/img/Of2.jpg";
-import Of3 from "@/img/Of3.jpg";
 
 import СircularShadow from "@/components/СircularShadow";
 import { AnimatePresence, motion } from "framer-motion";
@@ -33,6 +31,7 @@ const cardVariants = {
   },
 };
 function AboutUs({ aboutUs }) {
+  const { t } = useTranslation();
   // Состояние для модального окна
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { isVisible, ref } = useObserver();
@@ -61,21 +60,14 @@ function AboutUs({ aboutUs }) {
             className={styles.textSection}
           >
             <h2 className={classN(styles.title, "sectionTitle")}>
-              BIZ HAQIMIZDA
+              {t('about_us')}
             </h2>
             <p className={styles.text}>
-              {/* "Axborot texnologiyalari va axborot resurslarini rivojlantirish
-              markazi" MCHJ O‘zbekiston Respublikasi Prezidentining 2019-yil
-              14-sentabrdagi "Axborot texnologiyalari va kommunikatsiyalarning
-              yangi avlodini yaratish orqali ulardan foydalanish imkoniyatlarini
-              yanada kengaytirishga doir qo‘shimcha chora-tadbirlar to‘g‘risida"
-              PQ-4452-son qaroriga muvofiq tashkil etilgan. */}
-
               {aboutUs.description}
             </p>
 
             <div className={styles.link}>
-              <span className={styles.linkText}>BATAFSIL</span>
+              <Link href={'/about'} className={styles.linkText}>{ t('detail')}</Link>
               <div onClick={openModal} className={styles.playIcon}>
                 <span>
                   <Image
@@ -89,6 +81,7 @@ function AboutUs({ aboutUs }) {
             </div>
 
             <p className={styles.text}>{aboutUs.short_description}</p>
+
           </motion.div>
           <motion.div
             variants={cardVariants}

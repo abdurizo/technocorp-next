@@ -1,5 +1,6 @@
 import { getAboutUsForAboutUsPage } from "@/api/pagesApis/aboutUs";
 import { getDevelopers } from "@/api/pagesApis/employees";
+
 import AboutUs from "@/components/about/AboutUs";
 import Card, { SingleCounter } from "@/components/about/Card";
 import Programmers from "@/components/about/Programmers";

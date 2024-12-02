@@ -38,6 +38,7 @@
   border: 1px solid transparent;
   transition: 0.3s;
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .linkText:hover {
@@ -156,7 +157,8 @@
   padding: 0.5rem 1rem;
   background-color: #fff;
   font-weight: 900;
-  border-radius: 5 px;
+  border-radius: 5px;
+  font-family: "Roboto-Boldr";
 }
 .circular {
   min-width: 60rem;

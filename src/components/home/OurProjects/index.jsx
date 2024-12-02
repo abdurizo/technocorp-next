@@ -1,6 +1,8 @@
 import styles from "./OurProjects.module.css";
 import classN from "classnames";
 
+import { useTranslation } from "next-i18next";
+
 import Image from "next/image";
 import AdliyaVaz from "@/img/imgProject/adliyaVaz.jpeg";
 import TransportXizmat from "@/img/imgProject/transportXizmat.jpeg";
@@ -33,9 +35,10 @@ const variantsAnimation = {
 };
 
 function OurProjects() {
+  const { t } = useTranslation();
   return (
     <section className={classN(styles.wrap, "container")}>
-      <h2 className="sectionTitle mb-10">BIZNING LOYIHALAR</h2>
+      <h2 className="sectionTitle mb-10">{ t('our_projects')}</h2>
       <div className={styles.grid_container}>
         <motion.div
           {...variantsAnimation}
