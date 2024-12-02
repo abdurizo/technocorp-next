@@ -7,7 +7,13 @@ export const getAllNews = async (locale, params) => {
       "Accept-Language": locale,
     },
   });
-
+  data.results = data.results.map((item) => ({
+    ...item,
+    image: {
+      ...item.image,
+      src: item.image.src.replace("https://", "http://"),
+    },
+  }));
   return data;
 };
 

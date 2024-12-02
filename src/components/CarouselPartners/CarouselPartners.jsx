@@ -4,15 +4,6 @@ import Marquee from "react-fast-marquee";
 
 import styles from "./CarouselPartners.module.css";
 
-// import AdliyaC from "@/icon/partners/adliyaC.svg";
-// import EkologikC from "@/icon/partners/EkologikC.svg";
-// import Ichfi_ishlarC from "@/icon/partners/Ichfi_ishlarC.svg";
-// import KuchFdolatC from "@/icon/partners/KuchFdolatC.svg";
-// import MadaniyatC from "@/icon/partners/MadaniyatC.svg";
-// import OzarxivC from "@/icon/partners/OzarxivC.svg";
-// import ToshTC from "@/icon/partners/toshTC.svg";
-// import UznransgazC from "@/icon/partners/UznransgazC.svg";
-// import YollC from "@/icon/partners/yollC.svg";
 import { useEffect, useState } from "react";
 import { axiosT } from "@/api/axios";
 
@@ -23,7 +14,12 @@ function Carousel() {
     axiosT
       .get("/partner")
       .then(({ data }) => {
-        setPartnersList(data);
+        setPartnersList(
+          data.map((item) => ({
+            ...item,
+            icon: item.icon.replace("https://", "http://"),
+          }))
+        );
       })
       .catch((er) => {});
   }, []);

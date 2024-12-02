@@ -6,7 +6,10 @@ export const getStartUpProjects = async (locale) => {
       "Accept-Language": locale,
     },
   });
-  return data;
+  return data.map((item) => ({
+    ...item,
+    image: item.image.replace("https://", "http://"),
+  }));
 };
 export const getMainPageProjects = async (locale, params) => {
   const { data } = await axiosT.get("/project/main-page", {
@@ -15,7 +18,10 @@ export const getMainPageProjects = async (locale, params) => {
       "Accept-Language": locale,
     },
   });
-  return data;
+  return data.map((item) => ({
+    ...item,
+    image: item.image.replace("https://", "http://"),
+  }));
 };
 
 export const getAllProjects = async (locale, params) => {
@@ -25,5 +31,10 @@ export const getAllProjects = async (locale, params) => {
       "Accept-Language": locale,
     },
   });
+
+  data.results = data.results.map((item) => ({
+    ...item,
+    image: item.image.replace("https://", "http://"),
+  }));
   return data;
 };

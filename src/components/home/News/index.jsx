@@ -3,6 +3,7 @@ import classN from 'classnames';
 
 import Marquee from "react-fast-marquee";
 import Image from 'next/image';
+import { useTranslation } from "next-i18next";
 
 import Img1 from '@/img/imgNews/im1.png';
 import Img2 from '@/img/imgNews/im2.png';
@@ -15,9 +16,10 @@ import СircularShadow from "@/components/СircularShadow";
 import Btn from '@/components/ui/Btn/Btn';
 
 function News() {
+    const { t } = useTranslation();
     return (
         <section className={classN(styles.wrap, 'container')} >
-            <h2 className='sectionTitle'>MARKAZ YANGILIKLARI</h2>
+            <h2 className='sectionTitle'>{ t('center_news')}</h2>
             <Marquee
                 autoFill={true}
                 direction={"right"}
@@ -141,7 +143,7 @@ function News() {
 
             </Marquee>
             <СircularShadow className={styles.circular} />
-            <Btn text="Batafsil" href="/news" />
+            <Btn text={t('detail')} href="/news" />
         </section>
     );
 }

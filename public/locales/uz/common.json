@@ -10,5 +10,13 @@
   "our_projects": "BIZNING LOYIHALAR",
   "projects_page":"LOYIHALAR",
   "services_title": "XIZMATLAR",
-  "detail": "BATAFSIL"
+  "start_up_projects":"Startap loyihalar",
+  "detail": "Batafsil",
+  "quality":"SIFAT",
+  "detail_desc":"har bir xizmat yoki mahsulotda mukammallikni ta'minlash, mijozlar talablariga to'liq javob berish va doimiy ravishda takomillashtirishga intilishdir. Technocorp sifatni eng yuqori darajaga qo'yib, har bir loyiha va yechimda ishonchli va barqaror natijalarga erishishga intiladi. Sifat — bu kompaniyaning muvaffaqiyatining asosi.",
+  "trust":"Ishonch",
+  "trust_desc":"mijozlar, hamkorlar va xodimlar o'rtasida mustahkam aloqalarni yaratish, o'z vaqtida va sifatli xizmat ko'rsatish orqali ishning to'g'ri bajarilishiga ishonch hosil qilishdir. Technocorp o'zining ishonchli va o'zaro hurmatga asoslangan yondashuvi bilan, barcha tomonlar uchun doimiy ravishda yuqori darajadagi xizmatlarni   taqdim etadi.",
+  "innovation":"innovatsiya",
+  "innovation_desc":"yangiliklar yaratish va texnologiyalarni doimiy ravishda rivojlantirish orqali bozorni yangi va ilg'or yechimlar bilan to'ldirishdir. Technocorp innovatsiyalarni hayotga tadbiq etish orqali o'z mijozlariga samarali va raqobatbardosh texnologik yechimlar taklif etadi. Innovatsiya kompaniyaning uzoq muddatli muvaffaqiyatini ta'minlovchi asosiy kuchdir.",
+  "center_news":"MARKAZ YANGILIKLARI"
 }

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 import styles from "./Card.module.css";
 
@@ -7,7 +8,7 @@ import Image from "next/image";
 
 function Card({ gif, image, title, desc, href, id }) {
   const [isHovered, setIsHovered] = useState(false);
-
+  const { t } = useTranslation();
   return (
     <div
       className={styles.wrap}
@@ -39,7 +40,7 @@ function Card({ gif, image, title, desc, href, id }) {
               },
             }}
           >
-            BATAFSIL
+            {t('detail')}
           </Link>
         </div>
       </div>

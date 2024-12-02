@@ -1,7 +1,6 @@
 import { axiosT } from "../axios";
 
 export const getAllServicesList = async (locale) => {
-  console.log("locale", locale);
   const { data } = await axiosT.get("/service", {
     headers: {
       "Accept-Language": locale,

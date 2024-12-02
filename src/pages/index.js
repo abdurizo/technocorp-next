@@ -42,13 +42,7 @@ export async function getServerSideProps({ locale }) {
   };
 }
 
-export default function Home({
-  locale,
-  serviceList,
-  startups,
-  projects,
-  aboutUs,
-}) {
+export default function Home({ serviceList, startups, projects, aboutUs }) {
   return (
     <>
       <Head>
@@ -57,10 +51,10 @@ export default function Home({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         {/* <link rel="icon" href="/favicon.ico" /> */}
       </Head>
-    
+
       <Header />
       <CarouselPartners />
-  
+
       <div className="mb-80">
         <AboutUs aboutUs={aboutUs} />
       </div>

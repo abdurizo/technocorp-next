@@ -1,5 +1,5 @@
 import styles from "./Startap.module.css";
-import classN from "classnames";
+import { useTranslation } from "next-i18next";
 
 import Btn from "@/components/ui/Btn/Btn";
 import CardForStartap from "../../CardForStartap";
@@ -12,12 +12,14 @@ import Cpu2 from "@/icon/startapIcon/cpu2.svg";
 
 function Startap({ startups }) {
   console.log(startups, "startups");
+  const { t } = useTranslation();
   return (
     <section className="container">
-      <h2 className="sectionTitle">Startap loyihalar</h2>
+      <h2 className="sectionTitle">{ t('start_up_projects')}</h2>
       <div className={styles.grid_content}>
         {startups.map((item, index) => (
           <CardForStartap
+            key={index}
             imageOne={item.image}
             imageTwo={item.image}
             text={item.title}
@@ -40,7 +42,7 @@ function Startap({ startups }) {
           }
         /> */}
       </div>
-      <Btn text="Batafsil" href="#" />
+      <Btn text={t('detail')} href="/projects" />
     </section>
   );
 }
