@@ -73,7 +73,10 @@
   overflow: hidden;
   margin-top: 1rem;
   transition: 0.3s;
-  height: 250px;
+  /* height: 250px; */
+  overflow: hidden;
+  aspect-ratio: 31.4 / 27;
+  /* border: 1px solid #fff; */
 }
 
 .wrap:hover .image {

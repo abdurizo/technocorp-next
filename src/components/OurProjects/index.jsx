@@ -37,9 +37,10 @@ function OurProjects({ projects }) {
   const { isVisible, ref } = useObserver({ threshold: 0.3 });
   const { t } = useTranslation();
 
+
   return (
     <section className={classN(styles.wrap, "container")}>
-      <h2 className="sectionTitle mb-10">{ t('our_projects')}</h2>
+      <h2 className="sectionTitle mb-10">{ t('our_projects')}</h2>  
       <div className={"grid grid-cols-3 grid-rows-2 gap-4"} ref={ref}>
         {projects.map((item, index) => (
           <motion.div

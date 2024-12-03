@@ -25,7 +25,7 @@ function Scroll() {
       forHoverImg: AwardW,
       img: Award,
       title: t('quality'),
-      desc: t('detail_desc'),
+      desc: t('quality_desc'),
     },
     {
       forHoverImg: CodesandboxW,

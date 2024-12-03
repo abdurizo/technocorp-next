@@ -2,6 +2,7 @@ import styles from "./CardNew.module.css";
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
 
 import Eye from "@/icon/eye.svg";
 import RightGreen from "@/icon/right_green.svg";
@@ -16,6 +17,7 @@ const formatData = (date) => {
 
   return formattedDate;
 };
+
 function CardProgrammer({
   image,
   href,
@@ -26,7 +28,7 @@ function CardProgrammer({
   views,
 }) {
   const date = new Date(published_date);
-
+  const { t } = useTranslation();
   return (
     <>
       <div className={styles.card}>
@@ -70,7 +72,7 @@ function CardProgrammer({
               }}
               className={styles.button}
             >
-              <span>Batafsil</span>
+              <span>{ t('detail')}</span>
               <Image
                 src={RightGreen}
                 width={"auto"}

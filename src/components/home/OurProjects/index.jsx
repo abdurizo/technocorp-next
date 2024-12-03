@@ -38,7 +38,7 @@ function OurProjects() {
   const { t } = useTranslation();
   return (
     <section className={classN(styles.wrap, "container")}>
-      <h2 className="sectionTitle mb-10">{ t('our_projects')}</h2>
+      {/* <h2 className="sectionTitle mb-10">{ t('our_projects')}</h2> */}
       <div className={styles.grid_container}>
         <motion.div
           {...variantsAnimation}

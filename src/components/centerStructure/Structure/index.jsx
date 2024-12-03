@@ -1,19 +1,24 @@
 import styles from "./Structure.module.css";
 import classN from "classnames";
 
+import { useTranslation } from "next-i18next";
+
 import Card from "../Card";
 import СircularShadow from "@/components/СircularShadow";
 
 function Structure({ centerStructure }) {
+  const { t } = useTranslation();
+
   console.log(centerStructure, "centerStructure");
+
 
   return (
     <>
-      <p className={styles.background_text}>MarkazTUZILMASI</p>
+      <p className={styles.background_text}>{ t('structure_center_together')}</p>
 
       <header className={classN("container", styles.wrap)}>
         <h2 className={classN("sectionTitle", styles.title)}>
-          Markaz TUZILMASI
+          {t('structure_center')}
         </h2>
         <div className={styles.wrpa_director}></div>
 

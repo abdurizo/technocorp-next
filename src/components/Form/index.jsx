@@ -2,6 +2,7 @@ import styles from "./Form.module.css";
 
 import Image from "next/image";
 import { useForm } from "react-hook-form";
+import { useTranslation } from "next-i18next";
 
 import { postServiceMessage } from "@/api/pagesApis/contactUs";
 import { useRouter } from "next/router";
@@ -13,6 +14,8 @@ import Location from "@/icon/formIcon/location.svg";
 import Envelope from "@/icon/formIcon/envelope.svg";
 
 function Form({ type, id }) {
+  const { t } = useTranslation();
+
   const {
     register,
     formState: { errors },
@@ -84,17 +87,17 @@ function Form({ type, id }) {
                 type="text"
                 id="name"
                 className={styles.input}
-                placeholder="Ismingiz"
+                placeholder={t('form_name_placeholder')}
                 {...register("name", {
-                  required: "Ismni kiriting",
+                  required: t('form_name_required'),
                   pattern: {
                     value: /[A-Za-z]{3}/,
-                    message: "Lotin alifbosining kamida 3 harfini kiritin",
+                    message: t('form_name_message'),
                   },
                   validate: {
                     minLength: (value) => {
                       if (value.length < 3) {
-                        return "Lotin alifbosining kamida 3 harfini kiritin";
+                        return t('form_name_message');
                       }
                     },
                   },
@@ -121,17 +124,17 @@ function Form({ type, id }) {
                 type="tel"
                 id="tel"
                 className={styles.input}
-                placeholder="Telefon raqamingiz"
+                placeholder={t('form_tel_placeholder')}
                 {...register("tel", {
-                  required: "Telefon raqamini kiriting",
+                  required: t('form_tel_required'),
                   pattern: {
                     value: /^\+[0-9]{12}$/,
-                    message: "Telefon raqamingiz toliq kiriting",
+                    message: t('form_tel_message'),
                   },
                   validate: {
                     minLength: (value) => {
                       if (value.length < 1) {
-                        return "Telefon raqamingiz toliq kiriting";
+                        return t('form_tel_message');
                       }
                     },
                   },
@@ -146,13 +149,13 @@ function Form({ type, id }) {
           <textarea
             name="message"
             id="message"
-            placeholder="Matn kiriting"
+            placeholder={t('form_messag_placeholder')}
             className={styles.textarea}
             {...register("message")}
           ></textarea>
         </div>
         <div>
-          <div className={styles.us_wrap}>
+          <div className={styles.us_wrap}>    
             <div className={styles.icon_us_wrap}>
               <Image
                 src={Callphone}
@@ -164,7 +167,7 @@ function Form({ type, id }) {
             </div>
             <div className={styles.line}></div>
             <div className={styles.content}>
-              <p className={styles.title}>Telefon</p>
+              <p className={styles.title}>{ t('form_Phone')}</p>
               <p className={styles.text}>+998 (55) 501-43-13</p>
             </div>
           </div>
@@ -180,9 +183,9 @@ function Form({ type, id }) {
             </div>
             <div className={styles.line}></div>
             <div className={styles.content}>
-              <p className={styles.title}>Manzil</p>
+              <p className={styles.title}>{ t('form_address')}</p>
               <p className={styles.text}>
-                O‘zbekiston Respublikasi, Toshkent, A.Navoiy 30b
+                {t('form_address_text')}
               </p>
             </div>
           </div>
@@ -205,7 +208,7 @@ function Form({ type, id }) {
         </div>
       </div>
 
-      <button className={styles.button}>Yuborish</button>
+      <button className={styles.button}>{ t('send')}</button>
     </form>
   );
 }
