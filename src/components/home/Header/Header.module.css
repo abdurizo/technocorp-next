@@ -1,5 +1,5 @@
 .intro {
-    height: 100vh;
+    /* height: 100vh; */
     overflow: hidden;
 }
 
@@ -11,9 +11,10 @@
 
 .video_media {
     width: 100%;
-    height: auto;
+    height: 100%;
     position: absolute;
     left: 0;
     top: 0;
+    bottom: 0;
     object-fit: cover;
 }

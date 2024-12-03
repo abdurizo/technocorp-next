@@ -32,7 +32,7 @@ const cardVariants = {
 };
 function AboutUs({ aboutUs }) {
   const { t } = useTranslation();
-  // Состояние для модального окна
+ 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { isVisible, ref } = useObserver();
 
@@ -87,37 +87,37 @@ function AboutUs({ aboutUs }) {
             variants={cardVariants}
             initial="hidden"
             animate={isVisible ? "visible" : "exit"}
-            className={styles.imageSection}
+            className={classN(styles.imageSection)}
           >
             <div className={styles.top_left}>
               <Image
                 src={aboutUs.photo_1}
-                width={1000}
-                height={1000}
+                width={100}
+                height={100}
                 alt="of"
               />
             </div>
             <div className={styles.bottom_right}>
               <Image
                 src={aboutUs.photo_2}
-                width={1000}
-                height={1000}
+                width={100}
+                height={100}
                 alt="of"
               />
             </div>
             <div className={styles.top_left}>
               <Image
                 src={aboutUs.photo_3}
-                width={1000}
-                height={1000}
+                width={100}
+                height={100}
                 alt="of"
               />
             </div>
             <div className={styles.bottom_right}>
               <Image
                 src={aboutUs.photo_4}
-                width={1000}
-                height={1000}
+                width={100}
+                height={100}
                 alt="of"
               />
             </div>

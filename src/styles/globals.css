@@ -43,9 +43,11 @@ img {
 }
 
 .container {
-  max-width: 132rem;
+  max-width: 1320px;
   margin: auto;
   margin-top: 15rem;
+  padding: 0 10px;
+  /* border: 1px solid #fff; */
 }
 
 .sectionTitle {
@@ -90,4 +92,10 @@ img {
   font-style: normal;
   line-height: 135%;
   text-indent: 20px;
+}
+@media (max-width: 1024px) {
+  html{
+    font-size: 8px;
+    /* border: 1px solid #fff; */
+  }
 }
