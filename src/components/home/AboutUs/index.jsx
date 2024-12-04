@@ -87,37 +87,37 @@ function AboutUs({ aboutUs }) {
             variants={cardVariants}
             initial="hidden"
             animate={isVisible ? "visible" : "exit"}
-            className={classN(styles.imageSection)}
+            className={classN(styles.imageSection,)}
           >
             <div className={styles.top_left}>
               <Image
                 src={aboutUs.photo_1}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 alt="of"
               />
             </div>
             <div className={styles.bottom_right}>
               <Image
                 src={aboutUs.photo_2}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 alt="of"
               />
             </div>
             <div className={styles.top_left}>
               <Image
                 src={aboutUs.photo_3}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 alt="of"
               />
             </div>
             <div className={styles.bottom_right}>
               <Image
                 src={aboutUs.photo_4}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 alt="of"
               />
             </div>

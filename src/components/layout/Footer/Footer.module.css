@@ -1,6 +1,6 @@
 .footer{
     border-top: 1px solid rgba(255, 255, 255, 0.25);
-    
+    padding: 0 10px;
 }
 .container {
     max-width: 132rem;
@@ -116,4 +116,10 @@
 
 .developed span {
     color: #00E85D;
+}
+@media (max-width:640px) {
+    .grid_wrap {
+        grid-template-columns: repeat(2, 1fr);
+        /* gap: 2rem; */
+    }
 }

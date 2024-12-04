@@ -7,7 +7,7 @@ import ContactUs from "../ContactUs";
 function index({ children }) {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <ContactUs />
       <main>{children}</main>
       <Footer />

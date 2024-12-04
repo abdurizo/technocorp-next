@@ -13,6 +13,7 @@
 
 .new_carousel {
     margin: 2.4rem 1rem;
+    overflow: hidden;
 }
 
 .container_swiper {
@@ -98,3 +99,10 @@
 .swiper-pagination-bullet-active {
     background-color: #fff !important;
 }
+
+
+@media (max-width: 992px) {
+    .new_carousel{
+        max-width: 40rem;
+    } 
+  }

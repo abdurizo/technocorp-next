@@ -6,3 +6,9 @@
     filter:  grayscale(0%);
     transition: .3s;
 }
+@media (max-width: 800px) {
+   .image{
+    max-width: 10rem;
+    max-height: 10rem;    
+   }
+  }

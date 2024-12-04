@@ -2,11 +2,13 @@
   max-width: 96.2rem;
   margin: auto;
   margin-top: 19.2rem;
+  padding: 0 10px;
 }
 
 .block {
   display: grid;
   grid-template-columns: 22rem 22rem 1fr;
+  /* gap: 1rem; */
 }
 
 .icon_wrap {
@@ -122,4 +124,27 @@
 .text1Hover {
   background-size: 100% 100%;
   color: #fff;
+}
+@media (max-width: 640px) {
+  .wrap_1{
+    margin-top: 10rem;
+  }
+  .block {
+    display: block;
+    
+  }
+  .block:not(:first-child){
+    margin-top: 5rem;
+   
+  }
+  .line_wrap_1{
+    display: none;
+  }
+  .text_1{
+    margin-top: 2rem;
+  }
+  .icon_wrap{
+    margin-top: 5rem;
+   
+  }
 }

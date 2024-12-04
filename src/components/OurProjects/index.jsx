@@ -41,7 +41,7 @@ function OurProjects({ projects }) {
   return (
     <section className={classN(styles.wrap, "container")}>
       <h2 className="sectionTitle mb-10">{ t('our_projects')}</h2>  
-      <div className={"grid grid-cols-3 grid-rows-2 gap-4"} ref={ref}>
+      <div className={"grid grid-cols-2  gap-4 sm:grid-cols-3 grid-rows-2 gap-4"} ref={ref}>
         {projects.map((item, index) => (
           <motion.div
             key={index}

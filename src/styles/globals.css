@@ -43,7 +43,7 @@ img {
 }
 
 .container {
-  max-width: 1320px;
+  max-width: 132rem;
   margin: auto;
   margin-top: 15rem;
   padding: 0 10px;
@@ -96,6 +96,15 @@ img {
 @media (max-width: 1024px) {
   html{
     font-size: 8px;
-    /* border: 1px solid #fff; */
+  }
+}
+@media (max-width: 768px) {
+  html{
+    font-size: 7px;
+  }
+}
+@media (max-width: 500px) {
+  html{
+    /* font-size: 7px; */
   }
 }
