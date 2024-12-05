@@ -2,7 +2,7 @@ import styles from "./NavBar.module.css";
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 
 import Language from "@/components/Language";
@@ -46,7 +46,8 @@ const Links = [
 ];
 
 function NavBar() {
-  const { i18n, t } = useTranslation();
+  const { t } = useTranslation();
+  const [menuOpen, setMenuOpen] = useState(false);
   const [toggle, setToggle] = useState(true);
   const [search, setSearch] = useState(false);
   const router = useRouter();
@@ -59,12 +60,37 @@ function NavBar() {
     setSearch(!search);
   };
 
+  useEffect(() => {
+    if (menuOpen) {
+      // Когда меню открыто, блокируем прокрутку
+      document.documentElement.style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    } else {
+      // Когда меню закрыто, восстанавливаем прокрутку
+      document.documentElement.style.overflow = "";
+      document.body.style.overflow = "";
+    }
+  }, [menuOpen]);
+
   return (
-    <nav className={styles.logo}>
-      <Link href="/" locale={locale}>
+    <nav className={styles.nav}>
+      <Link href="/" locale={locale} className={styles.logo}>
         <Image src={Logo} width={231} height={41} alt="icon glasses" />
       </Link>
-      <ul className={styles.nav_list}>
+
+      <div
+        className={`${styles.burger} ${menuOpen ? styles.burger_open : ""
+          }`}
+        // className={styles.burger}
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
+        <span className={menuOpen ? styles.burger_open : ""}></span>
+        <span className={menuOpen ? styles.burger_open : ""}></span>
+        <span className={menuOpen ? styles.burger_open : ""}></span>
+      </div>
+
+      <ul className={`${styles.nav_list} ${menuOpen ? styles.nav_list_open : styles.nav_list_closed
+        }`}>
         {Links.map((item) => (
           <li>
             <Link
@@ -72,7 +98,7 @@ function NavBar() {
               locale={locale}
               className={classNames(
                 item.href === pathname &&
-                  "bg-gradient-to-l from-white to-[#C6C6C6] text-black rounded-[10px] py-2 px-5 transition-colors"
+                "bg-gradient-to-l from-white to-[#C6C6C6] text-black rounded-[10px] py-2 px-5 transition-colors"
               )}
             >
               {t(item.title)}
@@ -82,39 +108,50 @@ function NavBar() {
       </ul>
 
       <div className={styles.nav_icon}>
-        <SiteView />
+        
+          <SiteView />
+        
+
         <div
           className={`${styles.icon_animation} check`}
           onClick={handelAddClass}
         >
+
           <div className={styles.number}>+998 (55) 501-43-00</div>
           <div>
-            <Image
-              src={PhoneIcon}
-              width={"auto"}
-              height={"auto"}
-              alt="icon glasses"
-            />
+            <a href="tel:+998555014300">
+              <Image
+                src={PhoneIcon}
+                width={1000}
+                height={1000}
+                alt="icon glasses"
+                className={styles.icon} 
+              />
+            </a>
+
           </div>
         </div>
         <div className={styles.icon_animation}>
           <input
             type="text"
-            className={`${styles.search} ${
-              search ? styles.search_active : ""
-            } `}
+            className={`${styles.search} ${search ? styles.search_active : ""
+              } `}
             placeholder="search"
           />
           <div onClick={handelAddClassSearch}>
             <Image
               src={SearchIcon}
-              width={"auto"}
-              height={"auto"}
+              width={1000}
+              height={1000}
               alt="icon glasses"
+              className={styles.icon}
             />
           </div>
         </div>
-        <Language />
+       
+          <Language />
+        
+
       </div>
     </nav>
   );

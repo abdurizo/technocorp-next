@@ -9,4 +9,8 @@
     top: 100px;
     left: -50px;
 }
-  
+@media (max-width: 420px) {
+    .circular {
+      min-width: 40rem;
+    }
+  }  

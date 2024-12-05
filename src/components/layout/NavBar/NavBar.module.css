@@ -1,4 +1,4 @@
-.logo {
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,11 +17,27 @@
   display: flex;
   gap: 4rem;
   font-family: "Exo2-Medium";
-  font-size: 1.5rem;
+  font-size: 1.5rem;  
   font-style: normal;
   line-height: 1.84rem;
   /* text-transform: capitalize; */
   color: #a8a8a8;
+}
+
+
+.nav_list_open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 100%;  
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 2rem 5rem;
+  gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 100;
+  height: 100vh;
 }
 
 .nav_icon {
@@ -29,9 +45,40 @@
   justify-content: end;
   align-items: center;
   gap: 1rem;
-  /* min-width: 45rem; */
-  /* border: 1px solid #000; */
 }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: pointer;
+  position: fixed; /* Закрепляем бургер в правом углу */
+  top: 3.5rem; /* Отступ сверху */
+  right: 15px; /* Отступ справа */
+  z-index: 100; /* Поверх всего */
+}
+
+.burger span {
+  display: block;
+  width: 3rem;
+  height: 0.5rem;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.burger_open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger_open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger_open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+
 
 .nav_icon img {
   cursor: pointer;
@@ -42,7 +89,9 @@
   gap: 1rem;
   align-items: center;
 }
-
+.icon{
+ min-width: 0.5rem !important;
+}
 .number {
   font-family: "Exo2-Medium";
   font-size: 1.8rem;
@@ -86,4 +135,45 @@
 }
 .search::placeholder {
   color: #a8a8a8;
+}
+@media (max-width: 800px) {
+  .nav{
+    padding: 2.5rem 1rem;
+  }
+  .nav_icon{
+    padding-right: 7rem;
+  }
+  .nav_list {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .nav_list_open {
+    display: flex;
+  }
+  .logo{
+    max-width: 27rem;
+  }
+  .icon{
+    max-width: 1.8rem;
+  }
+
+  .number{
+    display: none;
+  }
+  .icon_animation{
+    gap: 0 !important;
+  }
+}
+@media (max-width:350px){
+  .logo{
+    max-width: 20rem;
+  }
+  .burger span {
+    width: 2.5rem;
+    height: 0.3rem;
+  }
 }
