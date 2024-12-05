@@ -17,7 +17,7 @@
   display: flex;
   gap: 4rem;
   font-family: "Exo2-Medium";
-  font-size: 1.5rem;  
+  font-size: 1.5rem;
   font-style: normal;
   line-height: 1.84rem;
   /* text-transform: capitalize; */
@@ -29,7 +29,7 @@
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 100%;  
+  top: 100%;
   left: 0;
   right: 0;
   background: rgba(0, 0, 0, 0.9);
@@ -52,10 +52,14 @@
   flex-direction: column;
   gap: 0.5rem;
   cursor: pointer;
-  position: fixed; /* Закрепляем бургер в правом углу */
-  top: 3.5rem; /* Отступ сверху */
-  right: 15px; /* Отступ справа */
-  z-index: 100; /* Поверх всего */
+  position: fixed;
+  /* Закрепляем бургер в правом углу */
+  top: 3.5rem;
+  /* Отступ сверху */
+  right: 15px;
+  /* Отступ справа */
+  z-index: 100;
+  /* Поверх всего */
 }
 
 .burger span {
@@ -78,8 +82,6 @@
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-
-
 .nav_icon img {
   cursor: pointer;
 }
@@ -89,9 +91,7 @@
   gap: 1rem;
   align-items: center;
 }
-.icon{
- min-width: 0.5rem !important;
-}
+
 .number {
   font-family: "Exo2-Medium";
   font-size: 1.8rem;
@@ -103,6 +103,7 @@
   padding: 0 0 2.4rem 0;
   border-bottom: 1px solid transparent;
 }
+
 .number:hover {
   border-bottom: 1px solid #fff;
   color: #fff;
@@ -111,6 +112,7 @@
 .d_toggle {
   margin: 0;
 }
+
 .icon_animation .d_toggle {
   width: 0;
   transition: all ease 0.3s;
@@ -133,16 +135,20 @@
 .search_active {
   width: 17rem;
 }
+
 .search::placeholder {
   color: #a8a8a8;
 }
-@media (max-width: 800px) {
-  .nav{
+
+@media (max-width: 1024px) {
+  .nav {
     padding: 2.5rem 1rem;
   }
-  .nav_icon{
+
+  .nav_icon {
     padding-right: 7rem;
   }
+
   .nav_list {
     display: none;
   }
@@ -154,24 +160,29 @@
   .nav_list_open {
     display: flex;
   }
-  .logo{
+
+  .logo {
     max-width: 27rem;
   }
-  .icon{
+
+  .icon {
     max-width: 1.8rem;
   }
 
-  .number{
+  .number {
     display: none;
   }
-  .icon_animation{
+
+  .icon_animation {
     gap: 0 !important;
   }
 }
-@media (max-width:350px){
-  .logo{
+
+@media (max-width:350px) {
+  .logo {
     max-width: 20rem;
   }
+
   .burger span {
     width: 2.5rem;
     height: 0.3rem;
