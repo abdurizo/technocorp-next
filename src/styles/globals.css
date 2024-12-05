@@ -103,8 +103,10 @@ img {
     font-size: 7px;
   }
 }
-@media (max-width: 500px) {
-  html{
-    /* font-size: 7px; */
+@media (max-width: 400px) {
+  .sectionTitle {
+   
+    line-height: 4.5rem;
+    
   }
 }
