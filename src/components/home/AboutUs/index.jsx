@@ -31,8 +31,8 @@ const cardVariants = {
   },
 };
 function AboutUs({ aboutUs }) {
-  const { t } = useTranslation();
- 
+  const { t } = useTranslation("common");
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   const { isVisible, ref } = useObserver();
 
@@ -47,8 +47,6 @@ function AboutUs({ aboutUs }) {
     }
   };
 
-  console.log("aboutUs", aboutUs);
-
   return (
     <>
       <AnimatePresence>
@@ -60,14 +58,14 @@ function AboutUs({ aboutUs }) {
             className={styles.textSection}
           >
             <h2 className={classN(styles.title, "sectionTitle")}>
-              {t('about_us')}
+              {t("about_us")}
             </h2>
-            <p className={styles.text}>
-              {aboutUs.description}
-            </p>
+            <p className={styles.text}>{aboutUs.description}</p>
 
             <div className={styles.link}>
-              <Link href={'/about'} className={styles.linkText}>{ t('detail')}</Link>
+              <Link href={"/about"} className={styles.linkText}>
+                {t("detail")}
+              </Link>
               <div onClick={openModal} className={styles.playIcon}>
                 <span>
                   <Image
@@ -81,13 +79,12 @@ function AboutUs({ aboutUs }) {
             </div>
 
             <p className={styles.text}>{aboutUs.short_description}</p>
-
           </motion.div>
           <motion.div
             variants={cardVariants}
             initial="hidden"
             animate={isVisible ? "visible" : "exit"}
-            className={classN(styles.imageSection,)}
+            className={classN(styles.imageSection)}
           >
             <div className={styles.top_left}>
               <Image

@@ -1,5 +1,5 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 import Structure from "@/components/centerStructure/Structure";
 import Programmers from "@/components/about/Programmers";
@@ -12,8 +12,8 @@ function CenterStructure({ developers, centerStructure }) {
     <>
       <Structure centerStructure={centerStructure} />
       <Programmers
-        title={t('additional_departments')} 
-        background_text={t('departments')}
+        title={t("additional_departments")}
+        background_text={t("departments")}
         developers={centerStructure.filter((card) => card.position === 3)}
       />
     </>

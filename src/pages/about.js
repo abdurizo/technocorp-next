@@ -1,6 +1,6 @@
 import { getAboutUsForAboutUsPage } from "@/api/pagesApis/aboutUs";
 import { getDevelopers } from "@/api/pagesApis/employees";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 import AboutUs from "@/components/about/AboutUs";
 import Card, { SingleCounter } from "@/components/about/Card";
@@ -10,7 +10,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
 
 export async function getServerSideProps({ locale }) {
-  
   const aboutUs = await getAboutUsForAboutUsPage(locale);
   const developers = await getDevelopers(locale);
   return {
@@ -41,7 +40,6 @@ function About({ aboutUs, developers }) {
     setCustomStats(arr);
   }, [aboutUs]);
   return (
-    
     <>
       <AboutUs aboutUs={aboutUs} />
 
@@ -55,7 +53,11 @@ function About({ aboutUs, developers }) {
         items={["HTML", "CSS", "JavaScript", "React", "Node.js", "TypeScript"]}
       /> */}
 
-      <Programmers developers={developers} title={t('our_team')} background_text={t('our_team_together')}/>
+      <Programmers
+        developers={developers}
+        title={t("our_team")}
+        background_text={t("our_team_together")}
+      />
     </>
   );
 }
