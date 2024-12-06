@@ -1,16 +1,24 @@
-    .wrap{
-    margin-top: 19.2em;
-    position: relative;
-}
-.circular{
-    width: 60rem;
-    height: 58rem;
-    flex-shrink: 0;
-    top: 100px;
-    left: -50px;
-}
-@media (max-width: 420px) {
-    .circular {
-      min-width: 40rem;
+    .wrap {
+      margin-top: 19.2em;
+      position: relative;
     }
-  }  
+
+    .circular {
+      width: 60rem;
+      height: 58rem;
+      flex-shrink: 0;
+      top: 100px;
+      left: -50px;
+    }
+
+    @media (max-width: 420px) {
+      .circular {
+        min-width: 40rem;
+      }
+    }
+
+    @media (max-width: 350px) {
+      .circular {
+        min-width: 20rem;
+      }
+    }

@@ -75,7 +75,7 @@ function OurProjects({ projects }) {
           </motion.div>
         ))}
       </div>
-      <Btn />
+      <Btn text={t('detail')} href="/projects"/>
     </section>
   );
 }

@@ -28,8 +28,16 @@
     .cards {
         grid-template-columns: repeat(1, 1fr);
     }
-}@media (max-width: 420px) {
+}
+
+@media (max-width: 420px) {
     .circular {
-      min-width: 40rem;
+        min-width: 40rem;
     }
-  }
+}
+
+@media (max-width: 350px) {
+    .circular {
+        min-width: 20rem;
+    }
+}

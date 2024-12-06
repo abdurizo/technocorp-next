@@ -1,6 +1,7 @@
 
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { axiosT } from "@/api/axios";
+import { Toaster } from 'react-hot-toast';
 
 
 import BreadCrumbs from "@/components/BreadCrumbs";
@@ -41,7 +42,17 @@ export async function getServerSideProps({ locale, query }) {
         <Desc />
 
         <Form type={1} id={props.detailId.id} />
-
+        <Toaster
+        position="top-right"
+        toastOptions={{
+          style: {
+            background: '#363636',
+            color: '#fff',
+            fontFamily: "Roboto-Medium",
+            fontSize:"1.8rem",
+          },
+        }}
+      />
       </div>
     );
   }

@@ -97,7 +97,16 @@ img {
   html{
     font-size: 8px;
   }
+  .background_text{
+    font-size: 15rem;
+  }
 }
+@media (max-width: 992px) {
+  .background_text{
+    font-size: 10rem;
+  }
+}
+
 @media (max-width: 768px) {
   html{
     font-size: 7px;

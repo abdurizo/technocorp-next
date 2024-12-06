@@ -16,11 +16,11 @@ function Structure({ centerStructure }) {
     <>
       <p className={styles.background_text}>{ t('structure_center_together')}</p>
 
+
       <header className={classN("container", styles.wrap)}>
         <h2 className={classN("sectionTitle", styles.title)}>
           {t('structure_center')}
         </h2>
-        <div className={styles.wrpa_director}></div>
 
         <div className="relative">
           <div className={classN(styles.director, "mb-10 relative z-10")}>

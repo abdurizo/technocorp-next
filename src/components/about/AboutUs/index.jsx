@@ -43,7 +43,7 @@ function AboutUs({ aboutUs }) {
         </div>
         <СircularShadow className={styles.circular_min} />
         <СircularShadow className={styles.circular} />
-        <p className="background_text"> {t('about_us')}</p>
+        <p className="background_t  ext"> {t('about_us')}</p>
       </header>
     </>
   );
