@@ -12,7 +12,7 @@ function Card({ card }) {
     <div className={styles.card}>
       <div className={styles.person_info}>
         <div className={styles.Image_wrap}>
-          <Image width={1000} height={1000} alt="person" src={card?.photo} />
+          <Image width={500} height={500} alt="person" src={card?.photo}  />
         </div>
         <div className={styles.info}>
           <h3 className={classN(styles.full_name, styles.base)}>

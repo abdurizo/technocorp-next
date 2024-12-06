@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 import Btn from "@/components/ui/Btn/Btn";
 import { useObserver } from "@/hooks/use-observer";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "next-i18next";
 
 // const variantsAnimation = {
 //   initial: {
@@ -35,13 +35,15 @@ const cardVariants = {
 
 function OurProjects({ projects }) {
   const { isVisible, ref } = useObserver({ threshold: 0.3 });
-  const { t } = useTranslation();
-
+  const { t } = useTranslation("common");
 
   return (
     <section className={classN(styles.wrap, "container")}>
-      <h2 className="sectionTitle mb-10">{ t('our_projects')}</h2>  
-      <div className={"grid grid-cols-2  gap-4 sm:grid-cols-3 grid-rows-2 gap-4"} ref={ref}>
+      <h2 className="sectionTitle mb-10">{t("our_projects")}</h2>
+      <div
+        className={"grid grid-cols-2  sm:grid-cols-3 grid-rows-2 gap-4"}
+        ref={ref}
+      >
         {projects.map((item, index) => (
           <motion.div
             key={index}

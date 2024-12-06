@@ -1,49 +1,48 @@
-.language_wrap{
-    display: flex;
-    gap: .5rem;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
+.language_wrap {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
 }
-.language{
-    display: flex;
-    gap: .5rem;
-    font-family: "Exo2-Medium";
-    width: 0;
-    overflow: hidden;
-    transition: .3s;
-   
+.language {
+  display: flex;
+  gap: 0.5rem;
+  font-family: "Exo2-Medium";
+  width: 0;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
-.uncover{
-    width: 8rem;
-    transition: .3s;
+.uncover {
+  width:5rem;
+  transition: 0.3s;
 }
-.noactive{
-    color: #A8A8A8;
-    cursor: pointer;
+.noactive {
+  color: #a8a8a8;
+  cursor: pointer;
 }
-.active{
-    color: #fff;
-    cursor: pointer;
+.active {
+  color: #fff;
+  cursor: pointer;
 }
-.wrap_icon{
-   display: flex;
-   align-items: center;
-   cursor: pointer;
+.wrap_icon {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
-.wrap_icon span{
-    font-family: "Exo2-Medium";
-    color: #fff;
-    margin-right: 0.5rem;
+.wrap_icon span {
+  font-family: "Exo2-Medium";
+  color: #fff;
+  margin-right: 0.5rem;
 }
 
 @media (max-width: 800px) {
-    .icon{
-     /* width: 2.5rem; */
-        /* height: 2.5rem; */
-    }
-    .language_wrap{
-        /* font-size: 2.5rem;    */
-    }
+  .icon {
+    /* width: 2.5rem; */
+    /* height: 2.5rem; */
+  }
+  .language_wrap {
+    /* font-size: 2.5rem;    */
+  }
 }

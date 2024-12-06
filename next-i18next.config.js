@@ -2,7 +2,7 @@ const path = require("path");
 
 module.exports = {
   i18n: {
-    defaultLocale: "ru",
+    defaultLocale: "uz",
     locales: ["uz", "ru", "en"],
     localeDetection: false,
   },
@@ -11,6 +11,6 @@ module.exports = {
       ? require("path").resolve("./public/locales")
       : "/locales",
   fallbackLng: {
-    default: ["ru"],
+    default: ["uz"],
   },
 };

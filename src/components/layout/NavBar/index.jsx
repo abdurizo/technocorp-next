@@ -50,11 +50,16 @@ function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [toggle, setToggle] = useState(true);
   const [search, setSearch] = useState(false);
+  const [toggleLanguage, setToggleLanguage] = useState(false);
   const router = useRouter();
   const { locale } = router;
   const pathname = usePathname();
   const handelAddClass = () => {
     setToggle(!toggle);
+  };
+
+  const handelSetToggleLanguage = () => {
+    setToggleLanguage(!toggleLanguage);
   };
   const handelAddClassSearch = (e) => {
     setSearch(!search);
@@ -79,8 +84,7 @@ function NavBar() {
       </Link>
 
       <div
-        className={`${styles.burger} ${menuOpen ? styles.burger_open : ""
-          }`}
+        className={`${styles.burger} ${menuOpen ? styles.burger_open : ""}`}
         // className={styles.burger}
         onClick={() => setMenuOpen(!menuOpen)}
       >
@@ -89,8 +93,11 @@ function NavBar() {
         <span className={menuOpen ? styles.burger_open : ""}></span>
       </div>
 
-      <ul className={`${styles.nav_list} ${menuOpen ? styles.nav_list_open : styles.nav_list_closed
-        }`}>
+      <ul
+        className={`${styles.nav_list} ${
+          menuOpen ? styles.nav_list_open : styles.nav_list_closed
+        }`}
+      >
         {Links.map((item) => (
           <li>
             <Link
@@ -98,7 +105,7 @@ function NavBar() {
               locale={locale}
               className={classNames(
                 item.href === pathname &&
-                "bg-gradient-to-l from-white to-[#C6C6C6] text-black rounded-[10px] py-2 px-5 transition-colors"
+                  "bg-gradient-to-l from-white to-[#C6C6C6] text-black rounded-[10px] py-2 px-5 transition-colors"
               )}
             >
               {t(item.title)}
@@ -108,16 +115,15 @@ function NavBar() {
       </ul>
 
       <div className={styles.nav_icon}>
-        
-          <SiteView />
-        
+        <SiteView />
 
         <div
           className={`${styles.icon_animation} check`}
           onClick={handelAddClass}
         >
-
-          <div className={styles.number}>+998 (55) 501-43-00</div>
+          {!toggleLanguage && (
+            <div className={styles.number}>+998 (55) 501-43-00</div>
+          )}
           <div>
             <a href="tel:+998555014300">
               <Image
@@ -125,17 +131,17 @@ function NavBar() {
                 width={1000}
                 height={1000}
                 alt="icon glasses"
-                className={styles.icon} 
+                className={styles.icon}
               />
             </a>
-
           </div>
         </div>
         <div className={styles.icon_animation}>
           <input
             type="text"
-            className={`${styles.search} ${search ? styles.search_active : ""
-              } `}
+            className={`${styles.search} ${
+              search ? styles.search_active : ""
+            } `}
             placeholder="search"
           />
           <div onClick={handelAddClassSearch}>
@@ -148,10 +154,11 @@ function NavBar() {
             />
           </div>
         </div>
-       
-          <Language />
-        
 
+        <Language
+          toggle={toggleLanguage}
+          handelAddClass={handelSetToggleLanguage}
+        />
       </div>
     </nav>
   );
