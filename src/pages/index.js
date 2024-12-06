@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Toaster } from 'react-hot-toast';
 
 import Header from "@/components/home/Header";
 import CarouselPartners from "@/components/CarouselPartners/CarouselPartners";
@@ -67,6 +68,18 @@ export default function Home({ serviceList, startups, projects, aboutUs }) {
       <News />
       <ContactUs />
       <Carousel />
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          style: {
+            background: '#363636',
+            color: '#fff',
+            fontFamily: "Roboto-Medium",
+            fontSize:"1.8rem",
+          },
+        }}
+      />
+      
     </>
   );
 }

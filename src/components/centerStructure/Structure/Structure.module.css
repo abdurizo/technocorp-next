@@ -48,3 +48,14 @@
   top: 0px;
   right: 0px;
 }
+@media (max-width: 1024px) {
+  
+  .background_text{
+    font-size: 12rem;
+  }
+}
+@media (max-width: 992px) {
+  .background_text{
+    font-size: 10rem;
+  }
+}

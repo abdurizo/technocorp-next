@@ -196,3 +196,10 @@
     min-width: 40rem;
   }
 }
+
+@media (max-width: 350px) {
+  .circular {
+    min-width: 20rem;
+  }
+}
+

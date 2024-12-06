@@ -3,6 +3,7 @@ import styles from "./Form.module.css";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "next-i18next";
+import { toast } from 'react-hot-toast';
 
 import { postServiceMessage } from "@/api/pagesApis/contactUs";
 import { useRouter } from "next/router";
@@ -40,8 +41,7 @@ function Form({ type, id }) {
 
       // Отправка запроса
       const response = await postServiceMessage(payload);
-
-      alert("Сообщение успешно отправлено!");
+      toast.success('Сообщение успешно отправлено!');
 
       // Очистка формы после отправки
       reset();

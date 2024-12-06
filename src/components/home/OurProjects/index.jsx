@@ -154,52 +154,9 @@ function OurProjects() {
             alt="of"
           />
         </motion.div>
-
-        {/* <div className={classN(styles.item6, styles.item)}>
-          <div className={styles.item_back}>
-            <div className={styles.icon_wrap}>
-              <Image
-                src={KuchAdolat}
-                width={"auto"}
-                height={"auto"}
-                alt="KuchAdolat"
-              />
-            </div>
-
-            <p>Milliy tiklanish demokratik partiyasi</p>
-          </div>
-          <Image
-            className={styles.image}
-            src={MilliTiklanish}
-            width={"auto"}
-            height={"auto"}
-            alt="of"
-          />
-        </div>
-
-        <div className={classN(styles.item7, styles.item)}>
-          <div className={styles.item_back}>
-            <div className={styles.icon_wrap}>
-              <Image
-                src={IchkiIshlarIcon}
-                width={"auto"}
-                height={"auto"}
-                alt="KuchAdolat"
-              />
-            </div>
-
-            <p>O‘zbеkiston Rеspublikаsi Ichki ishlаr vаzirligi</p>
-          </div>
-          <Image
-            className={styles.image}
-            src={IchkiIshlarImg}
-            width={"auto"}
-            height={"auto"}
-            alt="of"
-          />
-        </div> */}
+        
       </div>
-      <Btn />
+      <Btn text={t('detail')} href="/projects"/>
     </section>
   );
 }
