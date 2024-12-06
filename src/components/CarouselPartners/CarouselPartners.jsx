@@ -33,8 +33,8 @@ function Carousel() {
               <div className="carousel_wrap h-[100px]">
                 <Image
                   src={item.icon}
-                  width={200}
-                  height={200}
+                  width={600}
+                  height={600}
                   alt="adliya"
                   className={styles.image}
                 />
