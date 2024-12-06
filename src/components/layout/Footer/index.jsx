@@ -132,9 +132,9 @@ function Footer() {
 
                 <div className={styles.copyright_notice}>
                     <div className={styles.block}>
-                        <p className={styles.copyright_text}>&copy; 2023 - Sayt materiallaridan to'liq yoki qisman foydalanilganida ushbu manbani ko'rsatish majburiy</p>
+                        <p className={styles.copyright_text}>&copy; { t('copyright_1')}</p>
                         <div>
-                            <p className={styles.copyright_text}>Saytdagi barcha materiallardan quyidagi litsenziya bo‘yicha foydalanish mumkin: </p>
+                            <p className={styles.copyright_text}>{t('copyright_2')} </p>
                             <span className={styles.copyright_text_green}>Creative Commons Attribution 4.0 International.</span>
                         </div>
                     </div>

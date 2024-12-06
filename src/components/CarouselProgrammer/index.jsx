@@ -30,7 +30,7 @@ export default function CarouselProgrammer({ developers }) {
         }}
         breakpoints={{
           800: {
-            slidesPerView:2
+            slidesPerView: 2
           }
         }}
         pagination={false}
