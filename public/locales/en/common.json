@@ -26,7 +26,7 @@
   "form_tel_required": "Enter your phone number",
   "form_tel_message": "Enter your phone number in full",
   "form_messag_placeholder": "Enter text",
-   "form_Phone":"Telephone",
+   "form_Phone":"Phone number",
    "form_address":"Address",
    "form_address_text":"Republic of Uzbekistan, Tashkent, A. Navoi 30",
    "send":"send",
@@ -40,12 +40,17 @@
    "bc_contact_us":"contact us",
    "transport":"Transport",
    "metro":"Metro",
-   "metro_station":"'Alisher Navoi metro' station.",
-   "buses":"buses",
+   "metro_station":"Alisher Navoi metro station.",
+   "buses":"Buses",
    "shuttle_buses":"Shuttle buses",
-   "station_Beruni":"station 'Beruni'",
+   "station_Beruni":"station Beruni",
    "social_media": "Social media",
    "copyright_1":"2023 - When using the site's materials in whole or in part, citing this source is mandatory.",
-   "copyright_2": "All materials on the site are available for use under the following license:"
+   "copyright_2": "All materials on the site are available for use under the following license:",
+   "title_carousel":"Technocorp quality, reliability and innovation.",
+   "employees": "Employees",
+   "successful_projects":"Successful projects",
+   "satisfied_clients":"Satisfied clients",
+   "experience":"Experience"
   
 }

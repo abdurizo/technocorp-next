@@ -148,3 +148,8 @@
    
   }
 }
+@media (max-width: 400px){
+  .text_wrap_1{
+    text-align: center;
+  }
+}

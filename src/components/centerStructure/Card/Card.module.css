@@ -38,6 +38,8 @@
 .Image_wrap {
   max-width: 15rem;
   max-height: 15rem;
+  overflow: hidden;
+  border-radius: 10px;
 }
 .base {
   color: #fff;

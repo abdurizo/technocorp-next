@@ -1,7 +1,9 @@
 .carousel_section {
     border-top: 1px solid rgba(255, 255, 255, 0.50);
     padding-top: 2rem;
+    /* border: 1px solid #fff; */
 }
+
 
 .carousel_wrap {
     margin: 0 5.8rem;
@@ -33,6 +35,13 @@
     margin: auto;
 }
 
+.swiper_wrap iframe {
+    width: 100%;
+    height: 70rem;
+}
+
+
+
 .swiper_title {
     color: #B5B5B5;
     font-family: "Roboto-Medium";
@@ -63,11 +72,11 @@
 }
 
 .next {
-    right:0.5rem;
+    right: 0.5rem;
 }
 
 .nextProg,
-.prevProg{
+.prevProg {
     position: absolute;
     /* top: 0%; */
     bottom: -70px;
@@ -76,15 +85,14 @@
     height: 4.8rem;
     z-index: 666;
 }
-.nextProg{
+
+.nextProg {
     right: 0;
 }
-.prevProg{
+
+.prevProg {
     right: 65px;
 }
-
-
-
 
 
 
@@ -102,7 +110,17 @@
 
 
 @media (max-width: 992px) {
-    .new_carousel{
+    .new_carousel {
         max-width: 40rem;
-    } 
-  }
+    }
+}
+
+@media (max-width: 400px) {
+    .carousel_section {
+        max-height: 5rem;
+    }
+
+    .swiper_wrap iframe {
+        height: 50rem;
+    }
+}

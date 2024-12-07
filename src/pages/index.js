@@ -56,12 +56,10 @@ export default function Home({ serviceList, startups, projects, aboutUs }) {
       <Header />
       <CarouselPartners />
 
-      <div className="mb-80">
-        <AboutUs aboutUs={aboutUs} />
-      </div>
-      <div className="mb-32">
-        <OurProjects projects={projects} />
-      </div>
+      <AboutUs aboutUs={aboutUs} />
+
+      <OurProjects projects={projects} />
+
       <Services services={serviceList} />
       <Scroll />
       <Startap startups={startups} />
@@ -75,11 +73,11 @@ export default function Home({ serviceList, startups, projects, aboutUs }) {
             background: '#363636',
             color: '#fff',
             fontFamily: "Roboto-Medium",
-            fontSize:"1.8rem",
+            fontSize: "1.8rem",
           },
         }}
       />
-      
+
     </>
   );
 }

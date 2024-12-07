@@ -21,16 +21,19 @@ export async function getServerSideProps({ locale }) {
     },
   };
 }
-const stats = [
-  { value: 68, label: "Xodimlar", id: "employees" },
-  { value: 14, label: "Muvaffaqiyatli loyihalar", id: "projects" },
-  { value: 14, label: "Xursand mijozlarimiz", id: "customers" },
-  { value: 28, label: "Ish tajribasi", id: "experience" },
-];
+
+
 function About({ aboutUs, developers }) {
-  const [customStats, setCustomStats] = useState(stats);
   const { t } = useTranslation();
 
+  const stats = [
+    { value: 68, label: t('employees'), id: "employees" },
+    { value: 14, label: t('successful_projects'), id: "projects" },
+    { value: 14, label: t('satisfied_clients'), id: "customers" },
+    { value: 28, label: t('experience'), id: "experience" },
+  ];
+
+  const [customStats, setCustomStats] = useState(stats);
   useEffect(() => {
     const arr = customStats.map((n) => ({
       ...n,
@@ -43,7 +46,7 @@ function About({ aboutUs, developers }) {
     <>
       <AboutUs aboutUs={aboutUs} />
 
-      <section className="container grid grid-cols-4 gap-6">
+      <section className="container grid gap-6 grid-cols-2 md:grid-cols-4  ">
         {customStats.map((n) => (
           <Card count={n.value} text={n.label} />
         ))}

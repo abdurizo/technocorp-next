@@ -2,6 +2,7 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
+import { useTranslation } from "next-i18next";
 
 import ArrowLeftCarousel from '@/icon/ArrowLeftCarousel.svg';
 import ArrowRightCarousel from '@/icon/ArrowRightCarousel.svg';
@@ -12,13 +13,14 @@ import 'swiper/css/pagination';
 
 
 import 'swiper/css/pagination';
-import { Navigation, Pagination,   } from 'swiper/modules';
+import { Navigation, Pagination, } from 'swiper/modules';
 
 export default function App() {
-
+    const { t } = useTranslation("common");
     return (
         <>
             <div className='container_swiper'>
+                <p className='swiper_title'>{ t('title_carousel')}</p>
                 <div className='swiper_wrap'>
                     <Swiper
                         cssMode={true}
@@ -26,17 +28,17 @@ export default function App() {
                             nextEl: '.next',
                             prevEl: '.prev',
                         }}
-                        pagination={false}   
+                        pagination={false}
                         mousewheel={true}
                         keyboard={true}
-                        modules={[Navigation, Pagination,  ]}
+                        modules={[Navigation, Pagination,]}
                         className="mySwiper"
                     >
+
                         <SwiperSlide>
-                            <p className='swiper_title'>Technocorp sifat, ishonch va innovatsiya</p>
                             <iframe
-                                width="100%"
-                                height="700"
+                                width="auto"
+                                height="auto"
                                 src="https://www.youtube.com/embed/-ACo9Zh3f9k?start=7"
                                 title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -44,10 +46,9 @@ export default function App() {
                             ></iframe>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <p className='swiper_title'>Technocorp sifat, ishonch va innovatsiya</p>
                             <iframe
-                                width="100%"
-                                height="700"
+                                width="auto"
+                                height="auto"
                                 src="https://www.youtube.com/embed/-ACo9Zh3f9k?start=7"
                                 title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -55,10 +56,9 @@ export default function App() {
                             ></iframe>
                         </SwiperSlide>
                         <SwiperSlide>
-                            <p className='swiper_title'>Technocorp sifat, ishonch va innovatsiya</p>
                             <iframe
-                                width="100%"
-                                height="700"
+                                width="auto"
+                                height="auto"
                                 src="https://www.youtube.com/embed/-ACo9Zh3f9k?start=7"
                                 title="YouTube video player"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -28,11 +28,15 @@ export default function CarouselProgrammer({ developers }) {
           nextEl: ".nextProg",
           prevEl: ".prevProg",
         }}
-        // breakpoints={{
-        //   800: {
-        //     slidesPerView: 2
-        //   }
-        // }}
+        breakpoints={{
+          1024: {
+            slidesPerView: 3
+          },
+          450: {
+            slidesPerView: 2,
+          }
+
+        }}
         pagination={false}
         mousewheel={true}
         keyboard={true}

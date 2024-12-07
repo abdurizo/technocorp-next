@@ -79,3 +79,12 @@
   top: 0px;
   right: 0px;
 }
+@media (max-width: 500px) {
+  .wrap {
+    grid-template-columns: repeat(1, 1fr);
+}
+  .modalContent iframe{
+    width: 50rem;
+    height: 46rem;
+  }
+}

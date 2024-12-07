@@ -37,8 +37,8 @@
 }
 
 .image_wrap {
-    max-width: 37.6rem;
-    max-height: 45.2rem;
+    /* max-width: 37.6rem; */
+    max-height: 452px;
     overflow: hidden;
     border-radius: 10px;
     overflow: hidden;

@@ -13,12 +13,14 @@
 
     @media (max-width: 420px) {
       .circular {
-        min-width: 40rem;
+        /* min-width: 40rem; */
       }
     }
 
-    @media (max-width: 350px) {
+    @media (max-width: 400px) {
       .circular {
-        min-width: 20rem;
+        min-width: 30rem;
+        min-height: 58rem;
+        
       }
     }

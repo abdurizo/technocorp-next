@@ -112,10 +112,19 @@ img {
     font-size: 7px;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .sectionTitle {
-   
     line-height: 4.5rem;
-    
   }
+}
+@media (max-width: 500px){
+  html{
+    font-size: 6px;
+  }
+}
+@media (max-width: 400px) {
+  html{
+    font-size: 5px;
+  }
+  
 }

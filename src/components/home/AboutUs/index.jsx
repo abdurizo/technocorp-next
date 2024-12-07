@@ -70,8 +70,8 @@ function AboutUs({ aboutUs }) {
                 <span>
                   <Image
                     src={Play}
-                    width={"auto"}
-                    height={"auto"}
+                    width={1000}
+                    height={1000}
                     alt="icon play"
                   />
                 </span>
@@ -127,8 +127,8 @@ function AboutUs({ aboutUs }) {
                   X
                 </button>
                 <iframe
-                  width="860"
-                  height="560"
+                  width="auto"
+                  height="auto"
                   src="https://www.youtube.com/embed/-ACo9Zh3f9k?autoplay=1"
                   title="YouTube video"
                   frameBorder="0"
