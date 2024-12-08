@@ -121,6 +121,9 @@ img {
   html{
     font-size: 6px;
   }
+  .background_text{
+    font-size: 7rem;
+  }
 }
 @media (max-width: 400px) {
   html{

@@ -30,7 +30,7 @@ function CardProgrammer({
   const date = new Date(published_date);
   const { t } = useTranslation();
   return (
-    <>
+    
       <div className={styles.card}>
         <div className={styles.image_wrap}>
           <Image
@@ -38,7 +38,7 @@ function CardProgrammer({
             width={1000}
             height={1000}
             alt="Development"
-            className={styles.image}
+            // className={styles.image}/
           />
         </div>
         <h3 className={styles.title}>{href}</h3>
@@ -84,7 +84,7 @@ function CardProgrammer({
           </div>
         </div>
       </div>
-    </>
+    
   );
 }
 

@@ -72,7 +72,7 @@
 
 .card:hover .content {
     bottom: 40px;
-    transition: all ease 0.5s;
+    transition: all ease 0.5s;  
 }
 
 .text {

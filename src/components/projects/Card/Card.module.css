@@ -1,6 +1,5 @@
 .wrap {
   border-radius: 1rem;
-  /* border: 1px solid #FFF; */
   background: radial-gradient(
     100% 100% at 50% 0%,
     rgba(255, 255, 255, 0.2) 0%,
@@ -12,6 +11,9 @@
   padding: 4.5rem 5.4rem;
   transition: 0.3s;
   position: relative;
+  max-width: 42.4rem;
+  min-height: 42.8rem ;
+  overflow: hidden;
 }
 
 .wrap:hover:before {

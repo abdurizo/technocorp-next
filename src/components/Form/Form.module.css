@@ -140,6 +140,11 @@
     opacity: 1;
     transition: .3s;
 }
+@media (max-width: 850px) {
+    .wrap {
+        gap: 2rem;
+    }
+}
 
 @media (max-width: 500px) {
     .wrap {

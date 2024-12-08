@@ -34,6 +34,9 @@ export default function CarouselProgrammer({ developers }) {
           },
           450: {
             slidesPerView: 2,
+          },
+          300: {
+            slidesPerView: 1,
           }
 
         }}

@@ -115,12 +115,14 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 450px) {
     .carousel_section {
         max-height: 5rem;
     }
-
     .swiper_wrap iframe {
         height: 50rem;
+    }
+    .nextProg {
+        right: 20px;
     }
 }

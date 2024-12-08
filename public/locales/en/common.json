@@ -51,6 +51,11 @@
    "employees": "Employees",
    "successful_projects":"Successful projects",
    "satisfied_clients":"Satisfied clients",
-   "experience":"Experience"
-  
+   "experience":"Experience",
+   "all":"All",
+   "center_blog":"center blog",
+   "fight_against_corruption":"Fight against corruption",
+   "information_systems":"Information systems",
+  "website":"web-sites",
+  "mobile_applications":"Mobile applications"
 }

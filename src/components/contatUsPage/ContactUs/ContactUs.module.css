@@ -7,14 +7,14 @@
     min-width: 60rem;
     min-height: 58rem;
     flex-shrink: 0;
-    bottom: -50px;
-    left: -50px;
-}
-
-.circular_min {
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  .circular_min {
     min-width: 50rem;
     min-height: 48rem;
     flex-shrink: 0;
     top: 0px;
-    right: -50px;
-}
+    right: 0px;
+  }

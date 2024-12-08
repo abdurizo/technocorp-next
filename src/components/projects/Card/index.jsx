@@ -5,7 +5,7 @@ import Image from "next/image";
 import ArrowRightCrcle from "@/icon/ArrowRightCircle.svg";
 import Img from "@/img/imgNews/im1.png";
 
-function Card({ project }) {
+function  Card({ project }) {
   return (
     <div className={styles.wrap}>
       <h2 className={styles.title}>{project.title}</h2>
