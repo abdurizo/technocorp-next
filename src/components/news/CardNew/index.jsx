@@ -6,6 +6,8 @@ import { useTranslation } from "next-i18next";
 
 import Eye from "@/icon/eye.svg";
 import RightGreen from "@/icon/right_green.svg";
+import DOMPurify from "dompurify";
+import { useEffect, useState } from "react";
 const formatData = (date) => {
   const formattedDate = new Intl.DateTimeFormat("en-GB", {
     day: "2-digit",
@@ -29,6 +31,13 @@ function CardProgrammer({
 }) {
   const date = new Date(published_date);
   const { t } = useTranslation();
+  const [sanitizedDesc, setSanitizedDesc] = useState("");
+
+  useEffect(() => {
+    // Ensure DOMPurify runs only on the client
+    const cleanDesc = DOMPurify.sanitize(desc || "");
+    setSanitizedDesc(cleanDesc);
+  }, [desc]);
   return (
     
       <div className={styles.card}>
@@ -44,8 +53,10 @@ function CardProgrammer({
         <h3 className={styles.title}>{href}</h3>
 
         <div className={styles.content}>
-          <p className={styles.text}>{desc}</p>
-
+          <div
+            className={styles.text}
+            dangerouslySetInnerHTML={{ __html: sanitizedDesc }}
+          ></div>
           <div className={styles.footer}>
             <div className={styles.date_wrap}>
               <p className={styles.date_text}>{formatData(date)}</p>
@@ -72,7 +83,7 @@ function CardProgrammer({
               }}
               className={styles.button}
             >
-              <span>{ t('detail')}</span>
+              <span>{t("detail")}</span>
               <Image
                 src={RightGreen}
                 width={"auto"}

@@ -1,6 +1,6 @@
 import styles from "./GridCards.module.css";
 import classN from "classnames";
-
+import CardStyles from "../../../components/projects/Card/Card.module.css";
 import Card from "../Card";
 import { useObserver } from "@/hooks/use-observer";
 import { motion } from "framer-motion";
@@ -29,6 +29,7 @@ function GridCards({ projects }) {
           initial="hidden"
           animate={isVisible ? "visible" : "exit"}
           variants={cardVariants}
+          className={CardStyles.wrap}
         >
           <Card project={project} />
         </motion.div>
