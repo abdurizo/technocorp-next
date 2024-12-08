@@ -1,41 +1,37 @@
 import styles from "./SectionNews.module.css";
 
 import Card from "../CardNew";
-
-import Img from "@/img/imgNews/im1.png";
-
-
-  const news = [
-    { id: "123", title: "7-may – O‘zbekistonюю " },
-    { id: "456", title: "May" },
-    { id: "466", title: "8-dekabr" },
-  ];
-
-  // const formatTitleToURL = (title) => {
-  //   return title
-  //     .toLowerCase() // Приводим к нижнему регистру
-  //     .replace(/[^\w\s-]/g, "") // Удаляем все спецсимволы
-  //     .replace(/\s+/g, "-") // Заменяем пробелы на дефисы
-  //     .replace(/-+$/g, ""); // Убираем дефисы в конце строки
-  // };
+import { useInfiniteScrollPagination } from "@/hooks/useInfiniteScrollPagination";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 function SectionNews({ news }) {
+  const { hasMore, lastNewsRef, loading, page, items } =
+    useInfiniteScrollPagination(news.results, "/news");
 
   return (
     <section className={styles.container}>
       <div className={styles.cards}>
-        {news.results.map((item) => (
-          <Card
-            key={item.id}
-            image={item.image.src}
-            href={item.title}
-            id={item.slug}
-            desc={item.description}
-            published_date={item.published_date}
-            views={item.views}
-          />
-        ))}
+        {items.map((item, index) => {
+          const isLastItem = index === news.results.length - 1;
+          return (
+            <div ref={isLastItem ? lastNewsRef : null} key={item.id}>
+              <Card
+                key={item.id}
+                image={item.image.src}
+                href={item.title}
+                id={item.slug}
+                desc={item.description}
+                published_date={item.published_date}
+                views={item.views}
+              />
+            </div>
+          );
+        })}
       </div>
+      {loading && (
+        <p className={"text-center text-white text-[40px]"}>Loading...</p>
+      )}
     </section>
   );
 }

@@ -8,7 +8,6 @@ import GridCards from "@/components/projects/GridCards";
 import { getAllProjects } from "@/api/pagesApis/project";
 
 export async function getServerSideProps({ locale, query }) {
-  console.log("queryTab", query);
   const projects = await getAllProjects(locale, {
     p: 1,
     page_size: 10,
@@ -23,10 +22,18 @@ export async function getServerSideProps({ locale, query }) {
   };
 }
 
+const news = [
+  { id: undefined, text: "Barchasi" },
+  { id: 1, text: "Axborot tizimlari" },
+  { id: 3, text: "Veb-saytlar" },
+  { id: 4, text: "Start-up" },
+  { id: 2, text: "Mobil ilovalar" },
+];
+
 function Projects({ projects }) {
   return (
     <div className="container">
-      <Header />
+      <Header news={news} />
       <GridCards projects={projects} />
       <Carousel />
     </div>

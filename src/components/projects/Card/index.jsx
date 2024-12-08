@@ -7,9 +7,12 @@ import Img from "@/img/imgNews/im1.png";
 
 function Card({ project }) {
   return (
-    <div className={styles.wrap}>
+    <div >
       <h2 className={styles.title}>{project.title}</h2>
-      <p className={styles.text}>{project.description}</p>
+      <div
+        className={styles.text}
+        dangerouslySetInnerHTML={{ __html: project.description }}
+      ></div>
 
       <div className={styles.image}>
         <Image src={project.image} width={500} height={1000} alt="Img" />

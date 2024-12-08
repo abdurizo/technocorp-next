@@ -13,10 +13,10 @@ function Header(props) {
   const { t } = useTranslation();
   return (
     <header className={classN(styles.wrap)}>
-      <h2 className={classN("sectionTitle")}>{t('projects_page')} </h2>
-      <Filter />
+      <h2 className={classN("sectionTitle")}>{t("projects_page")} </h2>
+      <Filter news={props.news} />
       <СircularShadow className={styles.circular} />
-      <p className="background_text">{ t('projects_page')}</p>
+      <p className="background_text">{t("projects_page")}</p>
     </header>
   );
 }

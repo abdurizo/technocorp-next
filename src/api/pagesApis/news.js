@@ -23,5 +23,21 @@ export const getOneNews = async (locale, slug) => {
       "Accept-Language": locale,
     },
   });
+
+  return {
+    ...data,
+    image: {
+      ...data.image,
+      src: data.image.src.replace("https://", "http://"),
+    },
+  };
+};
+export const getAllNewsCategory = async (locale, slug) => {
+  const { data } = await axiosT.get(`/news/category`, {
+    headers: {
+      "Accept-Language": locale,
+    },
+  });
+
   return data;
 };

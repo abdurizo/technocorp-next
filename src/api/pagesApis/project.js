@@ -20,7 +20,7 @@ export const getMainPageProjects = async (locale, params) => {
   });
   return data.map((item) => ({
     ...item,
-    image: item.image.replace("https://", "http://"),
+    image: item?.image?.replace("https://", "http://") || "",
   }));
 };
 
@@ -34,7 +34,7 @@ export const getAllProjects = async (locale, params) => {
 
   data.results = data.results.map((item) => ({
     ...item,
-    image: item.image.replace("https://", "http://"),
+    image: item?.image?.replace("https://", "http://") || "",
   }));
   return data;
 };
