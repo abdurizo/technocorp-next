@@ -13,6 +13,7 @@
   overflow: hidden;
   min-height: 46.5rem;
   transition: all ease 0.5s;
+  border: none;
 }
 
 .card:hover:before {

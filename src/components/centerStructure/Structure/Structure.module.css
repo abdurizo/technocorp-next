@@ -59,3 +59,8 @@
     font-size: 10rem;
   }
 }
+@media (max-width: 660px) {
+  .background_text{
+    font-size: 7rem;
+  }
+}

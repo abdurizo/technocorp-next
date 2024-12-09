@@ -1,14 +1,21 @@
 import styles from "./Card.module.css";
+import classN from "classnames";
 
 import Image from "next/image";
 
 import ArrowRightCrcle from "@/icon/ArrowRightCircle.svg";
 import Img from "@/img/imgNews/im1.png";
 
-function  Card({ project }) {
+function Card({ project }) {
   return (
-    <div >
+    <>
       <h2 className={styles.title}>{project.title}</h2>
+
+      <div
+        className={styles.apsolute}
+        dangerouslySetInnerHTML={{ __html: project.description }}
+      ></div>
+      
       <div
         className={styles.text}
         dangerouslySetInnerHTML={{ __html: project.description }}
@@ -27,7 +34,7 @@ function  Card({ project }) {
           className={styles.icon}
         />
       </div>
-    </div>
+    </>
   );
 }
 

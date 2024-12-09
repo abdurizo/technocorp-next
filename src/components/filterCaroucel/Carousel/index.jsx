@@ -32,7 +32,7 @@ function OtherNews({ news }) {
 
   return (
     <>
-      <div className="w-full flex items-center gap-4 mb-10">
+      <div className="grid grid-cols-1 justify-center items-center gap-4  sm:grid-cols-3">
         {news?.map((item, id) => {
           return (
             <Button

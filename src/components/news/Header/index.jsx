@@ -8,9 +8,8 @@ import { getAllNewsCategory } from "@/api/pagesApis/news";
 import { useEffect, useState } from "react";
 
 import СircularShadow from "@/components/СircularShadow";
-// const Filter = dynamic(() => import('@/components/filterCaroucel/Carousel'), { ssr: false });
-import Filter from '@/components/filterCaroucel/Button';
-
+const Filter = dynamic(() => import('@/components/filterCaroucel/Carousel'), { ssr: false });
+// import Filter from '@/components/filterCaroucel/Button';3
 
 
 function Header(props) {
@@ -55,7 +54,8 @@ function Header(props) {
         <div className={classN(styles.wrap, 'container')}>
 
             <h2 className={classN('sectionTitle')}>{t('news')} </h2>
-            <div className="w-full flex items-center gap-4 mb-10">
+
+            {/* <div className="w-full flex items-center gap-4 mb-10">
                 {
                     news.map((item, id) => {
                         return (
@@ -68,8 +68,9 @@ function Header(props) {
                         )
                     })
                 }
-            </div>
-            {/* <Filter news={newsCategories} /> */}
+            </div> */}
+
+            <Filter news={newsCategories} />
 
             <СircularShadow className={styles.circular} />
             <p className='background_text'>{t('news')}</p>
