@@ -56,19 +56,14 @@
 }
 
 .text {
-  /* opacity: 0; */
-  /* transition: 0.3s; */
-  /* height: 0rem; */
-  /* max-width: 31.4rem; */
-  /* overflow: hidden; */
-  font-family: "Exo2-Regular";
-  font-size: 1.6rem;
-  font-style: normal;
-  line-height: 110%;
+  opacity: 0; 
+  transition: 0.3s;
+  height: 0rem;
+  max-width: 31.4rem;
 }
 
 .wrap:hover .text {
- /* height: 3rem; */
+ height: 3rem;
 }
 
 .apsolute{
