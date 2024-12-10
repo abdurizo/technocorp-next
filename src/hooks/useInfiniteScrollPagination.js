@@ -45,8 +45,13 @@ export const useInfiniteScrollPagination = (initialData, fetchUrl) => {
         },
       });
 
-      console.log(response.data.links, "response.data");
-      const newItems = response.data.results;
+      const newItems = response.data.results.map((item) => ({
+        ...item,
+        image: {
+          ...item.image,
+          src: item.image.src.replace("https://", "http://"),
+        },
+      }));
 
       setItems((prev) => [...prev, ...newItems]); // Append new data
       setHasMore(!!!response.data.links.next); // Check if more data exists
