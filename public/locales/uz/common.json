@@ -48,9 +48,15 @@
   "copyright_1": "2023 - Sayt materiallaridan to'liq yoki qisman foydalanilganida ushbu manbani ko'rsatish majburiy",
   "copyright_2": "Saytdagi barcha materiallardan quyidagi litsenziya bo‘yicha foydalanish mumkin:",
   "copyright_green": "Creative Commons Attribution 4.0 International.",
-  "title_carousel":"Technocorp sifat, ishonch va innovatsiya",
-   "employees": "Xodimlar",
-   "successful_projects":"Muvaffaqiyatli loyihalar",
-   "satisfied_clients":"Xursand mijozlarimiz",
-   "experience":"Ish tajribasi"
+  "title_carousel": "Technocorp sifat, ishonch va innovatsiya",
+  "employees": "Xodimlar",
+  "successful_projects": "Muvaffaqiyatli loyihalar",
+  "satisfied_clients": "Xursand mijozlarimiz",
+  "experience": "Ish tajribasi",
+  "all": "Barchasi",
+  "center_blog": "Markaz blogi",
+  "fight_against_corruption": "Korrupsiyaga qarshi kurash",
+  "information_systems":"Axborot tizimlari",
+   "website":"Veb-saytlar",
+   "mobile_applications":"Mobil ilovalar"
 }

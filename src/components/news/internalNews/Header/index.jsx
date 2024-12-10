@@ -50,13 +50,16 @@ function Header({ newsDetail }) {
         </div>
       </div>
       <h2 className={styles.title}>{newsDetail.title}</h2>
-      <Image
-        src={newsDetail.image.src}
-        width={1000}
-        height={1000}
-        alt="Development"
-        className={styles.image}
-      />
+      <div className={styles.wrap_img}>
+        <Image
+          src={newsDetail.image.src}
+          width={1000}
+          height={1000}
+          alt="Development"
+          className={styles.image}
+        />
+      </div>
+
     </>
   );
 }

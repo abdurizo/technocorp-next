@@ -5,15 +5,19 @@ import dynamic from "next/dynamic";
 import { useTranslation } from "next-i18next";
 
 import СircularShadow from "@/components/СircularShadow";
+// import Filter from '@/components/filterCaroucel/Button';
 const Filter = dynamic(() => import("@/components/filterCaroucel/Carousel"), {
   ssr: false,
 });
 
+
 function Header(props) {
   const { t } = useTranslation();
+  
   return (
     <header className={classN(styles.wrap)}>
-      <h2 className={classN("sectionTitle")}>{t("projects_page")} </h2>
+
+      <h2 className={classN("sectionTitle")}>{t('projects_page')} </h2>
       <Filter news={props.news} />
       <СircularShadow className={styles.circular} />
       <p className="background_text">{t("projects_page")}</p>

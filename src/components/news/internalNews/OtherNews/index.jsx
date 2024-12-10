@@ -33,6 +33,15 @@ function OtherNews({ news }) {
           nextEl: ".nextProg",
           prevEl: ".prevProg",
         }}
+        breakpoints={{
+          500: {
+            slidesPerView: 2,
+          },
+          300: {
+            slidesPerView: 1,
+          }
+
+        }}
         pagination={false}
         mousewheel={true}
         keyboard={true}

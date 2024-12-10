@@ -3,9 +3,15 @@
   margin: auto;
   margin-top: 4.8rem;
   margin-bottom: 13.8rem;
+  padding: 0 10px;
 }
 .cards{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 2.4rem;
+}
+@media (max-width: 600px){
+  .cards{
+    grid-template-columns: repeat(1,1fr);
+  }
 }
