@@ -1,10 +1,13 @@
 import styles from "./GridCards.module.css";
-import classN from "classnames";
+
 import CardStyles from "../../../components/projects/Card/Card.module.css";
 import Card from "../Card";
+
 import { useObserver } from "@/hooks/use-observer";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import Link from "next/link";
+
+
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: (i) => ({

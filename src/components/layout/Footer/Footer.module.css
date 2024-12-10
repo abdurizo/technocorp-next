@@ -1,7 +1,7 @@
-.footer{
+.footer {
     border-top: 1px solid rgba(255, 255, 255, 0.25);
-    padding: 0 10px;
 }
+
 .container {
     max-width: 132rem;
     margin: 6rem auto;
@@ -63,7 +63,7 @@
 
 .social_networks {
     margin-top: 1.25rem;
-    display: flex;  
+    display: flex;
 }
 
 .social_icon {
@@ -117,6 +117,13 @@
 .developed span {
     color: #00E85D;
 }
+
+@media (max-width:1024px) {
+    .footer {
+        padding: 0 20px;
+    }
+}
+
 @media (max-width:640px) {
     .grid_wrap {
         grid-template-columns: repeat(2, 1fr);

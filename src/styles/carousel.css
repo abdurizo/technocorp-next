@@ -109,6 +109,11 @@
 }
 
 
+@media (max-width: 1024px) {
+    .container_swiper {
+        margin: 15rem 20px;
+    }
+}
 @media (max-width: 992px) {
     .new_carousel {
         max-width: 40rem;

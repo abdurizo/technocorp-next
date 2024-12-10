@@ -63,9 +63,11 @@
 }
 
 .wrap:hover .text {
- height: 3rem;
+ height: 2rem;
 }
-
+.position{
+  position: relative;
+}
 .apsolute{
   color: #b0b0b0;
   font-family: "Exo2-Regular";
@@ -78,11 +80,12 @@
   max-height: 3.6rem;
   max-width: 31.4rem;
   position: absolute;
-  top: -100%;
-  
+  top: 80px;
+  opacity: 0;
 }
 .wrap:hover .apsolute{
-  top: 25%;
+  top: 120px;
+  opacity: 1;
 }
 
 .image {
