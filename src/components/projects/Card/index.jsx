@@ -15,7 +15,7 @@ function Card({ project }) {
         className={styles.apsolute}
         dangerouslySetInnerHTML={{ __html: project.description }}
       ></div>
-      
+
       <div
         className={styles.text}
         dangerouslySetInnerHTML={{ __html: project.description }}

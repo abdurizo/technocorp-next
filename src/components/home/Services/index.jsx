@@ -69,12 +69,11 @@ const cardVariants = {
 function Services({ services }) {
   const { isVisible, ref } = useObserver({ threshold: 0.3 });
   const { t } = useTranslation();
-
   return (
     <section className={classN(styles.wrap, "container")}>
-      <h2 className="sectionTitle">{ t('services_title')}</h2>
+      <h2 className="sectionTitle">{t("services_title")}</h2>
       <div className={styles.cards} ref={ref}>
-        {services.map(({ gif, image, title, href, id }, index) => (
+        {services.map(({ gif, image, title, href, id, slug }, index) => (
           <motion.div
             key={index}
             custom={index}

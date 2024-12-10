@@ -9,6 +9,8 @@ function SectionNews({ news }) {
   const { hasMore, lastNewsRef, loading, page, items } =
     useInfiniteScrollPagination(news.results, "/news");
 
+    
+
   return (
     <section className={styles.container}>
       <div className={styles.cards}>

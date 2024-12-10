@@ -6,13 +6,26 @@ import Image from "next/image";
 import NosirovAmirjon from "@/img/imgPerson/NosirovAmirjon.png";
 import GreenEnvelope from "@/icon/greenEnvelope.svg";
 import GreenPhone from "@/icon/greenPhone.svg";
+const formatUzbekPhoneNumber = (phoneNumber) => {
+  // Remove all non-numeric characters
+  const cleaned = phoneNumber.replace(/\D/g, "");
 
+  // Regex to match Uzbek phone numbers
+  const regex = /^998?(\d{2})(\d{3})(\d{2})(\d{2})$/;
+
+  if (regex.test(cleaned)) {
+    return cleaned.replace(regex, "+998 ($1) $2-$3-$4");
+  } else {
+    return "Invalid phone number";
+  }
+};
 function Card({ card }) {
+  console.log(card, "card");
   return (
     <div className={styles.card}>
       <div className={styles.person_info}>
         <div className={styles.Image_wrap}>
-          <Image width={500} height={500} alt="person" src={card?.photo}  />  
+          <Image width={500} height={500} alt="person" src={card?.photo} />
         </div>
         <div className={styles.info}>
           <h3 className={classN(styles.full_name, styles.base)}>
@@ -68,7 +81,7 @@ function Card({ card }) {
           <div>
             <p className={classN(styles.position, styles.base)}>Telefon </p>
             <p className={classN(styles.reception_time, styles.base)}>
-              +998 (55) 501-42-00
+              {formatUzbekPhoneNumber(card.phone)}
             </p>
           </div>
         </div>
