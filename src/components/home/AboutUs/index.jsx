@@ -92,6 +92,7 @@ function AboutUs({ aboutUs }) {
                 width={1000}
                 height={1000}
                 alt="of"
+                className="object-cover"
               />
             </div>
             <div className={styles.bottom_right}>
@@ -100,6 +101,7 @@ function AboutUs({ aboutUs }) {
                 width={1000}
                 height={1000}
                 alt="of"
+                className="object-cover"
               />
             </div>
             <div className={styles.top_left}>
@@ -108,6 +110,7 @@ function AboutUs({ aboutUs }) {
                 width={1000}
                 height={1000}
                 alt="of"
+                className="object-cover"
               />
             </div>
             <div className={styles.bottom_right}>
@@ -116,6 +119,7 @@ function AboutUs({ aboutUs }) {
                 width={1000}
                 height={1000}
                 alt="of"
+                className="object-cover"
               />
             </div>
           </motion.div>

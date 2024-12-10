@@ -1,8 +1,6 @@
-
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { axiosT } from "@/api/axios";
-import { Toaster } from 'react-hot-toast';
-
+import { Toaster } from "react-hot-toast";
 
 import BreadCrumbs from "@/components/BreadCrumbs";
 import Form from "@/components/Form";
@@ -14,47 +12,40 @@ import Desc from "@/components/servise/internalServise/Desc";
 // const data = await axiosT.get(`/service/detail/${query.internalservise}`);
 
 export async function getServerSideProps({ locale, query }) {
-
   const data = await axiosT.get(`/service/detail/${query.internalservise}`);
 
-    return {
-      props: {
-        ...(await serverSideTranslations(locale, ["common"])),
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
 
-        locale: locale,
-        detailId: data.data,
-      },
-    };
-  }
-  
+      locale: locale,
+      detailId: data.data,
+    },
+  };
+}
 
+function InternalServise({ detailId }) {
+  return (
+    <div className="container">
+      <BreadCrumbs back={"Xizmatlar"} href={"/servise"} />
+      <div className="mb-8"></div>
+      <Desc title={detailId.title} desc={detailId.description} />
+      <Video videoSrc={detailId.video} />
 
-  function InternalServise(props) {
-
-    console.log(props.detailId, "Prop");
-
-    // console.log(props.detailId);
-
-    return (
-      <div className="container">
-        <BreadCrumbs back={"Xizmatlar"} href={"/servise"} />
-        <Video />
-        <Desc />
-
-        <Form type={1} id={props.detailId.id} />
-        <Toaster
+      <Form type={1} id={detailId.id} />
+      <Toaster
         position="top-right"
         toastOptions={{
           style: {
-            background: '#363636',
-            color: '#fff',
+            background: "#363636",
+            color: "#fff",
             fontFamily: "Roboto-Medium",
-            fontSize:"1.8rem",
+            fontSize: "1.8rem",
           },
         }}
       />
-      </div>
-    );
-  }
+    </div>
+  );
+}
 
-  export default InternalServise;
+export default InternalServise;

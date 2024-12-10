@@ -23,13 +23,7 @@ export async function getServerSideProps({ locale, query }) {
   };
 }
 
-const news = [
-  { id: undefined, text: "Barchasi" },
-  { id: 1, text: "Axborot tizimlari" },
-  { id: 3, text: "Veb-saytlar" },
-  { id: 4, text: "Start-up" },
-  { id: 2, text: "Mobil ilovalar" },
-];
+
 
 function Projects({ projects }) {
   const { t } = useTranslation();
@@ -39,7 +33,7 @@ function Projects({ projects }) {
     { id: 3, text: t('website') },
     { id: 4, text: "Start-up" },
     { id: 2, text: t('mobile_applications') },
-    { id: 5, text: t('mobile_applications') },
+    { id: 5, text: t('360_virtual_tour') },
   ];
 
   return (

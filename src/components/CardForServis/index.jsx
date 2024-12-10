@@ -35,12 +35,9 @@ function Card({ gif, image, title, desc, href, id }) {
             className={styles.but}
             href={{
               pathname: "/servise/" + id,
-              query: {
-                name: href,
-              },
             }}
           >
-            {t('detail')}
+            {t("detail")}
           </Link>
         </div>
       </div>
