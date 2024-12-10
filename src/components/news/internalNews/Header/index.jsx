@@ -1,8 +1,7 @@
 import styles from "./Header.module.css";
 
 import Image from "next/image";
-import { useRouter } from "next/router";
-
+import { useTranslation } from "next-i18next";
 
 import Img from "@/img/imgNews/im1.png";
 import Arrow from "@/icon/long_arrow_right.svg";
@@ -24,13 +23,13 @@ const formatData = (date) => {
 };
 function Header({ newsDetail }) {
   // const { query } = useRouter();
-
+  const { t } = useTranslation();
   const date = new Date(newsDetail.published_date);
 
   return (
     <>
       <div className={styles.wrap}>
-        <BreadCrumbs back={"Yangiliklar"} href={"/news"} />
+        <BreadCrumbs back={t('news')} href={"/news"} />
 
         <div className={styles.date_wrap}>
           <p className={styles.date_text}>{formatData(date)}</p>

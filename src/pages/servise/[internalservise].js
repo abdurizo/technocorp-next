@@ -1,11 +1,13 @@
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { axiosT } from "@/api/axios";
 import { Toaster } from "react-hot-toast";
+import { useTranslation } from "next-i18next";
 
 import BreadCrumbs from "@/components/BreadCrumbs";
 import Form from "@/components/Form";
 import Video from "@/components/servise/VideoBlock";
 import Desc from "@/components/servise/internalServise/Desc";
+
 // import { axiosT } from "@/api/axios";
 
 // export async function getServerSideProps({ locale, query }) {
@@ -25,9 +27,10 @@ export async function getServerSideProps({ locale, query }) {
 }
 
 function InternalServise({ detailId }) {
+  const { t } = useTranslation();
   return (
     <div className="container">
-      <BreadCrumbs back={"Xizmatlar"} href={"/servise"} />
+      <BreadCrumbs back={t('services')} href={"/servise"} />
       <div className="mb-8"></div>
       <Desc title={detailId.title} desc={detailId.description} />
       <Video videoSrc={detailId.video} />

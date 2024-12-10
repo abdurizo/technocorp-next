@@ -77,6 +77,10 @@ function NavBar() {
     }
   }, [menuOpen]);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
+
   return (
     <nav className={styles.nav}>
       <Link href="/" locale={locale} className={styles.logo}>
@@ -88,9 +92,9 @@ function NavBar() {
         // className={styles.burger}
         onClick={() => setMenuOpen(!menuOpen)}
       >
+        <span className={menuOpen ? styles.burger_open : ""}></span>  
         <span className={menuOpen ? styles.burger_open : ""}></span>
-        <span className={menuOpen ? styles.burger_open : ""}></span>
-        <span className={menuOpen ? styles.burger_open : ""}></span>
+        <span className={menuOpen ? styles.burger_open : ""}></span>  
       </div>
 
       <ul
