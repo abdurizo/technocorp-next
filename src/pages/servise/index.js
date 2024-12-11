@@ -8,7 +8,7 @@ export async function getServerSideProps({ locale }) {
   const serviceList = await getAllServicesList(locale);
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common"])),  
+      ...(await serverSideTranslations(locale, ["common"])),
       locale: locale,
       serviceList,
     },
@@ -18,7 +18,10 @@ export async function getServerSideProps({ locale }) {
 function Servise({ serviceList }) {
   return (
     <>
-      <Services services={serviceList} />
+      <div className="server_wrap"> 
+        <Services services={serviceList} />
+      </div>
+
       <Video />
     </>
   );

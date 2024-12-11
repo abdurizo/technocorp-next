@@ -1,15 +1,17 @@
 import styles from "./ContactUs.module.css";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import classN from "classnames";
+import { useTranslation } from "next-i18next";
 
 import CallPhone from "@/icon/transparentCallPhone.svg";
 import User from "@/icon/formIcon/user.svg";
 import Phone from "@/icon/formIcon/phone.svg";
 
 function ContactUs() {
+  const { t } = useTranslation(); 
   // Состояние для модального окна
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -24,16 +26,37 @@ function ContactUs() {
     }
   };
 
+  // Добавляем обработчик события для закрытия по Esc
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        closeModal();
+      }
+    };
+
+    if (isModalOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    // Убираем обработчик при размонтировании
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isModalOpen]);
+
   const {
     register,
     formState: { errors },
     handleSubmit,
+    reset,
   } = useForm({
     mode: "onBlur",
   });
 
   const onSubmit = (data) => {
     console.log(data);
+    closeModal();
+    reset();
   };
 
   return (
@@ -61,7 +84,7 @@ function ContactUs() {
                   htmlFor="name"
                   className={classN(styles.label, styles.form_text_style)}
                 >
-                  Ism
+                  {t('form_name_placeholder')}
                 </label>
                 <div className={styles.input_wrap}>
                   <span>
@@ -77,17 +100,17 @@ function ContactUs() {
                     type="text"
                     id="name"
                     className={classN(styles.input, styles.form_text_style)}
-                    placeholder="Ismingizni kiritng"
+                    placeholder={t('form_name_required')}
                     {...register("name", {
-                      required: "Ismni kiriting",
+                      required: t('form_name_required'),
                       pattern: {
                         value: /[A-Za-z]{3}/,
-                        message: "Lotin alifbosining kamida 3 harfini kiritin",
+                        message: t('form_name_message'),
                       },
                       validate: {
                         minLength: (value) => {
                           if (value.length < 3) {
-                            return "Lotin alifbosining kamida 3 harfini kiritin";
+                            return t('form_name_message');
                           }
                         },
                       },
@@ -104,7 +127,7 @@ function ContactUs() {
                   htmlFor="tel"
                   className={classN(styles.label, styles.form_text_style)}
                 >
-                  Telefon raqamingizni toliq kiriting
+                  {t('form_tel_message')}
                 </label>
                 <div className={styles.input_wrap}>
                   <span>
@@ -120,17 +143,17 @@ function ContactUs() {
                     type="tel"
                     id="tel"
                     className={classN(styles.input, styles.form_text_style)}
-                    placeholder="Telefon raqamingiz"
+                    placeholder={t('form_tel_placeholder')}
                     {...register("tel", {
-                      required: "Telefon raqamini kiriting",
+                      required: t('form_tel_required'),
                       pattern: {
                         value: /^\+[0-9]{12}$/,
-                        message: "Telefon raqamingiz toliq kiriting",
+                        message: t('form_tel_message'),
                       },
                       validate: {
                         minLength: (value) => {
                           if (value.length < 1) {
-                            return "Telefon raqamingiz toliq kiriting";
+                            return t('form_tel_message');
                           }
                         },
                       },
@@ -142,7 +165,7 @@ function ContactUs() {
                 </div>
               </div>
               <div className={styles.button_wrap}>
-                <button className={styles.button}>Yuborish</button>
+                <button className={styles.button}>{t('send')}</button>
               </div>
             </form>
           </div>

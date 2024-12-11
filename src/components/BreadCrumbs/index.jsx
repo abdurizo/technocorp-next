@@ -24,7 +24,7 @@ function BreadCrumbs({ back, href }) {
         className={styles.icon}
       />
       <span className={classN(styles.color, styles.link)}>
-        {query.internalservise || "Loading..."}
+        {query.internalservise || query.name || "Loading..."}
       </span>
     </div>
   );

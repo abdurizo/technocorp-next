@@ -6,7 +6,7 @@
   bottom: 5%;
   right: 3%;
   z-index: 999;
-
+cursor: pointer;
 }
 
 .inner_wrap {

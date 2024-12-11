@@ -45,7 +45,7 @@ img {
 .container {
   max-width: 132rem;
   margin: auto;
-  margin-top: 15rem;
+  margin-top: 10rem;
   padding: 0 10px;
   /* border: 1px solid #fff; */
 }
@@ -59,9 +59,10 @@ img {
   margin-bottom: 5rem;
   text-transform: uppercase;
 }
+
 .background_text {
   position: absolute;
-  top: 0;
+  top: 0rem;
   z-index: -1;
   font-family: "Roboto-Boldr";
   font-size: 17.5rem;
@@ -77,9 +78,11 @@ img {
   0% {
     width: 0%;
   }
+
   50% {
     width: 70%;
   }
+
   100% {
     width: 100%;
   }
@@ -93,45 +96,57 @@ img {
   line-height: 135%;
   text-indent: 20px;
 }
+
+.server_wrap {
+  padding-top: 5rem;
+}
+
 @media (max-width: 1024px) {
-  html{
+  html {
     font-size: 8px;
   }
-  .background_text{
+
+  .background_text {
     font-size: 15rem;
   }
-  .container{
+
+  .container {
     padding: 0 20px;
   }
 }
+
 @media (max-width: 992px) {
-  .background_text{
+  .background_text {
     font-size: 10rem;
   }
- 
+
 }
 
 @media (max-width: 768px) {
-  html{
+  html {
     font-size: 7px;
   }
 }
+
 @media (max-width: 600px) {
   .sectionTitle {
     line-height: 4.5rem;
   }
 }
-@media (max-width: 500px){
-  html{
+
+@media (max-width: 500px) {
+  html {
     font-size: 6px;
   }
-  .background_text{
+
+  .background_text {
     font-size: 7rem;
   }
 }
+
 @media (max-width: 400px) {
-  html{
+  html {
     font-size: 5px;
   }
-  
+
 }

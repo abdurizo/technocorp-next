@@ -1,5 +1,5 @@
 .wrap {
-  padding-top: 15rem;
+  padding-top: 17rem;
   position: relative;
 }
 
@@ -19,7 +19,7 @@
 
 .background_text {
   position: absolute;
-  /* top: 14rem; */
+  top: 12rem;
   left: 0;
   right: 0;
   z-index: -1;
@@ -52,6 +52,10 @@
   
   .background_text{
     font-size: 10rem;
+    top: 6rem;
+  }
+  .wrap {
+    padding-top: 8rem;
   }
 }
 @media (max-width: 992px) {

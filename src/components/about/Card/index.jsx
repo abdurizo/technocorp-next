@@ -36,9 +36,10 @@ function Card({ count, text }) {
         transition={{ delay: 0.1, duration: 0.5 }}
         className={styles.card}
       >
-        <motion.p className={styles.count}>{rounded}</motion.p>
+        <motion.p className={styles.count}>{rounded}</motion.p> 
         <p className={styles.text}>{text}</p>
       </motion.div>
+
       {/* <div className={styles.card}>
             <p className={styles.count}>+14</p>
             <p className={styles.text}>Muvaffaqiyatli loyihalar</p>
