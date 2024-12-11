@@ -99,7 +99,7 @@
 }
 
 .wrap:hover .image {
-  transform: translateY(1rem);
+  transform: translateY(3rem);
 }
 
 .arrow {
