@@ -32,7 +32,7 @@ function Card({ card }) {
           </h3>
 
           <p className={classN(styles.position, styles.base)}>
-            {card.position_text}
+            {card.position_text}  
           </p>
 
           <div className={styles.reception}>

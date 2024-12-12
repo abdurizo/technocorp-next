@@ -75,7 +75,7 @@
 }
 
 .burger_open span:nth-child(3) {
-  transform: rotate(-45deg) translate(0px, -9px); 
+  transform: rotate(-45deg) translate(0px, -9px);
 }
 
 .nav_icon img {
@@ -137,11 +137,15 @@
   color: #a8a8a8;
 }
 
-@media (max-width: 1024px) {
-  .nav {
-    padding: 2.5rem 1rem;
+@media (max-width: 1280px) {
+  .nav{
+    padding: 2.5rem 2rem;
   }
+  
+}
 
+@media (max-width: 1024px) {
+  
   .nav_icon {
     padding-right: 7rem;
   }
@@ -185,6 +189,7 @@
     width: 20px;
     height: 3px;
   }
+
   .burger_open span:nth-child(3) {
     /* transform: rotate(-45deg) translate(0px, -10px);  */
   }

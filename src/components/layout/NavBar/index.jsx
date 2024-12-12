@@ -109,7 +109,8 @@ function NavBar() {
               locale={locale}
               className={classNames(
                 item.href === pathname &&
-                  "bg-gradient-to-l from-white to-[#C6C6C6] text-black rounded-[10px] py-2 px-5 transition-colors"
+                "bg-gradient-to-l from-white to-[#C6C6C6] text-black rounded-[10px] py-2 px-5 transition-colors",
+                styles.nav_item
               )}
             >
               {t(item.title)}

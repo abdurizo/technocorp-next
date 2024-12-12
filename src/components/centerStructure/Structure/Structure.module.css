@@ -9,6 +9,7 @@
 .director {
   display: flex;
   justify-content: center;
+  /* border: 1px solid #fff; */
 }
 
 .grid {
@@ -47,6 +48,13 @@
   top: 0px;
   right: 0px;
 }
+@media (max-width: 1280px){
+  .background_text{
+    font-size: 10rem;
+    top: 6rem;
+  }
+}
+
 @media (max-width: 1024px) {
   
   .background_text{
@@ -62,14 +70,28 @@
     font-size: 8rem;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .background_text{
     font-size: 7rem;
+  }
+  .grid{
+    grid-template-columns: repeat(1,1fr);
   }
 }
 @media (max-width: 600px) {
   .background_text{
     font-size: 6rem;
+  }
+  
+}
+@media (max-width: 450px){
+  .director{
+    left: 5px;
+  }
+}
+@media (max-width: 330px){
+  .director{
+    left: 15px;
   }
 }
 

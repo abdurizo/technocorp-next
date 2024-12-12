@@ -23,7 +23,7 @@ function Structure({ centerStructure }) {
             <Card card={centerStructure[0]} />
           </div>
 
-          <div className="border border-[#6F6F6F] border-b-0 h-[20rem] w-[80%] absolute  -bottom-[33%] right-0 left-[9%]"></div>
+          <div className=" sm:border border-[#6F6F6F] border-b-0 h-[20rem] w-[80%] absolute  -bottom-[33%] right-0 left-[9%]"></div>
         </div>
 
         <div className={styles.grid}>
