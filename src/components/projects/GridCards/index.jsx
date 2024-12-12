@@ -6,9 +6,7 @@ import Card from "../Card";
 import { useObserver } from "@/hooks/use-observer";
 import { motion } from "framer-motion";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import { useInfiniteScrollPagination } from "@/hooks/useInfiniteScrollPagination";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 50 },
@@ -29,7 +27,7 @@ function GridCards({ projects }) {
 
   return (
     <section className={styles.wrap} ref={ref}>
-       {projects.results.map((project, index) => {
+      {projects.results.map((project, index) => {
         return (
           <motion.a
             key={index}
