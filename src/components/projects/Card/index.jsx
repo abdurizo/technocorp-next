@@ -24,7 +24,7 @@ function Card({ project }) {
       {/* </div> */}
 
       <div className={styles.image}>
-        <Image src={project.image} width={1000} height={1000} alt="Img" />
+        <Image src={project.image} fill={true} alt="Img" />
       </div>
 
       <div className={styles.arrow}>

@@ -94,14 +94,24 @@
 
 .image {
   border-radius: 10px;
-  overflow: hidden;
+  position: relative;
   margin-top: 1rem;
   transition: 0.3s;
   overflow: hidden;
-  /* aspect-ratio: 31.4 / 27; */
-  height: 27rem;
+  width: 100%;
+  max-width: 314px;
+  height: auto;
+  aspect-ratio: 314 / 269;
 }
 
+.image img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+}
 .wrap:hover .image {
   transform: translateY(3rem);
 }
@@ -135,7 +145,7 @@
     padding: 4rem 3rem;
   }
   .image {
-    height: 25rem;
+    /* height: 25rem; */
   }
 }
 @media (max-width: 700px) {
@@ -143,6 +153,6 @@
     padding: 4.5rem 5.4rem;
   }
   .image {
-    height: 27rem;
+    /* height: 27rem; */
   }
 }
