@@ -7,7 +7,6 @@ import Img from "@/img/imgNews/im1.png";
 import Arrow from "@/icon/long_arrow_right.svg";
 import Eye from "@/icon/eye.svg";
 
-
 import BreadCrumbs from "@/components/BreadCrumbs";
 
 const formatData = (date) => {
@@ -29,7 +28,7 @@ function Header({ newsDetail }) {
   return (
     <>
       <div className={styles.wrap}>
-        <BreadCrumbs back={t('news')} href={"/news"} />
+        <BreadCrumbs back={t("news")} href={"/news"} />
 
         <div className={styles.date_wrap}>
           <p className={styles.date_text}>{formatData(date)}</p>
@@ -39,7 +38,6 @@ function Header({ newsDetail }) {
                 src={Eye}
                 width={"auto"}
                 height={"auto "}
-
                 alt="Development"
                 className={styles.icon}
               />
@@ -52,13 +50,11 @@ function Header({ newsDetail }) {
       <div className={styles.wrap_img}>
         <Image
           src={newsDetail.image.src}
-          width={1000}
-          height={1000}
+          fill
           alt="Development"
           className={styles.image}
         />
       </div>
-
     </>
   );
 }
