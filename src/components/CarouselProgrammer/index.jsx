@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation, Pagination, Autoplay  } from "swiper/modules";
 
 import KhodjabekovaSh from "@/img/imgProgrammer/KhodjabekovaShakhnoza.jpg";
 import RasulovKomiljon from "@/img/imgProgrammer/RasulovKomiljon.jpg";
@@ -43,7 +43,11 @@ export default function CarouselProgrammer({ developers }) {
         pagination={false}
         mousewheel={true}
         keyboard={true}
-        modules={[Navigation, Pagination]}
+        modules={[Navigation, Pagination, Autoplay]}
+        autoplay={{
+          delay: 3000, // Задержка между автопрокрутками в миллисекундах
+          disableOnInteraction: false, // Продолжать авто прокрутку после взаимодействия
+        }}
         className="mySwiper"
       >
         {developers.map((developer) => (
