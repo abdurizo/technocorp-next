@@ -20,12 +20,11 @@ const formatUzbekPhoneNumber = (phoneNumber) => {
   }
 };
 function Card({ card }) {
-  console.log(card, "card");
   return (
     <div className={styles.card}>
       <div className={styles.person_info}>
         <div className={styles.Image_wrap}>
-          <Image width={500} height={500} alt="person" src={card?.photo} />
+          <Image fill alt="person" src={card?.photo} />
         </div>
         <div className={styles.info}>
           <h3 className={classN(styles.full_name, styles.base)}>
