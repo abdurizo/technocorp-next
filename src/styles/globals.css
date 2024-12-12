@@ -62,7 +62,7 @@ img {
 
 .background_text {
   position: absolute;
-  top: 0rem;
+  top: -3rem;
   z-index: -1;
   font-family: "Roboto-Boldr";
   font-size: 17.5rem;
