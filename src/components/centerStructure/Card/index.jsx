@@ -2,6 +2,7 @@ import styles from "./Card.module.css";
 import classN from "classnames";
 
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
 import NosirovAmirjon from "@/img/imgPerson/NosirovAmirjon.png";
 import GreenEnvelope from "@/icon/greenEnvelope.svg";
@@ -20,6 +21,7 @@ const formatUzbekPhoneNumber = (phoneNumber) => {
   }
 };
 function Card({ card }) {
+  const { t } = useTranslation();
   return (
     <div className={styles.card}>
       <div className={styles.person_info}>
@@ -37,7 +39,7 @@ function Card({ card }) {
 
           <div className={styles.reception}>
             <p className={classN(styles.position, styles.base)}>
-              Qabul kuni va soati:{" "}
+              {t('date_and_time')}:
             </p>
             <p
               className={classN(
