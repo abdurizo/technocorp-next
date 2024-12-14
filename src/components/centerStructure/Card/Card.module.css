@@ -36,10 +36,11 @@
 }
 
 .Image_wrap {
-  overflow: hidden;
-  border-radius: 10px;
+ 
   /* max-width: 15rem;
   max-height: 15rem; */
+  overflow: hidden;
+  border-radius: 10px;
   position: relative;
   width: 100%;
   max-width: 150px;

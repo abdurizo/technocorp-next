@@ -25,8 +25,7 @@ function CardForStartap({ imageOne, imageTwo, text, textTwo }) {
           <div className={styles.image}>
             <Image
               src={isHovered ? imageTwo : imageOne}
-              width={180}
-              height={180}
+              fill={true}
               alt="Slack"
             />
           </div>

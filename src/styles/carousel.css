@@ -20,6 +20,8 @@
 
 .container_swiper {
     max-width: 132rem;
+    max-height: 80rem;
+    overflow: hidden;
     margin: 15rem auto;
     padding: 7.5rem;
     border-radius: 1rem;
@@ -37,7 +39,7 @@
 
 .swiper_wrap iframe {
     width: 100%;
-    height: 70rem;
+    height: 50rem;
 }
 
 

@@ -24,14 +24,17 @@
     right: 0;
     bottom: 0;
     border-radius: 10px;
-    padding: 1px; /* Ширина границы */
+    padding: 1px;
+    /* Ширина границы */
     background: linear-gradient(180deg, #ffffff, #ffffff00);
-    -webkit-mask: 
-      linear-gradient(#fff 0 0) content-box, 
-      linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor; /* Нужен для правильной маски */
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    /* Нужен для правильной маски */
     mask-composite: exclude;
-    pointer-events: none; /* Чтобы псевдоэлемент не мешал кликам */
+    pointer-events: none;
+    /* Чтобы псевдоэлемент не мешал кликам */
 }
 
 
@@ -46,10 +49,22 @@
 }
 
 .image {
-    width: 16rem;
-    height: 16rem;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    max-width: 180px;
+    max-height: 180px;
+    aspect-ratio: 180/180;
+    position: relative;
 }
 
+.image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 .text {
     color: #C5C5C5;

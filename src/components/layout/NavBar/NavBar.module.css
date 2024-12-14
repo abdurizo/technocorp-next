@@ -137,14 +137,22 @@
   color: #a8a8a8;
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1300px) {
   .nav{
     padding: 2.5rem 2rem;
   }
+  .nav_list{
+    gap: 3rem;
+  }
   
 }
+@media (max-width: 1180px) {
+  .nav_list{
+    gap: 2rem;
+  }
+}
 
-@media (max-width: 1024px) {
+@media (max-width: 1030px) {
   
   .nav_icon {
     padding-right: 7rem;

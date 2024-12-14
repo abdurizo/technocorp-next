@@ -11,7 +11,7 @@ import User from "@/icon/formIcon/user.svg";
 import Phone from "@/icon/formIcon/phone.svg";
 
 function ContactUs() {
-  const { t } = useTranslation(); 
+  const { t } = useTranslation();
   // Состояние для модального окна
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -76,6 +76,9 @@ function ContactUs() {
       {isModalOpen && (
         <div className={styles.modal} onClick={handleBackgroundClick}>
           <div className={styles.modalContent}>
+            <button onClick={closeModal} className={styles.closeButton}>
+              X
+            </button>
             <h2 className={styles.title_form}>Biz bilan bog‘laning</h2>
 
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form} autoComplete="off">
