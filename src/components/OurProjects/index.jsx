@@ -37,6 +37,8 @@ function OurProjects({ projects }) {
   const { isVisible, ref } = useObserver({ threshold: 0.3 });
   const { t } = useTranslation("common");
 
+  console.log("projects", projects);
+
   return (
     <section className={classN(styles.wrap, "container")}>
       <h2 className="sectionTitle mb-10">{t("our_projects")}</h2>
@@ -58,8 +60,10 @@ function OurProjects({ projects }) {
                 <div className={styles.icon_wrap}>
                   <Image
                     src={item.organization.icon}
-                    width={50}
-                    height={50}
+                    // width={50}
+                    // height={50}
+
+                    fill
                     alt="Adliya"
                   />
                 </div>
@@ -69,15 +73,14 @@ function OurProjects({ projects }) {
               <Image
                 className={classN(styles.image, "object-cover")}
                 src={item.image}
-                width={1000}
-                height={1000}
+                fill
                 alt="of"
               />
             </a>
           </motion.div>
         ))}
       </div>
-      <Btn text={t('detail')} href="/projects"/>
+      <Btn text={t("detail")} href="/projects" />
     </section>
   );
 }

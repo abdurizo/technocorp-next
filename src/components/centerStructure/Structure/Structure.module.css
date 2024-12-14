@@ -23,7 +23,6 @@
 
 .background_text {
   position: absolute;
-  /* top: 7rem; */
   left: 0;
   right: 0;
   z-index: -1;
@@ -56,15 +55,12 @@
 @media (max-width: 1280px) {
   .background_text {
     font-size: 10rem;
-    top: 6rem;
   }
 }
 
 @media (max-width: 1024px) {
-
   .background_text {
     font-size: 10rem;
-    top: 6rem;
   }
 
   .wrap {
@@ -92,7 +88,6 @@
   .background_text {
     font-size: 6rem;
   }
-
 }
 
 @media (max-width: 450px) {

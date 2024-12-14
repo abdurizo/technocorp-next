@@ -14,7 +14,11 @@ import Desc from "@/components/servise/internalServise/Desc";
 // const data = await axiosT.get(`/service/detail/${query.internalservise}`);
 
 export async function getServerSideProps({ locale, query }) {
-  const data = await axiosT.get(`/service/detail/${query.internalservise}`);
+  const data = await axiosT.get(`/service/detail/${query.internalservise}`, {
+    headers: {
+      "Accept-Language": locale,
+    },
+  });
 
   return {
     props: {
@@ -28,9 +32,15 @@ export async function getServerSideProps({ locale, query }) {
 
 function InternalServise({ detailId }) {
   const { t } = useTranslation();
+  console.log(detailId);
   return (
-    <div className="container">
-      <BreadCrumbs back={t('services')} href={"/servise"} />
+    <div
+      className="container"
+      style={{
+        marginTop: "15rem",
+      }}
+    >
+      <BreadCrumbs back={t("services")} href={"/servise"} />
       <div className="mb-8"></div>
       <Desc title={detailId.title} desc={detailId.description} />
       <Video videoSrc={detailId.video} />

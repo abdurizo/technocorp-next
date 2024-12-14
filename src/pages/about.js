@@ -8,6 +8,7 @@ import Programmers from "@/components/about/Programmers";
 import { TechlogiesList } from "@/components/about/Technologies/TechnologiesList";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useEffect, useState } from "react";
+import Head from "next/head";
 
 export async function getServerSideProps({ locale }) {
   const aboutUs = await getAboutUsForAboutUsPage(locale);
@@ -22,15 +23,14 @@ export async function getServerSideProps({ locale }) {
   };
 }
 
-
 function About({ aboutUs, developers }) {
   const { t } = useTranslation();
 
   const stats = [
-    { value: 68, label: t('employees'), id: "employees" },
-    { value: 14, label: t('successful_projects'), id: "projects" },
-    { value: 14, label: t('satisfied_clients'), id: "customers" },
-    { value: 28, label: t('experience'), id: "experience" },
+    { value: 68, label: t("employees"), id: "employees" },
+    { value: 14, label: t("successful_projects"), id: "projects" },
+    { value: 14, label: t("satisfied_clients"), id: "customers" },
+    { value: 28, label: t("experience"), id: "experience" },
   ];
 
   const [customStats, setCustomStats] = useState(stats);
@@ -44,6 +44,9 @@ function About({ aboutUs, developers }) {
   }, [aboutUs]);
   return (
     <>
+      <Head>
+        <title>{t("about_us")}</title>
+      </Head>
       <AboutUs aboutUs={aboutUs} />
 
       <section className="container grid gap-6 grid-cols-2 md:grid-cols-4  ">

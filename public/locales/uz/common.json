@@ -33,7 +33,7 @@
   "our_team": "BIZNING JAMOA",
   "our_team_together": "BIZNINGJAMOA",
   "structure_center": "Markaz TUZILMASI",
-  "structure_center_together": "MarkazTUZILMASI",
+  "structure_center_together": "Markaz TUZILMASI",
   "additional_departments": "QO‘SHIMCHA BO‘LIMLARI",
   "departments": "BO‘LIMLAR",
   "contact_us": "BIZ BILAN BOG‘LANING",
@@ -56,9 +56,9 @@
   "all": "Barchasi",
   "center_blog": "Markaz blogi",
   "fight_against_corruption": "Korrupsiyaga qarshi kurash",
-  "information_systems":"Axborot tizimlari",
-   "website":"Veb-saytlar",
-   "mobile_applications":"Mobil ilovalar",
-   "360_virtual_tour":"360 Virtual tur",
-    "date_and_time":"Qabul kuni va soati"
+  "information_systems": "Axborot tizimlari",
+  "website": "Veb-saytlar",
+  "mobile_applications": "Mobil ilovalar",
+  "360_virtual_tour": "360 Virtual tur",
+  "date_and_time": "Qabul kuni va soati"
 }

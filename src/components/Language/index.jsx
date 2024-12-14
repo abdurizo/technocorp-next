@@ -11,7 +11,7 @@ import GlobeEarthIcon from "@/icon/globe-earth.svg";
 
 function Language({ toggle, handelAddClass }) {
   const { i18n, t } = useTranslation();
-  const router = useRouter(); 
+  const router = useRouter();
   const { locale, pathname } = router;
   // const [toggle, setToggle] = useState(false);
   const [activeLocale, setActiveLocale] = useState(locale);

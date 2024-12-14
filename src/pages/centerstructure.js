@@ -5,6 +5,7 @@ import Structure from "@/components/centerStructure/Structure";
 import Programmers from "@/components/about/Programmers";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { getCenterStructure, getDevelopers } from "@/api/pagesApis/employees";
+import Head from "next/head";
 
 export async function getServerSideProps({ locale }) {
   const developers = await getDevelopers(locale);
@@ -22,6 +23,9 @@ function CenterStructure({ developers, centerStructure }) {
   const { t } = useTranslation();
   return (
     <>
+      <Head>
+        <title>{t("structure_center")}</title>
+      </Head>
       <Structure centerStructure={centerStructure} />
       <Programmers
         title={t("additional_departments")}

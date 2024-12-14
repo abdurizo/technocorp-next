@@ -92,9 +92,9 @@ function NavBar() {
         // className={styles.burger}
         onClick={() => setMenuOpen(!menuOpen)}
       >
-        <span className={menuOpen ? styles.burger_open : ""}></span>  
         <span className={menuOpen ? styles.burger_open : ""}></span>
-        <span className={menuOpen ? styles.burger_open : ""}></span>  
+        <span className={menuOpen ? styles.burger_open : ""}></span>
+        <span className={menuOpen ? styles.burger_open : ""}></span>
       </div>
 
       <ul
@@ -102,21 +102,26 @@ function NavBar() {
           menuOpen ? styles.nav_list_open : styles.nav_list_closed
         }`}
       >
-        {Links.map((item) => (
-          <li>
-            <Link
-              href={item.href}
-              locale={locale}
-              className={classNames(
-                item.href === pathname &&
-                "bg-gradient-to-l from-white to-[#C6C6C6] text-black rounded-[10px] py-2 px-5 transition-colors",
-                styles.nav_item
-              )}
-            >
-              {t(item.title)}
-            </Link>
-          </li>
-        ))}
+        {Links.map((item) => {
+          const isActiveParent =
+            pathname === item.href || pathname.startsWith(item.href + "/");
+
+          return (
+            <li>
+              <Link
+                href={item.href}
+                locale={locale}
+                className={classNames(
+                  isActiveParent &&
+                    "bg-gradient-to-l from-white to-[#C6C6C6] text-black rounded-[10px] py-2 px-5 transition-colors",
+                  styles.nav_item
+                )}
+              >
+                {t(item.title)}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
 
       <div className={styles.nav_icon}>
