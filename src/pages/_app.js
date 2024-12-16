@@ -32,28 +32,19 @@ const variants = {
 
 function App({ Component, pageProps }) {
   const router = useRouter();
-
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true); // Ensures animations only happen after the component is mounted
-  }, []);
-
   return (
     <Layout>
       <LoadingBar />
-      {isMounted && (
-        <AnimatePresence mode="wait" initial={true}>
-          <motion.div
-            key={router.route}
-            initial="hidden"
-            animate={"visible"}
-            variants={variants}
-          >
-            <Component {...pageProps} />;
-          </motion.div>
-        </AnimatePresence>
-      )}
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={router.route}
+          initial="hidden"
+          animate={"visible"}
+          variants={variants}
+        >
+          <Component {...pageProps} />;
+        </motion.div>
+      </AnimatePresence>
     </Layout>
   );
 }
