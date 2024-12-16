@@ -36,7 +36,7 @@ function App({ Component, pageProps }) {
   return (
     <Layout>
       <LoadingBar />
-      <AnimatePresence mode="sync" initial={false}>
+      <AnimatePresence mode="popLayout" initial={true}>
         <motion.div
           key={router.route}
           initial="hidden"
