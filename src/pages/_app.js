@@ -37,8 +37,8 @@ function App({ Component, pageProps }) {
   return (
     <Layout>
       <LoadingBar />
-      <AnimatePresence mode="wait">
-        {/* {isBrowser ? (
+      {/* <AnimatePresence mode="wait"> */}
+      {/* {isBrowser ? (
           <motion.div
             key={router.route}
             initial="hidden"
@@ -51,7 +51,7 @@ function App({ Component, pageProps }) {
         ) : (
           <Component {...pageProps} />
         )} */}
-        <motion.div
+      {/* <motion.div
           key={router.route}
           initial="hidden"
           animate={"visible"}
@@ -59,10 +59,10 @@ function App({ Component, pageProps }) {
           variants={variants}
         >
           <Component {...pageProps} />;
-        </motion.div>
-      </AnimatePresence>
+        </motion.div> */}
+      {/* </AnimatePresence> */}
 
-      {/* {isBrowser ? (
+      {isBrowser ? (
         <motion.div
           key={router.route}
           initial="hidden"
@@ -74,7 +74,7 @@ function App({ Component, pageProps }) {
         </motion.div>
       ) : (
         <Component {...pageProps} />
-      )} */}
+      )}
     </Layout>
   );
 }
