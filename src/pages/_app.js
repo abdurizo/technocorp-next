@@ -36,15 +36,16 @@ function App({ Component, pageProps }) {
   return (
     <Layout>
       <LoadingBar />
-      <Component {...pageProps} />;
-      {/* <AnimatePresence mode="wait" initial={true}>
+      <AnimatePresence mode="wait" initial={true}>
         <motion.div
           key={router.route}
           initial="hidden"
           animate={"visible"}
           variants={variants}
-        ></motion.div>
-      </AnimatePresence> */}
+        >
+          <Component {...pageProps} />;
+        </motion.div>
+      </AnimatePresence>
     </Layout>
   );
 }
