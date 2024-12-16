@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Toaster } from 'react-hot-toast';
+import { Toaster } from "react-hot-toast";
 
 import Header from "@/components/home/Header";
 import CarouselPartners from "@/components/CarouselPartners/CarouselPartners";
@@ -44,6 +44,7 @@ export async function getServerSideProps({ locale }) {
 }
 
 export default function Home({ serviceList, startups, projects, aboutUs }) {
+  console.log("home");
   return (
     <>
       <Head>
@@ -70,14 +71,13 @@ export default function Home({ serviceList, startups, projects, aboutUs }) {
         position="top-right"
         toastOptions={{
           style: {
-            background: '#363636',
-            color: '#fff',
+            background: "#363636",
+            color: "#fff",
             fontFamily: "Roboto-Medium",
             fontSize: "1.8rem",
           },
         }}
       />
-
     </>
   );
 }
