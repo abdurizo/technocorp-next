@@ -44,7 +44,6 @@ export async function getServerSideProps({ locale }) {
 }
 
 export default function Home({ serviceList, startups, projects, aboutUs }) {
-  console.log("home");
   return (
     <>
       <Head>
