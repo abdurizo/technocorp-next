@@ -32,10 +32,12 @@ const variants = {
 
 function App({ Component, pageProps }) {
   const router = useRouter();
+
+  const isBrowser = typeof window !== "undefined";
   return (
     <Layout>
       <LoadingBar />
-      <AnimatePresence mode="wait">
+      {/* <AnimatePresence mode="wait">
         <motion.div
           key={router.route}
           initial="hidden"
@@ -44,7 +46,21 @@ function App({ Component, pageProps }) {
         >
           <Component {...pageProps} />;
         </motion.div>
-      </AnimatePresence>
+      </AnimatePresence> */}
+
+      {isBrowser ? (
+        <motion.div
+          key={router.route}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          variants={variants}
+        >
+          <Component {...pageProps} />
+        </motion.div>
+      ) : (
+        <Component {...pageProps} />
+      )}
     </Layout>
   );
 }
