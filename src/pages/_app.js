@@ -42,7 +42,6 @@ function App({ Component, pageProps }) {
           initial="hidden"
           animate={"visible"}
           variants={variants}
-          layout
         >
           <Component {...pageProps} />;
         </motion.div>
