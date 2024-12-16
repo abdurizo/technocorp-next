@@ -41,13 +41,7 @@ function CardProgrammer({
   return (
     <div className={styles.card}>
       <div className={styles.image_wrap}>
-        <Image
-          src={image}
-          width={1000}
-          height={1000}
-          alt="Development"
-          // className={styles.image}/
-        />
+        <Image src={image} width={600} height={335} alt="Development" />
       </div>
       <h3 className={styles.title}>{href}</h3>
 

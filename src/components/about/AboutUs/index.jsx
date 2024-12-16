@@ -29,8 +29,7 @@ function AboutUs({ aboutUs }) {
           <div className={styles.top_left}>
             <Image
               src={aboutUs.photo_1}
-              width={1000}
-              height={1000}
+              fill
               alt="of"
               className="object-cover"
             />
@@ -38,8 +37,7 @@ function AboutUs({ aboutUs }) {
           <div className={styles.bottom_right}>
             <Image
               src={aboutUs.photo_2}
-              width={1000}
-              height={1000}
+              fill
               alt="of"
               className="object-cover"
             />
@@ -47,8 +45,7 @@ function AboutUs({ aboutUs }) {
           <div className={styles.top_left}>
             <Image
               src={aboutUs.photo_3}
-              width={1000}
-              height={1000}
+              fill
               alt="of"
               className="object-cover"
             />
@@ -56,8 +53,7 @@ function AboutUs({ aboutUs }) {
           <div className={styles.bottom_right}>
             <Image
               src={aboutUs.photo_4}
-              width={1000}
-              height={1000}
+              fill
               alt="of"
               className="object-cover"
             />

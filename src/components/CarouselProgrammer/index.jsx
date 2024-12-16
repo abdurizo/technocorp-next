@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import "swiper/css/pagination";
-import { Navigation, Pagination, Autoplay  } from "swiper/modules";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
 import KhodjabekovaSh from "@/img/imgProgrammer/KhodjabekovaShakhnoza.jpg";
 import RasulovKomiljon from "@/img/imgProgrammer/RasulovKomiljon.jpg";
@@ -30,15 +30,14 @@ export default function CarouselProgrammer({ developers }) {
         }}
         breakpoints={{
           1024: {
-            slidesPerView: 3
+            slidesPerView: 3,
           },
           450: {
             slidesPerView: 2,
           },
           300: {
             slidesPerView: 1,
-          }
-
+          },
         }}
         pagination={false}
         mousewheel={true}
@@ -59,61 +58,20 @@ export default function CarouselProgrammer({ developers }) {
             />
           </SwiperSlide>
         ))}
-
-        {/* 
-        <SwiperSlide>
-          <CardProgrammer
-            image={RasulovKomiljon}
-            name={"Rasulov Komiljon Uktamjonovich"}
-            profession={"Back-end developer"}
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <CardProgrammer
-            image={KhodjabekovaSh}
-            name={"Khodjabekova Shakhnoza Baxodirovna"}
-            profession={"Back-end developer"}
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <CardProgrammer
-            image={RasulovKomiljon}
-            name={"Rasulov Komiljon Uktamjonovich"}
-            profession={"Back-end developer"}
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <CardProgrammer
-            image={KhodjabekovaSh}
-            name={"Khodjabekova Shakhnoza Baxodirovna"}
-            profession={"Back-end developer"}
-          />
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <CardProgrammer
-            image={RasulovKomiljon}
-            name={"Rasulov Komiljon Uktamjonovich"}
-            profession={"Back-end developer"}
-          />
-        </SwiperSlide> */}
       </Swiper>
       <div className="prevProg arrow">
         <Image
           src={ArrowLeftCarousel}
-          width={500}
-          height={500}
+          width={"auto"}
+          height={"auto"}
           alt="Development"
         />
       </div>
       <div className="nextProg arrow">
         <Image
           src={ArrowRightCarousel}
-          width={500}
-          height={500}
+          width={"auto"}
+          height={"auto"}
           alt="Development"
         />
       </div>

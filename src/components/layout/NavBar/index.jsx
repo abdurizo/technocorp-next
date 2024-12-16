@@ -138,8 +138,8 @@ function NavBar() {
             <a href="tel:+998555014300">
               <Image
                 src={PhoneIcon}
-                width={1000}
-                height={1000}
+                width={50}
+                height={50}
                 alt="icon glasses"
                 className={styles.icon}
               />
@@ -157,8 +157,8 @@ function NavBar() {
           <div onClick={handelAddClassSearch}>
             <Image
               src={SearchIcon}
-              width={1000}
-              height={1000}
+              width={50}
+              height={50}
               alt="icon glasses"
               className={styles.icon}
             />

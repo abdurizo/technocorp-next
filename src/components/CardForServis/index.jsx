@@ -20,8 +20,7 @@ function Card({ gif, image, title, desc, href, id }) {
         <div className={styles.image}>
           <Image
             src={isHovered ? gif : image}
-            width={400}
-            height={400}
+            fill
             alt="Development"
             className={styles.image}
           />

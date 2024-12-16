@@ -38,8 +38,7 @@ function SiteView() {
     <div className={`${styles.site_view_block} site_view_block`}>
       <Image
         src={GlassesIcon}
-        width={1000}
-        height={1000}
+        fill
         alt="icon glasses"
         onClick={addFrHandler}
         className={styles.icon}

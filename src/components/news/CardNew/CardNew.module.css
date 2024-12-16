@@ -44,12 +44,11 @@
 }
 
 .image_wrap {
-  /* max-width: 60rem; */
-  max-height: 33.5rem;
   overflow: hidden;
   border-radius: 10px;
   overflow: hidden;
   transition: all ease 0.5s;
+  max-height: 33.5rem;
 }
 
 .card:hover .image_wrap {
@@ -80,9 +79,8 @@
 }
 
 .card:hover .content {
-
-    bottom: 40px;
-    transition: all ease 0.5s;  
+  bottom: 40px;
+  transition: all ease 0.5s;
 }
 
 .text {

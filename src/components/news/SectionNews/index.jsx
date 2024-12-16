@@ -2,14 +2,10 @@ import styles from "./SectionNews.module.css";
 
 import Card from "../CardNew";
 import { useInfiniteScrollPagination } from "@/hooks/useInfiniteScrollPagination";
-import { useEffect } from "react";
-import { useRouter } from "next/router";
 
 function SectionNews({ news }) {
   const { hasMore, lastNewsRef, loading, page, items } =
     useInfiniteScrollPagination(news.results, "/news");
-
-    
 
   return (
     <section className={styles.container}>
@@ -32,7 +28,7 @@ function SectionNews({ news }) {
         })}
       </div>
       {loading && (
-        <p className={"text-center text-white text-[40px]"}>Loading...</p>
+        <p className={"text-center text-white text-[40px]"}>Yuklanmoqda...</p>
       )}
     </section>
   );
