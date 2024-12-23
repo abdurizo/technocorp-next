@@ -8,11 +8,6 @@ import Form from "@/components/Form";
 import Video from "@/components/servise/VideoBlock";
 import Desc from "@/components/servise/internalServise/Desc";
 
-// import { axiosT } from "@/api/axios";
-
-// export async function getServerSideProps({ locale, query }) {
-// const data = await axiosT.get(`/service/detail/${query.internalservise}`);
-
 export async function getServerSideProps({ locale, query }) {
   const data = await axiosT.get(`/service/detail/${query.internalservise}`, {
     headers: {
@@ -32,7 +27,6 @@ export async function getServerSideProps({ locale, query }) {
 
 function InternalServise({ detailId }) {
   const { t } = useTranslation();
-  console.log(detailId);
   return (
     <div
       className="container"

@@ -12,7 +12,7 @@ import GlobeEarthIcon from "@/icon/globe-earth.svg";
 function Language({ toggle, handelAddClass }) {
   const { i18n, t } = useTranslation();
   const router = useRouter();
-  const { locale, pathname } = router;
+  const { locale, pathname, asPath } = router;
   // const [toggle, setToggle] = useState(false);
   const [activeLocale, setActiveLocale] = useState(locale);
   const [clientLanguage, setClientLanguage] = useState(null);
@@ -26,7 +26,7 @@ function Language({ toggle, handelAddClass }) {
   const handelExecutionFunction = (newLocale) => {
     handelAddClass();
     handelAddClassLocation(newLocale);
-    router.push(pathname, pathname, { locale: newLocale });
+    router.push(asPath, asPath, { locale: newLocale });
   };
 
   useEffect(() => {
