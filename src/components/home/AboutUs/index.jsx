@@ -68,7 +68,7 @@ function AboutUs({ aboutUs }) {
               </Link>
               <div onClick={openModal} className={styles.playIcon}>
                 <span>
-                  <Image src={Play} fill alt="icon play" />
+                  <Image src={Play} width={100} height={100} alt="icon play" />
                 </span>
               </div>
             </div>
