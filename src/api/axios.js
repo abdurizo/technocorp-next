@@ -2,9 +2,9 @@ import axios from "axios";
 
 let baseURL;
 if (typeof window === "undefined") {
-  baseURL = "http://new.technocorp.uz/api";
+  baseURL = "http://technocorp.uz/api";
 } else {
-  baseURL = "https://new.technocorp.uz/api";
+  baseURL = "https://technocorp.uz/api";
 }
 
 export const axiosT = axios.create({
