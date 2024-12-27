@@ -157,7 +157,9 @@ function Footer() {
 
         <div className={styles.copyright_notice}>
           <div className={styles.block}>
-            <p className={styles.copyright_text}>&copy; {t("copyright_1")}</p>
+            <p className={styles.copyright_text}>
+              &copy; {new Date().getFullYear()} - {t("copyright_1")}
+            </p>
             <div>
               <p className={styles.copyright_text}>{t("copyright_2")} </p>
               <span className={styles.copyright_text_green}>
@@ -169,7 +171,6 @@ function Footer() {
 
           <div className={styles.block_end}>
             <p className={styles.developed}>
-              {" "}
               Developed by <span>TECHNOCORP</span>
             </p>
             <p className={styles.copyright_text}>

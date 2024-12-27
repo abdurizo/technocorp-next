@@ -15,7 +15,7 @@ function Structure({ centerStructure }) {
 
       <div className={classN("container", styles.wrap)}>
         <h2 className={classN("sectionTitle", styles.title)}>
-          {t("structure_center")} 
+          {t("structure_center")}
         </h2>
 
         <div className="relative">
@@ -26,7 +26,7 @@ function Structure({ centerStructure }) {
           <div className=" sm:border border-[#6F6F6F] border-b-0 h-[20rem] w-[80%] absolute  -bottom-[33%] right-0 left-[9%]"></div>
         </div>
 
-        <div className={styles.grid}>
+        <div className={`${styles.grid}`}>
           {centerStructure
             .slice(1)
             .filter((card) => card.position !== 3)
