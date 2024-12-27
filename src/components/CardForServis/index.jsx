@@ -7,6 +7,7 @@ import styles from "./Card.module.css";
 import Image from "next/image";
 
 function Card({ gif, image, title, desc, href, id }) {
+  console.log("gif", gif);
   const [isHovered, setIsHovered] = useState(false);
   const { t } = useTranslation();
   return (
