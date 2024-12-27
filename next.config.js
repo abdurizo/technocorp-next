@@ -4,7 +4,7 @@ const { i18n } = require("./next-i18next.config");
 const nextConfig = {
   i18n,
   images: {
-    domains: ["new.technocorp.uz"],
+    domains: ["technocorp.uz"],
   },
   reactStrictMode: true,
 };
