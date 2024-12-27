@@ -8,7 +8,7 @@ export const getAllServicesList = async (locale) => {
   });
   return data.map((item) => ({
     id: item.slug,
-    gif: item?.gif?.replace("http://", "https://"),
+    gif: item?.gif?.replace("https://", "http://"),
     image: item.icon,
     desc: item.description,
     title: item.title,
