@@ -7,6 +7,7 @@ import styles from "./Card.module.css";
 import Image from "next/image";
 
 function Card({ gif, image, title, desc, href, id }) {
+  console.log("gif", gif);
   const [isHovered, setIsHovered] = useState(false);
   const { t } = useTranslation();
   return (
@@ -18,7 +19,7 @@ function Card({ gif, image, title, desc, href, id }) {
       <div className={styles.title_wrap}>
         <h3 className={styles.title}>{title}</h3>
         <div className={styles.image}>
-          <Image
+          <img
             src={isHovered ? gif : image}
             fill
             alt="Development"
