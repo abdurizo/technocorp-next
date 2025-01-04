@@ -5,6 +5,7 @@ const nextConfig = {
   i18n,
   images: {
     domains: ["technocorp.uz"],
+    // domains: ["http://technocorp.uz"],
   },
   reactStrictMode: true,
 };
