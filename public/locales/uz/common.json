@@ -61,5 +61,7 @@
   "website": "Veb-saytlar",
   "mobile_applications": "Mobil ilovalar",
   "360_virtual_tour": "360 Virtual tur",
-  "date_and_time": "Qabul kuni va soati"
+  "date_and_time": "Qabul kuni va soati",
+  "not_found": "Afsuski, siz soʻragan sahifani topa olmadik.",
+  "back_main": "Bosh sahifaga qaytish"
 }

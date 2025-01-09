@@ -104,7 +104,7 @@ img {
 .wrap_404{
   text-align: center;
   padding: 150px 10px;
-  font-size: 5rem;
+  /* font-size: 5rem; */
   color: #00e85d;
   font-family: Roboto-Medium;
 }

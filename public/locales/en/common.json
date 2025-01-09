@@ -60,5 +60,7 @@
   "mobile_applications": "Mobile applications",
   "360_virtual_tour": "360 Virtual tour",
   "date_and_time": "Date and time of reception",
-  "phone": "Phone"
+  "phone": "Phone",
+  "not_found": "Unfortunately, we were unable to find the page you requested.",
+  "back_main": "Return main page"
 }
