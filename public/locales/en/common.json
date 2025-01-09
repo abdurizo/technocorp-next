@@ -59,5 +59,6 @@
   "website": "web-sites",
   "mobile_applications": "Mobile applications",
   "360_virtual_tour": "360 Virtual tour",
-  "date_and_time": "Date and time of reception"
+  "date_and_time": "Date and time of reception",
+  "phone": "Phone"
 }

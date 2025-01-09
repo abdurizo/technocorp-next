@@ -10,7 +10,7 @@
   left: 0;
   right: 0;
   top: 0;
-  z-index: 55;
+  z-index: 45;
   white-space: nowrap;
 }
 
@@ -138,22 +138,20 @@
 }
 
 @media (max-width: 1300px) {
-  .nav{
+  .nav {
     padding: 2.5rem 2rem;
   }
-  .nav_list{
+  .nav_list {
     gap: 3rem;
   }
-  
 }
 @media (max-width: 1180px) {
-  .nav_list{
+  .nav_list {
     gap: 2rem;
   }
 }
 
 @media (max-width: 1030px) {
-  
   .nav_icon {
     padding-right: 7rem;
   }

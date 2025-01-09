@@ -23,6 +23,7 @@
   "form_name_required": "Ismni kiriting",
   "form_name_message": "Lotin alifbosining kamida 3 harfini kiritin",
   "form_tel_placeholder": "Telefon raqamingiz",
+  "phone": "Telefon",
   "form_tel_required": "Telefon raqamini kiriting",
   "form_tel_message": "Telefon raqamingiz toliq kiriting",
   "form_messag_placeholder": "Matn kiriting",

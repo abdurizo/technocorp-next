@@ -20,8 +20,6 @@ function AboutUs({ aboutUs }) {
           <div className={styles.line}></div>
 
           <div className={styles.text}>
-            <p> Markazning asosiy vazifalari:</p>
-
             <p>{aboutUs.description}</p>
           </div>
         </div>

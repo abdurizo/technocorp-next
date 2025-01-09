@@ -13,6 +13,7 @@ import SiteView from "@/components/SiteView/index";
 import { useRouter } from "next/router";
 import { usePathname } from "next/navigation";
 import classNames from "classnames";
+import LoadingBar from "@/components/LoadingBar/LoadingBar";
 
 const Links = [
   {
@@ -54,6 +55,8 @@ function NavBar() {
   const router = useRouter();
   const { locale } = router;
   const pathname = usePathname();
+  const [loading, setLoading] = useState(false);
+
   const handelAddClass = () => {
     setToggle(!toggle);
   };
@@ -80,6 +83,21 @@ function NavBar() {
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    const handleStart = () => setLoading(true);
+    const handleComplete = () => setLoading(false);
+
+    router.events.on("routeChangeStart", handleStart);
+    router.events.on("routeChangeComplete", handleComplete);
+    router.events.on("routeChangeError", handleComplete);
+
+    return () => {
+      router.events.off("routeChangeStart", handleStart);
+      router.events.off("routeChangeComplete", handleComplete);
+      router.events.off("routeChangeError", handleComplete);
+    };
+  }, [router]);
 
   return (
     <nav className={styles.nav}>

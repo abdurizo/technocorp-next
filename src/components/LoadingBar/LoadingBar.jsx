@@ -23,10 +23,8 @@ const LoadingBar = () => {
   if (!loading) return null;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50">
-      <div className="h-1 w-full bg-gray-200">
-        <div className="h-1 bg-[00E85D] transition-all duration-300 ease-out animate-[loading_2s_ease-in-out_infinite]" />
-      </div>
+    <div className="">
+      <div className="h-[5px] w-full bg-[#00E85D]/80 transition-all z-50 relative duration-300 ease-out animate-[loading_4s_ease-in-out_infinite]" />
     </div>
   );
 };

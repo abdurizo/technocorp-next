@@ -34,12 +34,12 @@ function Card({ card }) {
           </h3>
 
           <p className={classN(styles.position, styles.base)}>
-            {card.position_text}  
+            {card.position_text}
           </p>
 
           <div className={styles.reception}>
             <p className={classN(styles.position, styles.base)}>
-              {t('date_and_time')}:
+              {t("date_and_time")}:
             </p>
             <p
               className={classN(
@@ -80,7 +80,7 @@ function Card({ card }) {
             />
           </div>
           <div>
-            <p className={classN(styles.position, styles.base)}>Telefon </p>
+            <p className={classN(styles.position, styles.base)}>{t("phone")}</p>
             <p className={classN(styles.reception_time, styles.base)}>
               {formatUzbekPhoneNumber(card.phone)}
             </p>
