@@ -3,10 +3,7 @@ import { appWithTranslation } from "next-i18next";
 import "@/styles/globals.css";
 import Layout from "../components/layout";
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import LoadingBar from "@/components/LoadingBar/LoadingBar";
-import { getAllServicesList } from "@/api/pagesApis/service";
 const variants = {
   hidden: {
     opacity: 0,
@@ -35,23 +32,25 @@ function App({ Component, pageProps }) {
   const isBrowser = typeof window !== "undefined";
 
   return (
-    <Layout>
-      {isBrowser ? (
-        <motion.div
-          key={router.route}
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          variants={variants}
-        >
-          <Component {...pageProps} />
-        </motion.div>
-      ) : (
-        <div>
-          <Component {...pageProps} />
-        </div>
-      )}
-    </Layout>
+    <>
+      <Layout>
+        {isBrowser ? (
+          <motion.div
+            key={router.route}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={variants}
+          >
+            <Component {...pageProps} />
+          </motion.div>
+        ) : (
+          <div>
+            <Component {...pageProps} />
+          </div>
+        )}
+      </Layout>
+    </>
   );
 }
 

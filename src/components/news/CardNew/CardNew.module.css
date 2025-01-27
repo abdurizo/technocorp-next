@@ -123,7 +123,7 @@
 }
 
 .button {
-  color: #00e85d;
+  color: #00e85d !important;
   font-family: "Inter_18pt-SemiBold";
   font-size: 1.8rem;
   font-style: normal;
