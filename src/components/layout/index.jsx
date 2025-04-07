@@ -15,7 +15,6 @@ function index({ children }) {
       <ContactUs />
       <main>{children}</main>
       <Footer />
-      <Script src="https://chatapi.helpybo.com/media/chat_widgets/user_9_widget.js?v=1730915743?v=1731557696"></Script>
     </>
   );
 }

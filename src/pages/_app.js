@@ -4,6 +4,14 @@ import "@/styles/globals.css";
 import Layout from "../components/layout";
 import { motion, AnimatePresence } from "framer-motion";
 import { useRouter } from "next/router";
+import Script from "next/script";
+import { useEffect } from "react";
+
+import dynamic from "next/dynamic";
+
+const ChatWidget = dynamic(() => import("../../ChatWidget"), {
+  ssr: false,
+});
 const variants = {
   hidden: {
     opacity: 0,
@@ -50,6 +58,14 @@ function App({ Component, pageProps }) {
           </div>
         )}
       </Layout>
+      {/* <ChatWidget /> */}
+      {/* 
+      <Script
+        src="https://chatapi.helpybo.com/media/chat_widgets/user_9_widget.js?v=1730915743"
+        strategy="lazyOnload" // Load the widget script after the page is fully loaded
+        onLoad={() => console.log("Chat widget script loaded!")}
+        onError={() => console.error("Failed to load the chat widget script.")}
+      /> */}
     </>
   );
 }

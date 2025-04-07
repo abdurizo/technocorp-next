@@ -7,7 +7,7 @@ const nextConfig = {
     domains: ["technocorp.uz"],
     // domains: ["http://technocorp.uz"],
   },
-  reactStrictMode: true,
+  reactStrictMode: false,
 };
 
 module.exports = nextConfig;

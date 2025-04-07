@@ -12,9 +12,6 @@ import Startap from "@/components/home/Startap";
 import News from "@/components/home/News";
 import ContactUs from "@/components/home/ContactUs";
 import Carousel from "@/components/Carousel";
-// import { motion } from "framer-motion";
-// import { axiosT } from "@/api/axios";
-// import { useEffect } from "react";
 
 import { getAllServicesList } from "@/api/pagesApis/service";
 import {
